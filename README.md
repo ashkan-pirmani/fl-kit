@@ -29,8 +29,7 @@ If you want to build the website locally, please have a look at our [Git tutoria
 
 ELIXIR is an intergovernmental organisation that brings together life science resources from across Europe.
 These resources include databases, software tools, training materials, cloud storage and supercomputers.
-TODO: expand
-
+TODO: expand here
 
 ## License
 
