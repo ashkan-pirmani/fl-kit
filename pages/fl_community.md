@@ -1,0 +1,7 @@
+---
+title: Federated Learning Community
+contributors: [Ashkan Pirmani]
+page_id: fl_community
+search_exclude: false
+---
+Federated Learning is an evolving field shaped by interdisciplinary collaboration. This section introduces avenues for engagement with the broader FL community, including opportunities for knowledge exchange, networking, and contribution to shared resources.

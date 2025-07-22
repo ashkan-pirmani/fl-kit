@@ -1,27 +1,76 @@
 subitems:
 #  - title: Home
 #    url: /index
-  - title: WiNGS API Tutorial
-    url: /WiNGS
-  - title: Inflammatory Bowel Disease Study with Federated Learning 
-    url: /FL_IBD
-  - title: Federated Learning Hands on Tutorial
-    url: /federated_learning_pipeline
-  - title: Federated Learning 4 Everyone
-    url: /fl4e
-  - title: Predicting Disability Progression in Multiple Sclerosis Using Federated Learning
-    url: /flms
-  - title: COVID-19 in People with Multiple Sclerosis; A Global Data Sharing Initiative
-    url: /gdsi
 
-  - title: All tools and resources
-    description: Browse the RDMkit's catalogue of tools and resources for research data management.
+
+  - title: FL Glossary
+    url: /fl_glossary
+    description: New to Federated Learning? Use this glossary to get up to speed on key terms and concepts, fast. No jargon, just clear explanations.
+    image_url: assets/img/section-icons/info.svg
+
+
+  - title: FL Life Cycle
+    url: /fl_life_cycle
+    description: Get an overview of how data and models move through the Federated Learning process. Understand each stage so you can better plan, build, and manage your FL projects.
+    image_url: /assets/img/fl_life_cycle.svg
+
+  - title: Framework Assembly
+    url: /fl_framework_assembly
+    description: Explore how different tools and services come together in FL setups. Get practical guidance on building your own working framework.
+    image_url: assets/img/section-icons/tool-assembly.svg
+
+
+  - title: Use Cases
+    url: /fl_use_cases
+    description: Check out real examples of how FL is being used in the wild. See what is worked, what has not, and get inspired for your own projects.
+    image_url: assets/img/section-icons/diversity.svg
+
+  - title: FL Community
+    url: /fl_community
+    description: Connect with others working in FL. Whether you want to share knowledge, ask questions, or join discussions, this is your place to plug in.
+    image_url: assets/img/section-icons/community.svg
+
+  - title: All Tools and Resources
+    description: Browse the full collection of tools, platforms, and services designed for Federated Learning. All in one place.
     url: /all_tools_and_resources
     image_url: /assets/img/section-icons/cogs.svg
     hr: True
-  - title: All training resources
-    description: Browse all training resources mentioned in RDMkit pages.
+  - title: All Training Resources
+    description: Find every training guide, tutorial, and learning module featured in FLkit. Perfect for brushing up or diving deep.
     url: /all_training_resources
     image_url: /assets/img/section-icons/training-icon.svg
 
-  
+  - title: Your Role
+    description: See what matters most for your role, whether you are a developer, data steward, or project lead. Get the tools and guidance that fit your responsibilities in FL projects.
+    url: /your_role
+    image_url: assets/img/section-icons/exchange-1.svg
+    hr: True
+    subitems:
+      - title: Data Steward
+        url: /data_steward
+      - title: Policy maker
+        url: /policy_maker
+      - title: Principal Investigator (PI)
+        url: /principal_investigator
+      - title: Researcher
+        url: /researcher
+      - title: Research Software Engineer
+        url: /research_software_engineer
+      - title: Trainer
+        url: /trainer
+
+
+  # - title: WiNGS API Tutorials
+  #   url: /WiNGS
+  # - title: Inflammatory Bowel Disease Study with Federated Learning
+  #   url: /FL_IBD
+  # - title: Federated Learning Hands on Tutorial
+  #   url: /federated_learning_pipeline
+  # - title: Federated Learning 4 Everyone
+  #   url: /fl4e
+  # - title: Predicting Disability Progression in Multiple Sclerosis Using Federated Learning
+  #   url: /flms
+  # - title: COVID-19 in People with Multiple Sclerosis; A Global Data Sharing Initiative
+  #   url: /gdsi
+
+
