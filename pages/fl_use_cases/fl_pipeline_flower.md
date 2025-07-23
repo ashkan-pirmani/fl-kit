@@ -1,12 +1,15 @@
 ---
-title: Federated Learning Tutorial Hands on Experince
+title: Federated Learning Tutorial Hands on Experince Using Flower
 contributors: [Axel Faes, Ashkan Pirmani]
 search_exclude: false
+description: A hands-on tutorial for building and running a federated learning pipeline using the Flower framework and PyTorch, covering client, server, and utility scripts for practical FL experience.
 ---
+
+
 
 ## Introduction
 
-Welcome to this **hands-on tutorial** on Federated Learning (FL)! In this tutorial, you will gain practical experience in building and running a Federated Learning pipeline using the [Flower Framework](https://flower.dev/) and PyTorch. 
+Welcome to this **hands-on tutorial** on Federated Learning (FL)! In this tutorial, you will gain practical experience in building and running a Federated Learning pipeline using the [Flower Framework](https://flower.dev/) and PyTorch.
 
 The tutorial consists of three main components:
 

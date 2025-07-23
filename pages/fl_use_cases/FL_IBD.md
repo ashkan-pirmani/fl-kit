@@ -2,8 +2,11 @@
 title: Tutorial running Federated Learning and Deep Learning models for predicting complex phenotypes
 contributors: [Muhammad Quamber Ali]
 page_id: fl_ibd
+description: Tutorial on using federated and deep learning models to predict complex phenotypes from genetic data, including variant annotation, vectorization, and simulation setup.
 search_exclude: false
 ---
+
+
 
 
 ### Base Repo :  [fedcrohn](https://bitbucket.org/eddiewrc/fedcrohn/src/master/)
@@ -76,8 +79,8 @@ By adding these annotations, Annovar helps researchers understand the potential 
 1. **Run ANNOVAR**: Execute the ANNOVAR command to start the annotation process using the `table_annovar.pl` script provided with Annovar. Here's the basic command structure:
    ```sh
    perl .../annovar/table_annovar.pl VCFFILE .../annovar/humandb/ -out OUTPUT -vcfinput -buildver hg19 -protocol refGene,dbnsfp42a -operation gxf -xreffile XREFFILE
-   
-   
+
+
 ## Converting Genetic Annotations to Vector Representations
 
 This section details the data processing steps performed for the FedCrohn project. The process involves working with gene dictionaries, label processing, and feature extraction from annotated VCF files.
@@ -245,7 +248,7 @@ Experiment 1 involves running FedCrohn in a client-server setup with three datas
      ```sh
      python flClient.py 2
      ```
-     
+
 ## Initiating the Simulation
 
 ### Experiment 1 Workflow (Fedrated)

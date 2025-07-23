@@ -24,6 +24,19 @@ subitems:
     url: /fl_use_cases
     description: Check out real examples of how FL is being used in the wild. See what is worked, what has not, and get inspired for your own projects.
     image_url: assets/img/section-icons/diversity.svg
+    subitems:
+      - title: Federated Learning Pipeline (Flower)
+        url: /fl_pipeline_flower
+      - title: Federated Learning 4 Everyone (FL4E)
+        url: /fl4e
+      - title: Federated Learning for Multiple Sclerosis (FLMS)
+        url: /flms
+      - title: Global Data Sharing Initiative (GDSI)
+        url: /gdsi
+      - title: Inflammatory Bowel Disease Study (FL_IBD)
+        url: /fl_ibd
+      - title: WiNGS
+        url: /wings
 
   - title: FL Community
     url: /fl_community

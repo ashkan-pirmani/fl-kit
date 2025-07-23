@@ -3,13 +3,15 @@ title: The Journey of Data Within a Global Data Sharing Initiative - A Federated
 contributors: [Axel Faes]
 page_id: gdsi
 search_exclude: false
+description: Describes a federated, three-layer data analysis pipeline for global MS research, integrating data from multiple sources while ensuring privacy, standardization, and collaborative analysis.
 ---
+
 
 The paper "The Journey of Data Within a Global Data Sharing Initiative: A Federated 3-Layer Data Analysis Pipeline
  to Scale Up Multiple Sclerosis Research" describes an advanced method for collecting and analyzing data related
   to multiple sclerosis (MS) on a global scale {% cite Pirmani2023GDSI %}, [(external link)](https://medinform.jmir.org/2023/1/e48030/). Here's a simplified explanation:
 
-## Overview 
+## Overview
 ### Short Summary
 
 #### Overview
@@ -61,7 +63,7 @@ The paper "The Journey of Data Within a Global Data Sharing Initiative: A Federa
 
 The paper demonstrates a comprehensive method for managing and analyzing data on a global scale. This approach can significantly enhance research and provide valuable insights into diseases like MS, showing the power of collaborative data sharing initiatives.
 
-## Reimplementation 
+## Reimplementation
 
 ### Reimplementing the Work
 

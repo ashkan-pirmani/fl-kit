@@ -64,6 +64,12 @@ defaults:
     values:
       type: fl_framework_assembly
       type_img: /assets/img/section-icons/tool-assembly.svg
+  -
+    scope:
+      path: "pages/fl_use_cases/"
+    values:
+      type: fl_use_cases
+      type_img: /assets/img/section-icons/diversity.svg
 
 
 
