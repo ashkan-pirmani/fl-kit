@@ -1,0 +1,504 @@
+- term: Active Learning
+  description: Model selects most informative data points for labeling.
+  category: General ML
+- term: Adverse Event
+  description: Unintended medical occurrence during treatment or study.
+  category: Clinical/Healthcare
+- term: Algorithmic Fairness
+  description: Ensuring machine learning models avoid biased or discriminatory outcomes.
+  category: General ML
+- term: Alignment
+  description: Matching data or models to a reference standard.
+  category: Bioinformatics
+- term: Allele Frequency
+  description: Proportion of a specific allele among all alleles in a population.
+  category: Bioinformatics
+- term: Anonymization
+  description: Removing or masking personal identifiers from data.
+  category: Data & Privacy
+- term: Asynchronous Federated Learning
+  description: FL where clients update models at different times, unsynchronized.
+  category: Federated Learning
+- term: AutoFE in Federated Learning
+  description: Automated feature engineering adapted for federated learning settings.
+  category: Federated Learning
+- term: AutoML
+  description: Automated process of model selection, training, and tuning.
+  category: General ML
+- term: Batch Effect
+  description: Systematic differences between data batches, often in biomedical data.
+  category: Bioinformatics
+- term: Bias Mitigation
+  description: Techniques to reduce bias in machine learning models.
+  category: General ML
+- term: Bioinformatics
+  description: Application of computational tools to biological data.
+  category: Bioinformatics
+- term: Biomarker
+  description: Biological molecule indicating a process, condition, or disease.
+  category: Clinical/Healthcare
+- term: Blockchain in FL
+  description: Using blockchain for secure, transparent model updates in FL.
+  category: Federated Learning
+- term: Bootstrapping
+  description: Resampling technique for estimating statistics or model performance.
+  category: Analytics
+- term: BYOD (Bring Your Own Data)
+  description: Participants contribute their own data to collaborative analysis.
+  category: Data & Privacy
+- term: Byzantine-Robust Aggregation
+  description: Aggregation methods resilient to malicious or faulty clients in FL.
+  category: Federated Learning
+- term: Casemix
+  description: Measuring clinical activity based on patient characteristics for reimbursement.
+  category: Clinical/Healthcare
+- term: Centralized Learning
+  description: Model training with all data collected in one location.
+  category: General ML
+- term: ChIP-Seq
+  description: Technique to analyze protein interactions with DNA.
+  category: Bioinformatics
+- term: Client Clustering
+  description: Grouping clients with similar data distributions in FL to enhance performance.
+  category: Federated Learning
+- term: Clinical Decision Support System (CDSS)
+  description: System providing clinicians with knowledge to enhance patient care decisions.
+  category: Clinical/Healthcare
+- term: Clinical Trial
+  description: Research study to evaluate medical, surgical, or behavioral interventions.
+  category: Clinical/Healthcare
+- term: Cohort Study
+  description: Observational study following a group over time.
+  category: Clinical/Healthcare
+- term: Common Data Model (CDM)
+  description: Standardized structure for organizing data to facilitate sharing and analysis.
+  category: Data & Privacy
+- term: Communication-Efficient Algorithms
+  description: FL algorithms designed to minimize communication overhead.
+  category: Federated Learning
+- term: Consent Management
+  description: Handling patient permissions for data use and sharing.
+  category: Data & Privacy
+- term: Continuous Learning
+  description: Model updates as new data arrives, without retraining from scratch.
+  category: General ML
+- term: Cross-Silo Federated Learning
+  description: FL among organizations (e.g., hospitals) with large datasets.
+  category: Federated Learning
+- term: Cross-Validation
+  description: Splitting data into folds to assess model performance.
+  category: Analytics
+- term: Data Acquisition
+  description: Gathering data from various sources for analysis.
+  category: Data & Privacy
+- term: Data Anonymization
+  description: Removing identifiable information from datasets to protect privacy.
+  category: Data & Privacy
+- term: Data Augmentation
+  description: Creating new data samples by modifying existing ones.
+  category: General ML
+- term: Data Cleaning
+  description: Correcting or removing erroneous data to improve quality.
+  category: Data & Privacy
+- term: Data Dictionary
+  description: Descriptive list of data elements in a system or database.
+  category: Data & Privacy
+- term: Data Drift
+  description: Change in data distribution over time, affecting model performance.
+  category: Analytics
+- term: Data Federation
+  description: Sharing data from distributed sources without centralization.
+  category: Data & Privacy
+- term: Data Governance
+  description: Managing data availability, usability, integrity, and security.
+  category: Data & Privacy
+- term: Data Harmonization
+  description: Standardizing data from multiple sources to a common format.
+  category: Data & Privacy
+- term: Data Imputation
+  description: Filling in missing data values using statistical methods.
+  category: Analytics
+- term: Data Integration
+  description: Combining data from different sources into a unified view.
+  category: Data & Privacy
+- term: Data Lake
+  description: Centralized repository for storing raw, unstructured data.
+  category: Data & Privacy
+- term: Data Leakage
+  description: Unintended exposure of information from outside the training dataset.
+  category: Data & Privacy
+- term: Data Lineage
+  description: Tracking data origin and transformations throughout its lifecycle.
+  category: Data & Privacy
+- term: Data Minimization
+  description: Limiting data collection to only what is necessary.
+  category: Data & Privacy
+- term: Data Preprocessing
+  description: Preparing data for analysis through normalization and encoding.
+  category: Analytics
+- term: Data Provenance
+  description: Documentation of data origins and processing history.
+  category: Data & Privacy
+- term: Data Quality
+  description: Measure of data’s accuracy, completeness, and reliability.
+  category: Data & Privacy
+- term: Data Stewardship
+  description: Overseeing data assets to ensure quality and compliance.
+  category: Data & Privacy
+- term: Data Use Agreement (DUA)
+  description: Contract governing data sharing and usage between parties.
+  category: Data & Privacy
+- term: Data Wrangling
+  description: Cleaning and transforming raw data into a usable format.
+  category: Analytics
+- term: Deep Learning
+  description: Machine learning using neural networks with multiple layers.
+  category: General ML
+- term: De-identification
+  description: Removing or obscuring personal identifiers from data.
+  category: Data & Privacy
+- term: Descriptive Analytics
+  description: Examining data to understand past events and trends.
+  category: Analytics
+- term: Differential Expression
+  description: Identifying genes expressed differently between conditions.
+  category: Bioinformatics
+- term: Differential Privacy
+  description: Ensuring outputs do not reveal individual data points.
+  category: Security/Privacy
+- term: Digital Biomarker
+  description: Digital data indicating health status or disease progression.
+  category: Clinical/Healthcare
+- term: Digital Pathology
+  description: Analysis of digitized pathology slides using computational methods.
+  category: Clinical/Healthcare
+- term: Digital Twin
+  description: Virtual representation of a patient or system for simulation.
+  category: Clinical/Healthcare
+- term: Distributed Learning
+  description: Model training across multiple locations or devices.
+  category: General ML
+- term: DNA Sequencing
+  description: Determining the order of nucleotides in DNA.
+  category: Bioinformatics
+- term: Edge Computing in FL
+  description: Performing FL computations on edge devices to reduce latency.
+  category: Federated Learning
+- term: Electronic Health Record (EHR)
+  description: Digital record of a patient’s medical history.
+  category: Clinical/Healthcare
+- term: Electronic Medical Record (EMR)
+  description: Digital version of a patient’s paper chart.
+  category: Clinical/Healthcare
+- term: Ensemble Learning
+  description: Combining multiple models to improve prediction accuracy.
+  category: General ML
+- term: Ethics Board
+  description: Committee overseeing ethical aspects of research and data use.
+  category: Clinical/Healthcare
+- term: Exploratory Data Analysis (EDA)
+  description: Summarizing main characteristics of datasets through analysis.
+  category: Analytics
+- term: Explainable AI (XAI)
+  description: AI systems whose decisions can be understood by humans.
+  category: General ML
+- term: FAIR Principles
+  description: Guidelines for making data Findable, Accessible, Interoperable, Reusable.
+  category: Data & Privacy
+- term: Federated Analytics
+  description: Analyzing distributed data without moving or centralizing it.
+  category: Federated Learning
+- term: Federated Averaging (FedAvg)
+  description: FL algorithm averaging local model parameters for global updates.
+  category: Federated Learning
+- term: Federated Feature Engineering
+  description: Feature engineering in FL without sharing raw data.
+  category: Federated Learning
+- term: Federated Learning
+  description: ML training across decentralized devices without data exchange.
+  category: Federated Learning
+- term: Federated One-Shot Analysis
+  description: Single-round federated analysis without iterative communication.
+  category: Federated Learning
+- term: Federated Query
+  description: Querying distributed datasets without centralizing data.
+  category: Federated Learning
+- term: FedProx
+  description: FL algorithm improving performance on non-IID data.
+  category: Federated Learning
+- term: FHIR
+  description: Standard for electronic healthcare information exchange.
+  category: Clinical/Healthcare
+- term: Genotype
+  description: Genetic makeup of an organism.
+  category: Bioinformatics
+- term: Genome-Wide Association Study (GWAS)
+  description: Study associating genetic variants with traits or diseases.
+  category: Bioinformatics
+- term: Generalization
+  description: Model’s ability to perform well on unseen data.
+  category: General ML
+- term: Gradient Leakage
+  description: Attack reconstructing training data from shared gradients.
+  category: Security/Privacy
+- term: Health Information Exchange (HIE)
+  description: Electronic sharing of health-related information among organizations.
+  category: Clinical/Healthcare
+- term: HL7
+  description: Standards for transferring clinical and administrative data.
+  category: Clinical/Healthcare
+- term: Homomorphic Encryption
+  description: Encryption allowing computations on encrypted data without decryption.
+  category: Security/Privacy
+- term: Horizontal Federated Learning
+  description: FL with same features but different samples across clients.
+  category: Federated Learning
+- term: Horizontally Partitioned Data
+  description: Data with different rows stored in different locations.
+  category: Data & Privacy
+- term: Hyperparameter
+  description: Parameter set before training, not learned from data.
+  category: General ML
+- term: ICD-10
+  description: International classification system for diseases and health conditions.
+  category: Clinical/Healthcare
+- term: Imbalanced Data
+  description: Datasets where some classes are underrepresented.
+  category: Analytics
+- term: Informed Consent
+  description: Patient agreement for data use in research.
+  category: Clinical/Healthcare
+- term: Interoperability
+  description: Ability of systems to exchange and use information.
+  category: Data & Privacy
+- term: k-anonymity
+  description: Ensuring records are indistinguishable from at least k-1 others.
+  category: Security/Privacy
+- term: Key Performance Indicators (KPIs)
+  description: Metrics evaluating organizational or activity success.
+  category: Analytics
+- term: Label Noise
+  description: Incorrect or inconsistent labels in training data.
+  category: Analytics
+- term: Label Propagation
+  description: Spreading labels from labeled to unlabeled data points.
+  category: General ML
+- term: Latency
+  description: Delay between input and response in a system.
+  category: Analytics
+- term: Local Differential Privacy
+  description: Privacy protection applied at the data source before sharing.
+  category: Security/Privacy
+- term: Longitudinal Study
+  description: Research collecting data from the same subjects over time.
+  category: Clinical/Healthcare
+- term: Machine Learning
+  description: Enabling computers to learn from data without explicit programming.
+  category: General ML
+- term: Medical Imaging
+  description: Creating visual representations of the interior of a body.
+  category: Clinical/Healthcare
+- term: Membership Inference
+  description: Attacks to identify if data was used in training.
+  category: Security/Privacy
+- term: Meta-Learning in Federated Learning
+  description: Meta-learning for fast adaptation of FL global models.
+  category: Federated Learning
+- term: Metabolomics
+  description: Study of chemical processes involving metabolites.
+  category: Bioinformatics
+- term: Minimum Data Set
+  description: Smallest set of data elements for a specific purpose.
+  category: Data & Privacy
+- term: mHealth
+  description: Using mobile devices for medicine and public health.
+  category: Clinical/Healthcare
+- term: Model Compression
+  description: Reducing model size for efficiency.
+  category: General ML
+- term: Model Deployment
+  description: Integrating machine learning models into production environments.
+  category: General ML
+- term: Model Drift
+  description: Model performance degrades due to changing data.
+  category: Analytics
+- term: Model Evaluation
+  description: Assessing model performance using metrics like accuracy.
+  category: Analytics
+- term: Model Explainability
+  description: Ability to interpret and understand model predictions.
+  category: General ML
+- term: Model Personalization
+  description: Adapting FL global models to individual client data.
+  category: Federated Learning
+- term: Model Poisoning
+  description: Malicious client updates degrading FL global models.
+  category: Security/Privacy
+- term: Model Selection
+  description: Choosing the best machine learning model for a task.
+  category: General ML
+- term: Model Training
+  description: Teaching machine learning models using data.
+  category: General ML
+- term: Multi-Omics
+  description: Integrative analysis of multiple omics data types.
+  category: Bioinformatics
+- term: Multi-Task Learning
+  description: Training models on multiple related tasks simultaneously.
+  category: General ML
+- term: Neural Network
+  description: Computational model inspired by the human brain.
+  category: General ML
+- term: Next-Generation Sequencing (NGS)
+  description: High-throughput DNA sequencing technologies.
+  category: Bioinformatics
+- term: Non-IID Data
+  description: Data not independently and identically distributed across clients.
+  category: Federated Learning
+- term: OHDSI
+  description: Community developing standards for observational health data.
+  category: Clinical/Healthcare
+- term: Omics Data
+  description: Large-scale datasets from genomics, proteomics, etc.
+  category: Bioinformatics
+- term: One-Shot Federated Learning
+  description: FL training global model in a single communication round.
+  category: Federated Learning
+- term: Ontology
+  description: Structured vocabulary for a domain, enabling data integration.
+  category: Bioinformatics
+- term: Overfitting
+  description: Model learns training data too well, performs poorly on new data.
+  category: General ML
+- term: Patient Cohort
+  description: Group of patients sharing common characteristics.
+  category: Clinical/Healthcare
+- term: Patient Similarity Learning
+  description: Identifying similar patients for diagnosis or treatment planning.
+  category: Clinical/Healthcare
+- term: Pathology Informatics
+  description: Application of informatics in pathology for data management and analysis.
+  category: Clinical/Healthcare
+- term: Personal Health Record (PHR)
+  description: Health record managed and controlled by the patient.
+  category: Clinical/Healthcare
+- term: Personalized Federated Learning (PFL)
+  description: FL customizing models for each client’s data.
+  category: Federated Learning
+- term: Personally Identifiable Information (PII)
+  description: Data that can identify an individual.
+  category: Data & Privacy
+- term: Pharmacogenomics
+  description: Study of how genes affect drug response.
+  category: Bioinformatics
+- term: Phenotype
+  description: Observable characteristics of an organism.
+  category: Bioinformatics
+- term: Predictive Analytics
+  description: Predicting future events using data analysis.
+  category: Analytics
+- term: Prescriptive Analytics
+  description: Recommending actions for optimal outcomes using data.
+  category: Analytics
+- term: Privacy by Design
+  description: Incorporating privacy into system design from the start.
+  category: Security/Privacy
+- term: Privacy-Preserving Computation
+  description: Computations that protect private data.
+  category: Security/Privacy
+- term: Proteomics
+  description: Study of the structure and function of proteins.
+  category: Bioinformatics
+- term: Pseudonymization
+  description: Replacing private identifiers with fake identifiers.
+  category: Security/Privacy
+- term: Quality Assurance (QA)
+  description: Ensuring data and processes meet defined quality standards.
+  category: Analytics
+- term: Quality Control (QC)
+  description: Operational techniques to fulfill quality requirements.
+  category: Analytics
+- term: Real-World Data (RWD)
+  description: Data collected from routine clinical practice.
+  category: Clinical/Healthcare
+- term: Real-World Evidence (RWE)
+  description: Clinical evidence from real-world data analysis.
+  category: Clinical/Healthcare
+- term: Reproducibility
+  description: Ability to obtain consistent results using the same data and methods.
+  category: Analytics
+- term: Scaffold
+  description: FL algorithm reducing client drift using control variates.
+  category: Federated Learning
+- term: Secure Aggregation
+  description: Protocol ensuring only aggregated updates are visible to the server.
+  category: Security/Privacy
+- term: Secure Enclave
+  description: Hardware-based secure area for sensitive computations.
+  category: Security/Privacy
+- term: Secure Multi-Party Computation
+  description: Cryptographic protocol for private multi-party computations.
+  category: Security/Privacy
+- term: Semi-Supervised Learning
+  description: ML using both labeled and unlabeled data.
+  category: General ML
+- term: SHAP Values
+  description: Method for explaining individual model predictions.
+  category: Analytics
+- term: Single-Cell Analysis
+  description: Study of gene expression at the single-cell level.
+  category: Bioinformatics
+- term: SNOMED CT
+  description: Standardized clinical terminology for electronic health records.
+  category: Clinical/Healthcare
+- term: Synthetic Data
+  description: Artificially generated data resembling real data.
+  category: Data & Privacy
+- term: Supervised Learning
+  description: ML using labeled data to train models.
+  category: General ML
+- term: Swarm Learning
+  description: Decentralized ML using blockchain for coordination.
+  category: Federated Learning
+- term: Telemedicine
+  description: Remote diagnosis and treatment via telecommunications.
+  category: Clinical/Healthcare
+- term: Test Data
+  description: Dataset for evaluating trained model performance.
+  category: Analytics
+- term: Tokenization
+  description: Converting sensitive data into non-sensitive tokens.
+  category: Security/Privacy
+- term: Training Data
+  description: Dataset used to train machine learning models.
+  category: Analytics
+- term: Transfer Learning
+  description: Reusing a pre-trained model for a new task.
+  category: General ML
+- term: Transcriptomics
+  description: Study of RNA transcripts produced by the genome.
+  category: Bioinformatics
+- term: Trusted Execution Environment (TEE)
+  description: Secure area of a processor for sensitive computations.
+  category: Security/Privacy
+- term: Underfitting
+  description: Model too simple to capture data patterns.
+  category: General ML
+- term: Unsupervised Learning
+  description: ML finding patterns in unlabeled data.
+  category: General ML
+- term: Validation Data
+  description: Dataset for tuning hyperparameters to prevent overfitting.
+  category: Analytics
+- term: Variant Calling
+  description: Identifying genetic variants from sequence data.
+  category: Bioinformatics
+- term: Vertical Federated Learning
+  description: FL with different features for the same samples across clients.
+  category: Federated Learning
+- term: Vertically Partitioned Data
+  description: Data with different columns stored in different locations.
+  category: Data & Privacy
+- term: Zero-Knowledge Proof
+  description: Proving knowledge of information without revealing it.
+  category: Security/Privacy

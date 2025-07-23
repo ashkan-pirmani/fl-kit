@@ -52,6 +52,21 @@ defaults:
     values:
       sidebar: contribute
 
+  -
+    scope:
+      path: "pages/your_role/"
+    values:
+      type: your_role
+      type_img: /assets/img/section-icons/role-id.svg
+  -
+    scope:
+      path: "pages/fl_framework_assembly/"
+    values:
+      type: fl_framework_assembly
+      type_img: /assets/img/section-icons/tool-assembly.svg
+
+
+
 theme_variables:
   dev-info-banner: true
   topnav:

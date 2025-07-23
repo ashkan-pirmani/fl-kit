@@ -8,16 +8,16 @@ redirect_from: [data_steward_infrastructure, data_steward_policy, data_steward_r
 
 ## Introduction
 
-Data stewardship is a relatively new profession and a catch-all term for numerous support functions, roles and activities. It implies professional and careful treatment of data throughout all stages of a research process. 
+Data stewardship is a relatively new profession and a catch-all term for numerous support functions, roles and activities. It implies professional and careful treatment of data throughout all stages of a research process.
 
 The core responsibilities and tasks vary, from policy advising and consultancy, to operational and technical support and IT related tasks. Responsibilities also vary between and among the different research-performing organisations, and data stewards (DS) often have different job titles.
 
-Data stewards can be categorised in different ways, for example according to their 
+Data stewards can be categorised in different ways, for example according to their
 
  * place in an organisation: coordinator or generic data stewards (hired in a central library, for example), and embedded data steward (working for a research department or project), or
  * on their topic focus: policy oriented, research oriented and infrastructure oriented.\
- See Mijke Jetten, Marjan Grootveld, Annemie Mordant, Mascha Jansen, Margreet Bloemers, Margriet Miedema, & Celia W.G. van Gelder. (2021). Professionalising data stewardship in the Netherlands. Competences, training and education. Dutch roadmap towards national implementation of FAIR data stewardship. Zenodo. <https://doi.org/10.5281/zenodo.4623713>. See also <https://competency.ebi.ac.uk/framework/datasteward/1.0> 
-. 
+ See Mijke Jetten, Marjan Grootveld, Annemie Mordant, Mascha Jansen, Margreet Bloemers, Margriet Miedema, & Celia W.G. van Gelder. (2021). Professionalising data stewardship in the Netherlands. Competences, training and education. Dutch roadmap towards national implementation of FAIR data stewardship. Zenodo. <https://doi.org/10.5281/zenodo.4623713>. See also <https://competency.ebi.ac.uk/framework/datasteward/1.0>
+.
 
 | Role                       | Description |
 | -------------------------- | ----------- |
@@ -30,11 +30,11 @@ Data stewards can be categorised in different ways, for example according to the
 
 ## Data management responsibilities
 
-As a data steward, you are supporting researchers in data handling before, during and after a research project. You need to be aware of how to best support making data more sustainable and remain valuable after a research project ends. 
+As a data steward, you are supporting researchers in data handling before, during and after a research project. You need to be aware of how to best support making data more sustainable and remain valuable after a research project ends.
 
 In your role of data steward, you may need to:
 
- * Act as a knowledge and communication hub; 
+ * Act as a knowledge and communication hub;
  * Advise and support on policy, guidelines, infrastructure, services and tools;
  * Align support functions, tool landscape and RDM policy to the FAIR (Findable, Accessible, Interoperable, Reusable) data principles and the principles of Open Science;
  * Develop, implement, monitor and evaluate policies regarding research data;
@@ -45,7 +45,7 @@ In your role of data steward, you may need to:
 
 ### RDMkit pages
 
- * The [RDM life cycle pages](data_life_cycle) give an overview of data management tasks. 
+ * The [RDM life cycle pages](data_life_cycle) give an overview of data management tasks.
  * [Your domain pages](your_domain) have a description of domain-specific data management challenges, considerations to be taken into account and solutions used by the community to address the challenges. You will also find training material and links to relevant tools and resources.
  * [Your task pages](your_tasks) are organised around regular RDM tasks and challenges. You will find best practices, guidelines, training material as well as links to tools and resources.
  * The [National resources pages](national_resources) point to country-specific information resources such as local funding agencies and research councils, and information on local policies for open science, national regulations on data ethics, and domain-specific infrastructures and tools.
