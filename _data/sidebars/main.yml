@@ -14,14 +14,15 @@ subitems:
     description: Get an overview of how data and models move through the Federated Learning process. Understand each stage so you can better plan, build, and manage your FL projects.
     image_url: /assets/img/fl_life_cycle.svg
     subitems:
-      - title: Analysis
-        url: /analysis
-      - title: Wrangling
-        url: /wrangling
-      - title: Infrastructure
-        url: /infrastructure
       - title: Governance
         url: /governance
+      - title: Infrastructure
+        url: /infrastructure
+      - title: Wrangling
+        url: /wrangling
+      - title: Analysis
+        url: /analysis
+
 
   - title: Framework Assembly
     url: /fl_framework_assembly
