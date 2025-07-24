@@ -57,7 +57,7 @@ defaults:
       path: "pages/your_role/"
     values:
       type: your_role
-      type_img: /assets/img/section-icons/role-id.svg
+      type_img: /assets/img/section-icons/exchange-1.svg
   -
     scope:
       path: "pages/fl_framework_assembly/"

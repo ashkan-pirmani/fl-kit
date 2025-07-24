@@ -4,10 +4,10 @@ contributors: [Ashkan Pirmani]
 page_id: fl_glossary
 search_exclude: false
 toc: false
+
 ---
 Terminology in Federated Learning can be complex and context-specific. The glossary presents clear, concise definitions of key concepts and technical terms to ensure conceptual clarity and promote consistent understanding across disciplines.
 
-**Interactive Glossary Table**
 
 <div class="glossary-table-toolbar">
   <div class="toolbar-group" id="datatable-search-control"></div>
