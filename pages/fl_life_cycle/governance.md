@@ -1,5 +1,5 @@
 ---
-title: governance
+title: Governance
 description: This page describes the role, importance, and best practices of data governance in the data lifecycle, with a focus on FAIR principles.
 contributors: [Ashkan Pirmani]
 search_exclude: true

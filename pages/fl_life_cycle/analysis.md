@@ -1,5 +1,5 @@
 ---
-title: analysing
+title: Analysis
 contributors: [Ashkan Pirmani]
 search_exclude: true
 description: This page describes the role, importance, and best practices of data analysis in the data lifecycle, with a focus on FAIR principles.

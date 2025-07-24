@@ -4,7 +4,7 @@ title: FLkit
 #topnav_title: FLKit
 # Optional: this appears on the top navigation bar next to the main_logo.svg icon
 
-description: "Best practices and guidelines you can use when applying Federated Learning to your research"
+description: "Best practices and guidelines you can use when applying Federated Learning to your research (WIP)"
 # Metadata description of the website
 
 # Names for common variables referenced in the pages
@@ -70,6 +70,12 @@ defaults:
     values:
       type: fl_use_cases
       type_img: /assets/img/section-icons/diversity.svg
+  -
+    scope:
+      path: "pages/fl_community/"
+    values:
+      type: fl_community
+      type_img: /assets/img/section-icons/community.svg
 
 
 
