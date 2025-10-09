@@ -13,7 +13,7 @@ This section provides a structured overview of the Federated Learning (FL) life 
 - **Wrangling:** The processes of preparing, cleaning, harmonizing, and transforming data to make it suitable for federated analysis.
 - **Analysis:** The methods and tools used to train, evaluate, and interpret federated models, turning distributed data into actionable insights.
 
-
+<!--
 <div class="main_rdm mt-5 d-flex justify-content-center">
 	<svg
 		xmlns="http://www.w3.org/2000/svg" style="background: #ffffff; background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color-scheme: light dark;"
@@ -341,10 +341,13 @@ This section provides a structured overview of the Federated Learning (FL) life 
 	</svg>
 </div>
 
+ -->
 
+<div class="fl-diagram">
+  <img src="assets/img/flkit.png" alt="FL Diagram">
+</div>
 
-
-## Technical Readiness Levels for Data and Analysis in Healthcare
+<!-- ## Technical Readiness Levels for Data and Analysis in Healthcare
 
 **TRL 1 – Clinical or Scientific Concept Identified**
 An early-stage healthcare hypothesis or need is identified (e.g., understanding disease burden, evaluating treatment pathways). The idea is conceptual, grounded in literature or expert opinion, with no defined analytical approach.
@@ -373,4 +376,4 @@ The analytical solution is validated across multiple real-world datasets and mee
 **TRL 9 – Real-World Evidence Harnessed for Practice and Policy**
 The tool generates accepted real-world evidence used in decision-making at scale—supporting clinical guidelines, reimbursement models, public health strategies, or regulatory submissions. Results are peer-reviewed or published, and the solution is maintained in live operations.
 
-
+ -->
