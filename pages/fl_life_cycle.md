@@ -1,7 +1,6 @@
 ---
 title: Federated Learning Life Cycle
 contributors: [Ashkan Pirmani]
-page_id: fl_life_cycle
 search_exclude: false
 toc: false
 ---
