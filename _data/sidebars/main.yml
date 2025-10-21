@@ -51,10 +51,17 @@ subitems:
         url: /wings
       - title: Templates
         subitems:
-        - title: Generic
+        - title: Template 0.1
           url: /new_template
+        - title: Template 0.2
+          url: /new_template_v12
+        - title: Template 0.3
+          url: /template_v2
         - title: FL-MS
           url: /new_fl_ms
+        - title: FBBTR-BCI
+          url: /fbttr_bci
+
 
   - title: FL Communities
     url: /fl_community
@@ -79,6 +86,16 @@ subitems:
     subitems:
       - title: Data Steward
         url: /data_steward
+      - title: Data Protection Officer (DPO) / Legal Advisor
+        url: /data_protection_officer
+      - title: Clinical Researcher / Data Generator
+        url: /clinical_researcher
+      - title: Federated Model Developer / Data Scientist
+        url: /federated_model_developer
+      - title: Coordinator / Project Manager
+        url: /coordinator
+      - title: Federated Data Steward
+        url: /federated_data_steward
       - title: Policy maker
         url: /policy_maker
       - title: Principal Investigator (PI)

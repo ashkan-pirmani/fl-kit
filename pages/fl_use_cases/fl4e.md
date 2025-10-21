@@ -1,7 +1,6 @@
 ---
 title: Federated Learning for Everyone (FL4E)
 contributors: [Axel Faes]
-page_id: fl4e
 search_exclude: false
 description: Overview of the FL4E framework, which simplifies and democratizes federated learning for clinical research, enabling flexible, scalable, and inclusive collaboration across healthcare stakeholders.
 ---

@@ -13,23 +13,43 @@ training:
 ---
 
 ## What is data wrangling?
-Data wrangling, also known as data cleaning or data munging, is the process of transforming and mapping raw data into a usable format for analysis. This includes cleaning, structuring, and enriching data to ensure its quality and suitability for downstream tasks. Data wrangling is a crucial step in the data lifecycle, bridging the gap between data collection and analysis.
+Data wrangling, also known as data cleaning or data munging, is the process of preparing raw data for analysis by transforming it into a structured, consistent, and enriched format. In the context of **federated learning**, wrangling typically happens locally at each data partner site, making it a **decentralized process**. Wrangling in FL ensures that multi-site datasets are compatible, harmonized, and analysis-ready, without needing to pool the data centrally.
 
 ## Why is data wrangling important?
-Data wrangling is essential because real-world data is often messy, incomplete, or inconsistent. Effective wrangling:
-- Improves data quality and reliability
-- Reduces errors and biases in analysis
-- Ensures data is in a standardized, interoperable format
-- Saves time and resources in later stages of the data lifecycle
-- Supports compliance with FAIR principles by making data more findable, accessible, interoperable, and reusable
+Real-world data is often messy, incomplete, or inconsistent. Effective wrangling is essential to ensure data quality and comparability across multiple sources. In federated learning, it also plays a critical role in aligning local datasets to enable model training across institutions without centralizing data. Wrangling helps to:
+
+- Improve local data quality, completeness, and consistency
+
+- Enable semantic and syntactic interoperability across partners
+
+- Reduce technical variation that could bias federated models
+
+- Support model generalizability and fairness
+
+- Contribute to compliance with FAIR principles at the local level
+
+- Prevent data errors or schema mismatches during training
+
+- Minimize rework during model deployment or evaluation
+
 
 ## What should be considered for data wrangling?
-To ensure best practices and adherence to FAIR principles during data wrangling, consider the following:
-* **Data Quality:** Identify and address missing values, duplicates, outliers, and inconsistencies.
-* **Documentation:** Record all transformations, cleaning steps, and decisions for transparency and reproducibility.
-* **Standardization:** Use common formats, units, and controlled vocabularies to enhance interoperability.
-* **Automation:** Where possible, automate wrangling processes to reduce manual errors and improve efficiency.
-* **Ethics and Privacy:** Remove or anonymize sensitive information as required by regulations and ethical standards.
-* **Version Control:** Track changes to data and scripts to enable rollback and collaboration.
-* **FAIR Principles:** Ensure that cleaned and processed data, as well as wrangling scripts, are well-documented and shared in accessible repositories.
-* **Validation:** Regularly validate data after wrangling to ensure accuracy and completeness.
+To ensure high-quality, ethical, and interoperable data wrangling in federated settings, consider:
+
+* **Local Preprocessing Pipelines**: Implement consistent wrangling pipelines across sites using shared protocols or scripts, even if the data stays local.
+
+* **Common Data Models**: Map local data to shared schemas (e.g. OMOP CDM, FHIR, custom federated schemas) to ensure semantic alignment.
+
+* **Data Quality Checks**: Address missing values, inconsistent units, outliers, duplicates, and errors at each node.
+
+* **Transformation Transparency**: Document and version all wrangling steps to ensure reproducibility and trust.
+
+* **Anonymization or Pseudonymization**: Remove or mask personally identifiable information to comply with privacy requirements.
+
+* **Validation Across Sites**: Use distributed validation tools or federated QA dashboards to ensure harmonization and detect inconsistencies.
+
+* **Script Sharing & Containerization**: Share reusable wrangling code (e.g. as Docker containers or Jupyter notebooks) while keeping raw data local.
+
+* **Automation & Monitoring**: Automate where possible and monitor logs for pipeline errors or deviations.
+
+* **FAIR-by-Design**: Align wrangling outputs (metadata, formats, units) with FAIR principles to ensure downstream usability.

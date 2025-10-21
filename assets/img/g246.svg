@@ -1,19 +1,9 @@
----
-title: Federated Learning Life Cycle
-contributors: [Ashkan Pirmani]
-search_exclude: false
-toc: false
----
-
-Unlike centralized machine learning, FL involves training models across distributed data sources without moving the data. This introduces specific challenges around governance, interoperability, coordination, and secure infrastructure.
-
-<div class="main_rdm mt-5 d-flex justify-content-start" style="margin-left: 100px;">
-
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="650"
+   width="885.92194"
    zoomAndPan="magnify"
    viewBox="0 0 664.44145 652.19531"
-   height="650"
+   height="869.59375"
    preserveAspectRatio="xMidYMid"
    version="1.0"
    id="svg498"
@@ -166,7 +156,6 @@ Unlike centralized machine learning, FL involves training models across distribu
          id="rect14" />
     </clipPath>
   </defs>
-  <a xlink:href="./governance" style="cursor: pointer;">
   <g
      clip-path="url(#9c614deaa0)"
      id="g22"
@@ -178,8 +167,6 @@ Unlike centralized machine learning, FL involves training models across distribu
        fill-rule="nonzero"
        id="path22" />
   </g>
-  </a>
-  <a xlink:href="./infrastructure" style="cursor: pointer;">
   <g
      clip-path="url(#27e502b574)"
      id="g23"
@@ -191,8 +178,6 @@ Unlike centralized machine learning, FL involves training models across distribu
        fill-rule="nonzero"
        id="path23" />
   </g>
-  </a>
-  <a xlink:href="./wrangling" style="cursor: pointer;">
   <g
      clip-path="url(#0890fd2a45)"
      id="g24"
@@ -210,8 +195,6 @@ Unlike centralized machine learning, FL involves training models across distribu
      fill-opacity="1"
      fill-rule="nonzero"
      id="path25" />
-  </a>
-  <a xlink:href="./analysis" style="cursor: pointer;">
   <g
      clip-path="url(#e4bd74a1c2)"
      id="g26"
@@ -229,8 +212,6 @@ Unlike centralized machine learning, FL involves training models across distribu
      fill-opacity="1"
      fill-rule="nonzero"
      id="path27" />
-  </a>
-  <a xlink:href="./infrastructure" style="cursor: pointer;">
   <g
      clip-path="url(#c83e6a3175)"
      id="g28"
@@ -242,8 +223,6 @@ Unlike centralized machine learning, FL involves training models across distribu
        fill-rule="nonzero"
        id="path28" />
   </g>
-  </a>
-  <a xlink:href="./governance" style="cursor: pointer;">
   <g
      clip-path="url(#7dd37787c8)"
      id="g29"
@@ -255,8 +234,6 @@ Unlike centralized machine learning, FL involves training models across distribu
        fill-rule="nonzero"
        id="path29" />
   </g>
-  </a>
-  <a xlink:href="./fl_framework" style="cursor: pointer;">
   <g
      clip-path="url(#016950400a)"
      id="g35"
@@ -288,7 +265,6 @@ Unlike centralized machine learning, FL involves training models across distribu
       </g>
     </g>
   </g>
-  </a>
   <g
      clip-path="url(#cf0aa91ab9)"
      id="g37"
@@ -1331,41 +1307,3 @@ Unlike centralized machine learning, FL involves training models across distribu
     </g>
   </g>
 </svg>
-
-
-</div>
-
-
-
-
-
-<!-- ## Technical Readiness Levels for Data and Analysis in Healthcare
-
-**TRL 1 – Clinical or Scientific Concept Identified**
-An early-stage healthcare hypothesis or need is identified (e.g., understanding disease burden, evaluating treatment pathways). The idea is conceptual, grounded in literature or expert opinion, with no defined analytical approach.
-
-**TRL 2 – Analytical Approach Formulated**
-Initial discussions shape how data could support the healthcare question. This may include identifying potential data sources (e.g., EHRs, claims, registries) and suggesting broad analytical methods (e.g., cohort studies, ML models). No data extraction or modeling occurs yet.
-
-**TRL 3 – Feasibility Demonstrated Using Sample Data**
-Data availability and quality are assessed using small samples or public datasets. A proof of concept is developed—such as a basic model or summary statistics—to test initial assumptions. Clinical stakeholders are often engaged to refine the scope.
-
-**TRL 4 – Data Pipeline and Preliminary Model Built in Controlled Setting**
-A prototype data pipeline is constructed using real healthcare data (e.g., EHRs, lab results). Early models or analytics are tested, but only within a sandbox or test environment. Regulatory and privacy constraints are considered at this stage.
-
-**TRL 5 – Model or Analytical Tool Validated in Relevant Healthcare Setting**
-The solution is applied to a real clinical dataset relevant to the target population. Issues like data completeness, coding variability (e.g., ICD/LOINC/SNOMED), and confounders are addressed. Early validation is performed (e.g., comparison to gold standards or known outcomes).
-
-**TRL 6 – Prototype Used in Pilot Setting with Clinical Input**
-An operational prototype (such as a risk score, decision support tool, or population health dashboard) is tested in collaboration with clinicians or care teams. The model outputs begin influencing early-stage decision-making or workflow evaluations.
-
-**TRL 7 – Deployment in Clinical or Operational Environment**
-The solution is integrated into a real-world healthcare system, such as being embedded in EHR workflows or clinical dashboards. The tool supports care decisions, policy evaluation, or operational planning. Usage, safety, and performance are monitored closely.
-
-**TRL 8 – Fully Qualified Solution with Governance and Monitoring**
-The analytical solution is validated across multiple real-world datasets and meets clinical, regulatory, and operational standards. Robust governance is in place for model updates, bias monitoring, data provenance, and explainability.
-
-**TRL 9 – Real-World Evidence Harnessed for Practice and Policy**
-The tool generates accepted real-world evidence used in decision-making at scale—supporting clinical guidelines, reimbursement models, public health strategies, or regulatory submissions. Results are peer-reviewed or published, and the solution is maintained in live operations.
-
- -->
