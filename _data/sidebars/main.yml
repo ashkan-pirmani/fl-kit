@@ -79,6 +79,16 @@ subitems:
     subitems:
       - title: Data Steward
         url: /data_steward
+      - title: Data Protection Officer (DPO) / Legal Advisor
+        url: /data_protection_officer
+      - title: Clinical Researcher / Data Generator
+        url: /clinical_researcher
+      - title: Federated Model Developer / Data Scientist
+        url: /federated_model_developer
+      - title: Coordinator / Project Manager
+        url: /coordinator
+      - title: Federated Data Steward
+        url: /federated_data_steward
       - title: Policy maker
         url: /policy_maker
       - title: Principal Investigator (PI)
