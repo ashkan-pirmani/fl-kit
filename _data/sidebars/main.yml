@@ -52,11 +52,9 @@ subitems:
       - title: Templates
         subitems:
         - title: Template 0.1
-          url: /new_template
-        - title: Template 0.2
-          url: /new_template_v12
-        - title: Template 0.3
-          url: /template_v2
+          url: /template_v0.1
+        - title: Template 1.1
+          url: /template_v1.1
         - title: FL-MS
           url: /new_fl_ms
         - title: FBBTR-BCI

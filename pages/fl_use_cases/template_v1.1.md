@@ -92,22 +92,82 @@ details.example .example-content li {
   margin: 8px 0;
 }
 
-/* Guidance boxes */
-.guidance {
-  background: #f8f9fa;
-  border-left: 4px solid #28a745;
-  padding: 16px 20px;
-  margin: 16px 0;
-  border-radius: 4px;
-  font-size: 0.95em;
+/* Phase Introduction Box */
+.phase-intro {
+  background: linear-gradient(to right, #f8f9ff, #faf8ff);
+  border-left: 5px solid #9333ea;
+  padding: 20px 24px;
+  margin: 20px 0 30px 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(147, 51, 234, 0.1);
+  font-size: 1.05em;
   line-height: 1.7;
+}
+
+/* Phase metadata items */
+.phase-meta {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.phase-meta-item {
+  margin: 16px 0;
+  padding-left: 28px;
+  position: relative;
+}
+
+.phase-meta-item::before {
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+}
+
+.phase-meta-item.questions::before {
+  content: "❓";
+}
+
+.phase-meta-item.people::before {
+  content: "👥";
+}
+
+.phase-meta-item.timeline::before {
+  content: "⏱️";
+}
+
+.phase-meta-item.mistakes::before {
+  content: "⚠️";
+}
+
+.phase-meta-item.deliverables::before {
+  content: "📦";
+}
+
+.phase-meta-item strong {
+  color: #6366f1;
+  font-size: 0.95em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Lifecycle connection box */
+.lifecycle-note {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  border-left: 5px solid #f59e0b;
+  padding: 20px 24px;
+  margin: 25px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(245, 158, 11, 0.1);
 }
 </style>
 
 <div class="info-box">
   <strong>📘 About This Template:</strong> This template guides you through documenting your federated analytics project across its complete lifecycle, from initial planning to deployment. It follows best practices for reproducible, transparent, and ethical federated learning research.
   <br><br>
-  <strong>💡 How to use:</strong> Read each section's guidance text carefully - it explains what to document and why it matters. Click on examples to see how these sections were completed for a real published study (Multiple Sclerosis disability progression prediction using personalized federated learning).
+  <strong>💡 How to use:</strong> Read each section's guidance text carefully - it explains what to document and why it matters. Click on examples to see how these sections were completed for a real published study (Multiple Sclerosis disability progression prediction using personalized federated learning) {% cite Pirmani2025-sd %}.
   <br><br>
   <button onclick="toggleAllExamples()" id="toggleBtn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 600; box-shadow: 0 2px 4px rgba(102,126,234,0.3); transition: all 0.2s ease;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(102,126,234,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(102,126,234,0.3)'">
     ✨ Show All Examples
@@ -148,21 +208,51 @@ This template follows eight phases that mirror the natural progression of a fede
 7. **📚 Reproducibility & Sharing** - Enable validation and reuse by others
 8. **🚀 Maturity Assessment & Path Forward** - Assess readiness and reflect on lessons learned
 
+<div class="lifecycle-note">
+  <strong>📍 How This Template Relates to the FL Lifecycle:</strong> This template provides detailed documentation guidance for federated analytics projects. It aligns with the broader <a href="/fl_life_cycle">Federated Learning Lifecycle</a> covering Analysis, Wrangling, Infrastructure, Governance, and Training stages. Each phase here maps to specific lifecycle stages:
+  <br><br>
+  <strong>Phases 1-2</strong> (Planning & Governance) → <em>Governance & Analysis stages</em>
+  <br>
+  <strong>Phases 3-4</strong> (Data & Infrastructure) → <em>Wrangling & Infrastructure stages</em>
+  <br>
+  <strong>Phases 5-6</strong> (Training & Security) → <em>Training stage with privacy controls</em>
+  <br>
+  <strong>Phases 7-8</strong> (Sharing & Maturity) → <em>Publication, deployment, and reflection</em>
+  <br><br>
+  Use this template to document your project as you progress through the FL lifecycle. Each phase builds on the previous, though some activities overlap (e.g., governance continues throughout).
+</div>
+
 ---
 
 ## 🎯 Phase 1: Planning & Scoping
 
-**This is where everything begins.** Before writing code or contacting potential partners, you need crystal-clear answers to fundamental questions: What problem are we solving? Why does it matter? Why can't we just pool data centrally? What exactly will we deliver, and what's out of scope?
+<div class="phase-intro">
+<strong>This is where everything begins.</strong> Before writing code or contacting potential partners, you need crystal-clear answers to fundamental questions: What problem are we solving? Why does it matter? Why can't we just pool data centrally? What exactly will we deliver, and what's out of scope?
+</div>
 
-**Key questions to answer:** What specific clinical, scientific, or operational gap are you filling? Who benefits (patients, researchers, policymakers)? Why is federated analytics necessary rather than just preferable? What does success look like concretely? What assumptions underpin your approach, and how will you validate them?
+<div class="phase-meta">
 
-**Who's involved:** Principal investigators and domain experts define the problem and objectives. Legal and compliance officers identify regulatory barriers to centralization. Project managers establish scope boundaries and timelines. Funding agencies assess whether problem justifies resources.
+<div class="phase-meta-item questions">
+<strong>Key Questions:</strong> What specific clinical, scientific, or operational gap are you filling? Who benefits (patients, researchers, policymakers)? Why is federated analytics necessary rather than just preferable? What does success look like concretely? What assumptions underpin your approach, and how will you validate them?
+</div>
 
-**Timeline:** Initial scoping: 1-2 weeks of stakeholder discussions and literature review. Refinement happens throughout project as you learn more, but major scope changes after Phase 3 are costly.
+<div class="phase-meta-item people">
+<strong>Who's Involved:</strong> Principal investigators and domain experts define the problem and objectives. Legal and compliance officers identify regulatory barriers to centralization. Project managers establish scope boundaries and timelines. Funding agencies assess whether problem justifies resources.
+</div>
 
-**Common mistakes:** Vague problem statements ("improve healthcare"), unrealistic objectives (overpromising performance), weak federation justification (could actually centralize with proper agreements), hidden assumptions that blow up later (assuming all sites have same data quality).
+<div class="phase-meta-item timeline">
+<strong>Timeline:</strong> Initial scoping: First couple of weeks of stakeholder discussions and literature review. Refinement happens throughout project as you learn more, but major scope changes after Phase 3 are costly.
+</div>
 
-**Deliverables from this phase:** One-page project summary, stakeholder roster with commitments, explicit list of in-scope and out-of-scope deliverables, documented assumptions with validation plan.
+<div class="phase-meta-item mistakes">
+<strong>Common Mistakes:</strong> Vague problem statements ("improve healthcare"), unrealistic objectives (overpromising performance), weak federation justification (could actually centralize with proper agreements), hidden assumptions that blow up later (assuming all sites have same data quality).
+</div>
+
+<div class="phase-meta-item deliverables">
+<strong>Deliverables:</strong> One-page project summary, stakeholder roster with commitments, explicit list of in-scope and out-of-scope deliverables, documented assumptions with validation plan.
+</div>
+
+</div>
 
 ### Problem and Domain
 
@@ -303,17 +393,33 @@ This project does not include:
 
 ## ⚖️ Phase 2: Governance & Ethics
 
-**Governance can make or break multi-institutional projects.** This phase establishes legal and ethical frameworks, defines decision-making authority, and builds trust among partners. Without solid governance, projects stall in endless negotiations or face ethics violations. Done well, governance becomes your foundation for long-term collaboration.
+<div class="phase-intro">
+<strong>Governance can make or break multi-institutional projects.</strong> This phase establishes legal and ethical frameworks, defines decision-making authority, and builds trust among partners. Without solid governance, projects stall in endless negotiations or face ethics violations. Done well, governance becomes your foundation for long-term collaboration.
+</div>
 
-**Key questions to answer:** Who approves what decisions? What's the legal basis for processing sensitive data? Which ethics committees need to review this work? How will results be shared and published? What happens if a partner wants to withdraw? How do we handle disputes?
+<div class="phase-meta">
 
-**Who's involved:** Principal investigators lead consortium building. Legal counsels draft agreements. Ethics committees (IRBs) review protocols. Data protection officers assess GDPR compliance. Institutional signing authorities approve contracts. Patient advocates may review for some clinical projects.
+<div class="phase-meta-item questions">
+<strong>Key Questions:</strong> Who approves what decisions? What's the legal basis for processing sensitive data? Which ethics committees need to review this work? How will results be shared and published? What happens if a partner wants to withdraw? How do we handle disputes?
+</div>
 
-**Timeline:** This is often the LONGEST phase (3-12 months). Multi-party agreements take time. Ethics reviews can require multiple rounds of revision. Do NOT underestimate. Start early, often in parallel with Phase 1.
+<div class="phase-meta-item people">
+<strong>Who's Involved:</strong> Principal investigators lead consortium building. Legal counsels draft agreements. Ethics committees (IRBs) review protocols. Data protection officers assess GDPR compliance. Institutional signing authorities approve contracts. Patient advocates may review for some clinical projects.
+</div>
 
-**Common mistakes:** Underestimating timeline for ethics/legal (budget 6+ months), forgetting to get institutional signing authority approval (not just PI agreement), unclear authorship rules leading to publication conflicts, not documenting data access procedures clearly, skipping data protection impact assessments.
+<div class="phase-meta-item timeline">
+<strong>Timeline:</strong> This is often the LONGEST phase (Even it can take up to years). Multi-party agreements take time. Ethics reviews can require multiple rounds of revision. Do NOT underestimate. Start early, often in parallel with Phase 1.
+</div>
 
-**Deliverables from this phase:** Signed consortium agreement or data use agreements, ethics approval letters with reference numbers, documented roles and responsibilities, publication policy document, data access and sharing policy.
+<div class="phase-meta-item mistakes">
+<strong>Common Mistakes:</strong> Underestimating timeline for ethics/legal (budget 6+ months), forgetting to get institutional signing authority approval (not just PI agreement), unclear authorship rules leading to publication conflicts, not documenting data access procedures clearly, skipping data protection impact assessments.
+</div>
+
+<div class="phase-meta-item deliverables">
+<strong>Deliverables:</strong> Signed consortium agreement or data use agreements, ethics approval letters with reference numbers, documented roles and responsibilities, publication policy document, data access and sharing policy.
+</div>
+
+</div>
 
 ### Stakeholders and Roles
 
@@ -325,12 +431,12 @@ This project does not include:
 <summary>📝 Example from FL-MS Study</summary>
 <div class="example-content" markdown="1">
 
-**Principal Investigator:** Ashkan Pirmani (KU Leuven, Belgium)
+**Principal Investigator:** Ashkan Pirmani (KU Leuven - , Belgium)
 **Supervisors:** Yves Moreau (KU Leuven), Edward De Brouwer (KU Leuven), Liesbet M. Peeters (Hasselt University & Universitair MS Centrum Pelt)
-**Technical Team:** Martijn Oldenhof, Ádám Arany, Antoine Passemiers, Axel Faes (KU Leuven ESAT-STADIUS)
+**Technical Team:** Martijn Oldenhof, Ádám Arany, Antoine Passemiers (KU Leuven), Axel Faes (Hasselt University)
 **Data Provider:** MSBase International Registry (coordinated by University of Melbourne)
 **MSBase Study Group:** 70+ co-authors representing participating clinics across 32 countries (see full author list in publication)
-**Ethics Oversight:** KU Leuven Social and Societal Ethics Committee
+**Ethics Oversight:** Uhasselt, KU Leuven and Universitait MS Centrum Pelt  Social and Societal Ethics Committee
 **Compute Provider:** Flanders Supercomputer Center (VSC)
 **End Users:** Clinicians managing MS patients, MS researchers developing prognostic tools
 
@@ -347,9 +453,12 @@ This project does not include:
 <summary>📝 Example from FL-MS Study</summary>
 <div class="example-content" markdown="1">
 
-**KU Leuven PRET (Privacy, Research Ethics and Technology) Approval:** G 2023 6771
+**Hasselt University and KU Leuven PRET (Privacy, Research Ethics and Technology) Approval:** G 2023 6771
+
 **Social and Societal Ethics Committee:** Confirmed GDPR alignment for federated processing of MSBase data
+
 **Data Provider Ethics:** MSBase has existing multi-center ethics framework covering participating sites globally. Individual site approvals managed by MSBase consortium.
+
 **Key Conditions:** All analyses conducted in simulated manner with data remaining on approved computing host (Flanders Supercomputer Center). No physical data transfer or splitting across storage locations.
 
 </div>
@@ -365,7 +474,7 @@ This project does not include:
 <summary>📝 Example from FL-MS Study</summary>
 <div class="example-content" markdown="1">
 
-**Approved by ethics committee.** KU Leuven granted PRET approval (G 2023 6771) for secondary analysis of de-identified MSBase registry data. The Social and Societal Ethics Committee confirmed the federated simulation approach complies with GDPR. No individual patient consent required for this secondary analysis under European research exception provisions, as data were already collected under MSBase's established multi-center ethics framework with appropriate patient consent at participating sites.
+**Approved by ethics committee.** Hasselt University and KU Leuven granted approval (G 2023 6771) for secondary analysis of de-identified MSBase registry data. The Social and Societal Ethics Committee confirmed the federated simulation approach complies with GDPR. No individual patient consent required for this secondary analysis under European research exception provisions, as data were already collected under MSBase's established multi-center ethics framework with appropriate patient consent at participating sites.
 
 </div>
 </details>
@@ -381,7 +490,9 @@ This project does not include:
 <div class="example-content" markdown="1">
 
 **GDPR Legal Basis:** Article 6(1)(e) processing necessary for research in public interest + Article 9(2)(j) processing special category health data for scientific research with appropriate safeguards
-**Data Use Agreement:** Researchers accessed MSBase harmonized dataset under established agreements between KU Leuven and MSBase consortium. Agreement specifies: (1) Data remains on approved computing infrastructure (Flanders Supercomputer Center), (2) No data transfer to third parties, (3) Results may be published with appropriate co-authorship acknowledging MSBase contributors, (4) Code must be made openly available.
+
+**Data Use Agreement:** Researchers accessed MSBase harmonized dataset under established agreements between Hasselt University, KU Leuven and MSBase consortium. Agreement specifies: (1) Data remains on approved computing infrastructure (Flanders Supercomputer Center), (2) No data transfer to third parties, (3) Results may be published with appropriate co-authorship acknowledging MSBase contributors, (4) Code must be made openly available.
+
 **Key Terms:** MSBase retains data ownership. Derived models and analysis code belong to research team. Publications require coordination with MSBase steering committee.
 
 </div>
@@ -436,13 +547,25 @@ This project does not include:
 
 ## 🗂️ Phase 3: Data & Standards
 
-**Understanding your data landscape is critical before building any federated system.** This phase characterizes what data exist at each site, how heterogeneous they are across clients, and what standards or harmonization steps are needed to make distributed data semantically comparable.
+<div class="phase-intro">
+<strong>Understanding your data landscape is critical before building any federated system.</strong> This phase characterizes what data exist at each site, how heterogeneous they are across clients, and what standards or harmonization steps are needed to make distributed data semantically comparable.
+</div>
 
-**Key questions to answer:** Where does your data live? How many clients will participate? How different are they from each other (data volume, feature distributions, outcome prevalence)? What clinical or technical vocabularies do you need to align? What data quality issues exist?
+<div class="phase-meta">
 
-**Common mistakes to avoid:** Assuming all sites have similar data quality or feature availability, underestimating harmonization effort, ignoring extreme heterogeneity that might make federation infeasible.
+<div class="phase-meta-item questions">
+<strong>Key Questions:</strong> Where does your data live? How many clients will participate? How different are they from each other (data volume, feature distributions, outcome prevalence)? What clinical or technical vocabularies do you need to align? What data quality issues exist?
+</div>
 
-**Deliverables from this phase:** Client inventory with data volumes, data quality assessment reports from each site, harmonization mapping documents, documented decision on client definition (institution-level, region-level, etc.).
+<div class="phase-meta-item mistakes">
+<strong>Common Mistakes:</strong> Assuming all sites have similar data quality or feature availability, underestimating harmonization effort, ignoring extreme heterogeneity that might make federation infeasible.
+</div>
+
+<div class="phase-meta-item deliverables">
+<strong>Deliverables:</strong> Client inventory with data volumes, data quality assessment reports from each site, harmonization mapping documents, documented decision on client definition (institution-level, region-level, etc.).
+</div>
+
+</div>
 
 ### Clients and Data Sources
 
@@ -657,17 +780,33 @@ Defined as sustained increase in EDSS score from baseline, confirmed at 6-month 
 
 ## 🔧 Phase 4: Preparation & Infrastructure
 
-**This is where planning becomes implementation.** You'll transform raw data into analysis-ready features at each client site and set up the technical infrastructure for federation. This phase has two parallel tracks: (1) data engineering happening locally at each site, and (2) federation infrastructure setup happening centrally. Both must work together seamlessly.
+<div class="phase-intro">
+<strong>This is where planning becomes implementation.</strong> You'll transform raw data into analysis-ready features at each client site and set up the technical infrastructure for federation. This phase has two parallel tracks: (1) data engineering happening locally at each site, and (2) federation infrastructure setup happening centrally. Both must work together seamlessly.
+</div>
 
-**Key questions to answer:** How do you preprocess data consistently across all sites while respecting local variations? How will you handle train/test splits in distributed setting? What normalization strategy avoids information leakage? What federation framework and topology will you use? What hardware do clients need? How will you monitor training and handle failures?
+<div class="phase-meta">
 
-**Who's involved:** Data engineers at each site implement local preprocessing pipelines. ML engineers set up federation framework (Flower, PySyft, TensorFlow Federated, etc.). IT administrators configure servers and network access. DevOps engineers handle monitoring and logging. System architects design topology. All following shared specifications from coordination team.
+<div class="phase-meta-item questions">
+<strong>Key Questions:</strong> How do you preprocess data consistently across all sites while respecting local variations? How will you handle train/test splits in distributed setting? What normalization strategy avoids information leakage? What federation framework and topology will you use? What hardware do clients need? How will you monitor training and handle failures?
+</div>
 
-**Timeline:** 4-12 weeks depending on number of sites and technical complexity. Data pipeline development: 2-4 weeks. Infrastructure setup and testing: 2-4 weeks. Integration and debugging: 2-4 weeks. More sites = more coordination overhead.
+<div class="phase-meta-item people">
+<strong>Who's Involved:</strong> Data engineers at each site implement local preprocessing pipelines. ML engineers set up federation framework (Flower, PySyft, TensorFlow Federated, etc.). IT administrators configure servers and network access. DevOps engineers handle monitoring and logging. System architects design topology. All following shared specifications from coordination team.
+</div>
 
-**Common mistakes:** Inconsistent preprocessing across sites (subtle bugs multiply), ignoring data leakage (test statistics leaking into normalization), underestimating infrastructure complexity (firewalls, authentication, monitoring), poor error handling (one client failure crashes everything), inadequate logging (can't debug when things go wrong).
+<div class="phase-meta-item timeline">
+<strong>Timeline:</strong> 4-12 weeks depending on number of sites and technical complexity. Data pipeline development: 2-4 weeks. Infrastructure setup and testing: 2-4 weeks. Integration and debugging: 2-4 weeks. More sites = more coordination overhead.
+</div>
 
-**Deliverables from this phase:** Validated preprocessing pipelines running at each site, federation infrastructure passing integration tests, monitoring dashboards operational, documented hardware and software specifications, runbooks for troubleshooting common issues.
+<div class="phase-meta-item mistakes">
+<strong>Common Mistakes:</strong> Inconsistent preprocessing across sites (subtle bugs multiply), ignoring data leakage (test statistics leaking into normalization), underestimating infrastructure complexity (firewalls, authentication, monitoring), poor error handling (one client failure crashes everything), inadequate logging (can't debug when things go wrong).
+</div>
+
+<div class="phase-meta-item deliverables">
+<strong>Deliverables:</strong> Validated preprocessing pipelines running at each site, federation infrastructure passing integration tests, monitoring dashboards operational, documented hardware and software specifications, runbooks for troubleshooting common issues.
+</div>
+
+</div>
 
 ### Local Data Preparation
 
@@ -774,15 +913,29 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 
 ## 🧬 Phase 5: Development & Training
 
-**This is where the federated learning happens.** You'll design your analytical approach, train models (or run federated analytics), and rigorously evaluate results. This phase generates your scientific findings and determines whether federated analytics successfully solved your problem.
+<div class="phase-intro">
+<strong>This is where the federated learning happens.</strong> You'll design your analytical approach, train models (or run federated analytics), and rigorously evaluate results. This phase generates your scientific findings and determines whether federated analytics successfully solved your problem.
+</div>
 
-**Key questions to answer:** What algorithms will you test? How do they handle data heterogeneity across clients? What does "success" look like (metrics, thresholds)? How does federated performance compare to centralized and local-only baselines? Does the model work fairly across all participating sites?
+<div class="phase-meta">
 
-**Who's involved:** Data scientists and ML engineers design and implement methods. Domain experts (clinicians, scientists) validate that approach makes sense for the problem. Statisticians ensure rigorous evaluation. Site coordinators support distributed execution.
+<div class="phase-meta-item questions">
+<strong>Key Questions:</strong> What algorithms will you test? How do they handle data heterogeneity across clients? What does "success" look like (metrics, thresholds)? How does federated performance compare to centralized and local-only baselines? Does the model work fairly across all participating sites?
+</div>
 
-**Timeline:** This is typically the longest phase (weeks to months depending on number of experiments, computational resources, and debugging cycles).
+<div class="phase-meta-item people">
+<strong>Who's Involved:</strong> Data scientists and ML engineers design and implement methods. Domain experts (clinicians, scientists) validate that approach makes sense for the problem. Statisticians ensure rigorous evaluation. Site coordinators support distributed execution.
+</div>
 
-**Deliverables:** Trained models or computed statistics, comprehensive performance reports comparing multiple approaches, fairness analysis showing per-client results, documented hyperparameters and training configurations.
+<div class="phase-meta-item timeline">
+<strong>Timeline:</strong> This is typically the longest phase (weeks to months depending on number of experiments, computational resources, and debugging cycles).
+</div>
+
+<div class="phase-meta-item deliverables">
+<strong>Deliverables:</strong> Trained models or computed statistics, comprehensive performance reports comparing multiple approaches, fairness analysis showing per-client results, documented hyperparameters and training configurations.
+</div>
+
+</div>
 
 ### Computation Plan
 
@@ -929,17 +1082,33 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 
 ## 🔒 Phase 6: Privacy, Security & Risk
 
-**Privacy and security aren't afterthoughts - they're core design requirements for federated analytics.** This phase documents the technical safeguards that implement your governance policies (from Phase 2). You'll identify threats, describe defenses, and be transparent about what is and isn't protected. Privacy is a spectrum, not binary.
+<div class="phase-intro">
+<strong>Privacy and security aren't afterthoughts - they're core design requirements for federated analytics.</strong> This phase documents the technical safeguards that implement your governance policies (from Phase 2). You'll identify threats, describe defenses, and be transparent about what is and isn't protected. Privacy is a spectrum, not binary.
+</div>
 
-**Key questions to answer:** What could go wrong (threat model)? Who might try to attack your system (adversaries)? What information could leak (attack vectors)? What defenses have you implemented? What privacy guarantees can you actually make? For simulations: how does your threat model differ from real deployment?
+<div class="phase-meta">
 
-**Who's involved:** Security engineers conduct threat modeling and implement controls. Privacy experts assess re-identification risks. Cryptography specialists design secure aggregation if needed. Data protection officers ensure GDPR compliance. IT security teams handle infrastructure hardening.
+<div class="phase-meta-item questions">
+<strong>Key Questions:</strong> What could go wrong (threat model)? Who might try to attack your system (adversaries)? What information could leak (attack vectors)? What defenses have you implemented? What privacy guarantees can you actually make? For simulations: how does your threat model differ from real deployment?
+</div>
 
-**Timeline:** Threat modeling: 1-2 weeks. Implementation of basic controls (encryption, authentication): 1-2 weeks. Advanced privacy tech (differential privacy, secure MPC): 4-8+ weeks if needed. Security audit: 1-2 weeks. This often overlaps with Phase 4 infrastructure work.
+<div class="phase-meta-item people">
+<strong>Who's Involved:</strong> Security engineers conduct threat modeling and implement controls. Privacy experts assess re-identification risks. Cryptography specialists design secure aggregation if needed. Data protection officers ensure GDPR compliance. IT security teams handle infrastructure hardening.
+</div>
 
-**Common mistakes:** Assuming "federated = private" automatically (not true without additional safeguards), ignoring simulation vs. production threat model differences, implementing differential privacy without understanding epsilon parameters, over-claiming privacy guarantees, no incident response plan.
+<div class="phase-meta-item timeline">
+<strong>Timeline:</strong> Threat modeling: 1-2 weeks. Implementation of basic controls (encryption, authentication): 1-2 weeks. Advanced privacy tech (differential privacy, secure MPC): 4-8+ weeks if needed. Security audit: 1-2 weeks. This often overlaps with Phase 4 infrastructure work.
+</div>
 
-**Deliverables from this phase:** Threat model document, implemented security controls checklist, privacy impact assessment, incident response plan, audit logs and monitoring setup.
+<div class="phase-meta-item mistakes">
+<strong>Common Mistakes:</strong> Assuming "federated = private" automatically (not true without additional safeguards), ignoring simulation vs. production threat model differences, implementing differential privacy without understanding epsilon parameters, over-claiming privacy guarantees, no incident response plan.
+</div>
+
+<div class="phase-meta-item deliverables">
+<strong>Deliverables:</strong> Threat model document, implemented security controls checklist, privacy impact assessment, incident response plan, audit logs and monitoring setup.
+</div>
+
+</div>
 
 ### Threat Model and Controls
 
@@ -995,15 +1164,33 @@ No formal incident response plan for simulation phase (research setting, de-iden
 
 ## 📚 Phase 7: Reproducibility & Sharing
 
-**Making your work reproducible is not optional - it's a scientific and ethical obligation.** This phase documents everything someone else needs to validate your findings or apply your methods to their own data. For federated analytics, reproducibility has unique challenges because data can't be shared, yet methods must still be verifiable.
+<div class="phase-intro">
+<strong>Making your work reproducible is not optional - it's a scientific and ethical obligation.</strong> This phase documents everything someone else needs to validate your findings or apply your methods to their own data. For federated analytics, reproducibility has unique challenges because data can't be shared, yet methods must still be verifiable.
+</div>
 
-**Key questions:** Can someone else reproduce your results with access to the same (or similar) data? Have you documented enough detail about your environment, hyperparameters, and preprocessing that results should be identical? If data can't be shared, what alternatives enable validation (synthetic data, code testing, detailed methods)?
+<div class="phase-meta">
 
-**Who's involved:** Research software engineers ensure code quality and documentation. Data stewards document data access procedures. Legal/ethics teams review what can be publicly shared. Principal investigators decide publication strategy.
+<div class="phase-meta-item questions">
+<strong>Key Questions:</strong> Can someone else reproduce your results with access to the same (or similar) data? Have you documented enough detail about your environment, hyperparameters, and preprocessing that results should be identical? If data can't be shared, what alternatives enable validation (synthetic data, code testing, detailed methods)?
+</div>
 
-**Timeline:** Overlaps with Phase 5 (document as you go) but finalization happens after results are ready. Budget 2-4 weeks for code cleanup, documentation writing, and artifact archiving before publication.
+<div class="phase-meta-item people">
+<strong>Who's Involved:</strong> Research software engineers ensure code quality and documentation. Data stewards document data access procedures. Legal/ethics teams review what can be publicly shared. Principal investigators decide publication strategy.
+</div>
 
-**Common mistakes:** Waiting until submission deadline to organize code (leads to rushed, poor documentation). Forgetting to document version numbers. Releasing code that can't run without undocumented dependencies. Not explaining data access process clearly.
+<div class="phase-meta-item timeline">
+<strong>Timeline:</strong> Overlaps with Phase 5 (document as you go) but finalization happens after results are ready. Budget 2-4 weeks for code cleanup, documentation writing, and artifact archiving before publication.
+</div>
+
+<div class="phase-meta-item mistakes">
+<strong>Common Mistakes:</strong> Waiting until submission deadline to organize code (leads to rushed, poor documentation). Forgetting to document version numbers. Releasing code that can't run without undocumented dependencies. Not explaining data access process clearly.
+</div>
+
+<div class="phase-meta-item deliverables">
+<strong>Deliverables:</strong> Public code repository with documentation, environment specification files, archived artifacts with persistent identifiers (DOIs), data access guide, documented limitations.
+</div>
+
+</div>
 
 ### Code, Data, and Artifacts
 
@@ -1078,15 +1265,31 @@ No formal incident response plan for simulation phase (research setting, de-iden
 
 ## 🚀 Phase 8: Maturity Assessment & Path Forward
 
-**This phase honestly assesses where you are and what comes next.** Not every federated learning project needs to reach production deployment - many generate valuable scientific insights while remaining research tools. This section helps you and your stakeholders understand the current maturity level, what it would take to advance, and whether that investment makes sense.
+<div class="phase-intro">
+<strong>This phase honestly assesses where you are and what comes next.</strong> Not every federated learning project needs to reach production deployment - many generate valuable scientific insights while remaining research tools. This section helps you and your stakeholders understand the current maturity level, what it would take to advance, and whether that investment makes sense.
+<br><br>
+<em>Honest reflection matters more than hype.</em> Many research projects contribute valuable knowledge at TRL 4-5 without ever deploying. Overpromising deployment timelines damages credibility and wastes resources.
+</div>
 
-**Key questions:** Is this production-ready, or proof-of-concept? What evidence supports your maturity claim? What would it actually take (time, money, people, approvals) to reach the next level? Is deployment realistic and worthwhile, or is the research contribution sufficient?
+<div class="phase-meta">
 
-**Who's involved:** Principal investigators assess scientific maturity. Clinical champions evaluate deployment feasibility. IT leaders estimate infrastructure requirements. Funders consider return on investment. Regulators may need consultation for medical applications.
+<div class="phase-meta-item questions">
+<strong>Key Questions:</strong> Is this production-ready, or proof-of-concept? What evidence supports your maturity claim? What would it actually take (time, money, people, approvals) to reach the next level? Is deployment realistic and worthwhile, or is the research contribution sufficient?
+</div>
 
-**Timeline:** Initial TRL assessment happens throughout the project. Final assessment and roadmap creation: 1-2 weeks after results finalize. If pursuing deployment: gap analysis and planning can take months.
+<div class="phase-meta-item people">
+<strong>Who's Involved:</strong> Principal investigators assess scientific maturity. Clinical champions evaluate deployment feasibility. IT leaders estimate infrastructure requirements. Funders consider return on investment. Regulators may need consultation for medical applications.
+</div>
 
-**Honest reflection matters more than hype.** Many research projects contribute valuable knowledge at TRL 4-5 without ever deploying. Overpromising deployment timelines damages credibility and wastes resources.
+<div class="phase-meta-item timeline">
+<strong>Timeline:</strong> Initial TRL assessment happens throughout the project. Final assessment and roadmap creation: 1-2 weeks after results finalize. If pursuing deployment: gap analysis and planning can take months.
+</div>
+
+<div class="phase-meta-item deliverables">
+<strong>Deliverables:</strong> TRL assessment with evidence, gap analysis with resource estimates, deployment roadmap OR research-only justification, lessons learned document, recommendations for future work.
+</div>
+
+</div>
 
 ### Technology Readiness Level (TRL) Assessment
 
@@ -1297,3 +1500,8 @@ Given regulatory and deployment complexity, may remain research tool for: (1) MS
 - Explicit TRL assessment with gap analysis
 - Focus on reproducibility and transparency
 
+
+
+## Bibliography
+
+{% bibliography --cited %}
