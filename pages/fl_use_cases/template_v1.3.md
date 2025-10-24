@@ -749,7 +749,7 @@ html {
 
 <div class="template-header">
   <h1 class="template-title">Federated Analytics Implementation Guide</h1>
-  <p class="template-subtitle">A practical, step-by-step guide for implementing federated analytics projects, inspired by the <a href="/fl_life_cycle">FL Lifecycle</a>.</p>
+  <p class="template-subtitle">A practical, step-by-step guide for implementing federated analytics projects.
   <p class="template-description">This guide provides a structured approach to implementing federated analytics projects, building upon the foundational concepts in our <a href="/fl_life_cycle">FL Lifecycle</a>. Rather than introducing new theoretical concepts, this document focuses on practical implementation steps, real-world considerations, and actionable guidance for moving from initial planning to successful deployment.</p>
 </div>
 
