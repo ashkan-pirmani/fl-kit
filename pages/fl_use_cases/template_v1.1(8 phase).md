@@ -1,7 +1,8 @@
 ---
-title: Federated Analytics Life Cycle Template
-version: 1.2
+version: 1.1
 search_exclude: false
+toc: true
+title: Federated Analytics Life Cycle Template
 description: Document your federated analytics project from conception to deployment
 ---
 
@@ -162,20 +163,398 @@ details.example .example-content li {
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(245, 158, 11, 0.1);
 }
+
+/* Clean Professional Overview */
+.project-overview {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin: 30px 0 40px 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.overview-intro {
+  background: #ffffff;
+  margin: 0;
+  padding: 30px;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  z-index: 2;
+}
+
+.overview-intro h3 {
+  margin: 0 0 16px 0;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #1e293b;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.overview-intro p {
+  margin: 0 0 20px 0;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #4a5568;
+  text-align: left;
+}
+
+.usage-guidance {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 0;
+  border: 1px solid #e2e8f0;
+}
+
+.guidance-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.guidance-item:last-child {
+  margin-bottom: 0;
+}
+
+.guidance-icon {
+  font-size: 1.3em;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.guidance-content h4 {
+  margin: 0 0 6px 0;
+  font-size: 1em;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.guidance-content p {
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.guidance-content a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.guidance-content a:hover {
+  text-decoration: underline;
+  color: #5568d3;
+}
+
+.inline-toggle-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85em;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.tldr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 0 30px 30px 30px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1200px) {
+  .tldr-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tldr-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tldr-phase {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tldr-phase-number {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 0.85em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tldr-phase-title {
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+.tldr-phase-desc {
+  color: #64748b;
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.tldr-quick-links {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 0 30px 30px 30px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.tldr-quick-links h4 {
+  margin: 0 0 24px 0;
+  color: #1e293b;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.tldr-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.tldr-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  background: #f1f5f9;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #334155;
+  font-size: 0.85em;
+  font-weight: 500;
+  border: 1px solid #cbd5e1;
+  text-align: center;
+}
+
+/* Phase Details - Collapsible */
+.phase-details {
+  margin: 30px 0;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.phase-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+  padding: 16px 24px;
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5em;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.phase-header:hover {
+  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+}
+
+.phase-header::after {
+  content: "▼";
+  font-size: 0.8em;
+  transition: transform 0.3s ease;
+  opacity: 0.8;
+}
+
+.phase-details[open] .phase-header::after {
+  transform: rotate(180deg);
+}
+
+.phase-details .phase-intro,
+.phase-details .phase-meta,
+.phase-details h3,
+.phase-details h4,
+.phase-details details.example {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Override h2 styling inside phase details */
+.phase-details h2 {
+  background: none !important;
+  color: inherit !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: inherit !important;
+  font-size: inherit !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Phase content styling */
+.phase-details .phase-content {
+  padding: 20px 24px;
+}
+
+/* Better spacing for phase sections */
+.phase-details h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #2d3748;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.phase-details h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #4a5568;
+  font-size: 1.1em;
+  font-weight: 600;
+}
 </style>
 
-<div class="info-box">
-  <strong>📘 About This Template:</strong> This template guides you through documenting your federated analytics project across its complete lifecycle, from initial planning to deployment. It follows best practices for reproducible, transparent, and ethical federated learning research.
-  <br><br>
-  <strong>💡 How to use:</strong> Read each section's guidance text carefully - it explains what to document and why it matters. Click on examples to see how these sections were completed for a real published study (Multiple Sclerosis disability progression prediction using personalized federated learning) {% cite Pirmani2025-sd %}.
-  <br><br>
-  <button onclick="toggleAllExamples()" id="toggleBtn" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 600; box-shadow: 0 2px 4px rgba(102,126,234,0.3); transition: all 0.2s ease;" onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(102,126,234,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(102,126,234,0.3)'">
-    ✨ Show All Examples
-  </button>
+<div class="project-overview">
+
+  <div class="overview-intro">
+    <p>This comprehensive template guides you through <strong>eight essential phases</strong> that follow the natural progression of a federated analytics project, from initial planning and stakeholder alignment to deployment and long-term sustainability. Each phase includes detailed guidance, real-world examples, and best practices for conducting reproducible, transparent, and ethically sound federated analytics research.</p>
+
+    <div class="usage-guidance">
+      <div class="guidance-item">
+        <div class="guidance-content">
+          <h4>💡 How to use this template</h4>
+          <p>Read each section's guidance text carefully, it explains what to document and why it matters for your project's success. Click on the expandable examples to see how each section was completed in a real published study {% cite Pirmani2025-sd %}.</p>
+        </div>
+      </div>
+
+      <div class="guidance-item">
+        <div class="guidance-content">
+          <h4>🗺️ Navigation</h4>
+          <p>Click any phase card below to jump directly to that section, or use the quick reference links for specific topics. The <button onclick="toggleAllExamples()" id="toggleBtn" class="inline-toggle-btn">✨ Show All Examples</button> button expands all real-world examples at once for comprehensive reference.</p>
+        </div>
+      </div>
+
+      <div class="guidance-item">
+        <div class="guidance-content">
+          <h4>🔗 FL Lifecycle alignment</h4>
+          <p>These phases align with the standard <a href="/fl_life_cycle">Federated Learning Lifecycle</a>, providing detailed, actionable steps for each lifecycle stage while maintaining scientific rigor and practical applicability.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="tldr-grid">
+      <div class="tldr-phase" onclick="document.querySelector('#phase1').scrollIntoView({behavior: 'smooth'})">
+        <div class="tldr-phase-number">🎯 Phase 1</div>
+        <div class="tldr-phase-title">Planning & Scoping</div>
+        <div class="tldr-phase-desc">Define the problem, justify federation, set clear objectives and scope boundaries</div>
+      </div>
+
+      <div class="tldr-phase" onclick="document.querySelector('#phase2').scrollIntoView({behavior: 'smooth'})">
+        <div class="tldr-phase-number">⚖️ Phase 2</div>
+        <div class="tldr-phase-title">Governance & Ethics</div>
+        <div class="tldr-phase-desc">Establish legal frameworks, ethics approvals, stakeholder roles, and publication policies</div>
+      </div>
+
+      <div class="tldr-phase" onclick="document.querySelector('#phase3').scrollIntoView({behavior: 'smooth'})">
+        <div class="tldr-phase-number">🗂️ Phase 3</div>
+        <div class="tldr-phase-title">Data & Standards</div>
+        <div class="tldr-phase-desc">Characterize data sources, define clients, assess quality, and harmonization needs</div>
+      </div>
+
+      <div class="tldr-phase" onclick="document.querySelector('#phase4').scrollIntoView({behavior: 'smooth'})">
+        <div class="tldr-phase-number">🔧 Phase 4</div>
+        <div class="tldr-phase-title">Preparation & Infrastructure</div>
+        <div class="tldr-phase-desc">Set up data pipelines, federation infrastructure, and technical architecture</div>
+      </div>
+
+      <div class="tldr-phase" onclick="document.querySelector('#phase5').scrollIntoView({behavior: 'smooth'})">
+        <div class="tldr-phase-number">🧬 Phase 5</div>
+        <div class="tldr-phase-title">Development & Training</div>
+        <div class="tldr-phase-desc">Design algorithms, train models, evaluate performance, and compare baselines</div>
+      </div>
+
+      <div class="tldr-phase" onclick="document.querySelector('#phase6').scrollIntoView({behavior: 'smooth'})">
+        <div class="tldr-phase-number">🔒 Phase 6</div>
+        <div class="tldr-phase-title">Privacy & Security</div>
+        <div class="tldr-phase-desc">Threat modeling, implement safeguards, assess risks, and document controls</div>
+      </div>
+
+      <div class="tldr-phase" onclick="document.querySelector('#phase7').scrollIntoView({behavior: 'smooth'})">
+        <div class="tldr-phase-number">📚 Phase 7</div>
+        <div class="tldr-phase-title">Reproducibility & Sharing</div>
+        <div class="tldr-phase-desc">Document code, environment, data access, and enable validation by others</div>
+      </div>
+
+      <div class="tldr-phase" onclick="document.querySelector('#phase8').scrollIntoView({behavior: 'smooth'})">
+        <div class="tldr-phase-number">🚀 Phase 8</div>
+        <div class="tldr-phase-title">Maturity Assessment</div>
+        <div class="tldr-phase-desc">Assess TRL, plan deployment, document lessons learned, and next steps</div>
+      </div>
+    </div>
+
+    <div class="tldr-quick-links">
+      <h4>🔗 Quick Reference Links</h4>
+      <div class="tldr-links-grid">
+        <a href="#phase1" class="tldr-link">Problem Definition</a>
+        <a href="#phase2" class="tldr-link">Ethics Approval</a>
+        <a href="#phase3" class="tldr-link">Data Inventory</a>
+        <a href="#phase4" class="tldr-link">Infrastructure Setup</a>
+        <a href="#phase5" class="tldr-link">Algorithm Design</a>
+        <a href="#phase6" class="tldr-link">Threat Model</a>
+        <a href="#phase7" class="tldr-link">Code Repository</a>
+        <a href="#phase8" class="tldr-link">TRL Assessment</a>
+        <a href="#appendix" class="tldr-link">Version Changes</a>
+        <a href="#bibliography" class="tldr-link">References</a>
+      </div>
+    </div>
+
 </div>
 
 <script>
 let examplesVisible = false;
+
 function toggleAllExamples() {
   const details = document.querySelectorAll('details.example');
   const btn = document.getElementById('toggleBtn');
@@ -191,46 +570,32 @@ function toggleAllExamples() {
 
   btn.textContent = examplesVisible ? '✨ Hide All Examples' : '✨ Show All Examples';
 }
+
+// Simple smooth scroll for anchor links
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+});
 </script>
 
 ---
 
-## Federated Analytics Lifecycle
+<h2 class="phase-header" id="phase1">
+🎯 Phase 1: Planning & Scoping
+</h2>
 
-This template follows eight phases that mirror the natural progression of a federated analytics project:
-
-1. **🎯 Planning & Scoping** - Define the problem and why federation is necessary
-2. **⚖️ Governance & Ethics** - Establish legal, ethical, and oversight frameworks
-3. **🗂️ Data & Standards** - Understand your data landscape and harmonization needs
-4. **🔧 Preparation & Infrastructure** - Set up local data pipelines and federation systems
-5. **🧬 Development & Training** - Design and execute federated computations
-6. **🔒 Privacy & Security** - Implement safeguards and risk mitigation
-7. **📚 Reproducibility & Sharing** - Enable validation and reuse by others
-8. **🚀 Maturity Assessment & Path Forward** - Assess readiness and reflect on lessons learned
-
-<div class="lifecycle-note">
-  <strong>📍 How This Template Relates to the FL Lifecycle:</strong> This template provides detailed documentation guidance for federated analytics projects. It aligns with the broader <a href="/fl_life_cycle">Federated Learning Lifecycle</a> covering Analysis, Wrangling, Infrastructure, Governance, and Training stages. Each phase here maps to specific lifecycle stages:
-  <br><br>
-  <strong>Phases 1-2</strong> (Planning & Governance) → <em>Governance & Analysis stages</em>
-  <br>
-  <strong>Phases 3-4</strong> (Data & Infrastructure) → <em>Wrangling & Infrastructure stages</em>
-  <br>
-  <strong>Phases 5-6</strong> (Training & Security) → <em>Training stage with privacy controls</em>
-  <br>
-  <strong>Phases 7-8</strong> (Sharing & Maturity) → <em>Publication, deployment, and reflection</em>
-  <br><br>
-  Use this template to document your project as you progress through the FL lifecycle. Each phase builds on the previous, though some activities overlap (e.g., governance continues throughout).
-</div>
-
----
-
-## 🎯 Phase 1: Planning & Scoping
-
-<div class="phase-intro">
+<div class="phase-intro" markdown="1">
 <strong>This is where everything begins.</strong> Before writing code or contacting potential partners, you need crystal-clear answers to fundamental questions: What problem are we solving? Why does it matter? Why can't we just pool data centrally? What exactly will we deliver, and what's out of scope?
 </div>
 
-<div class="phase-meta">
+<div class="phase-meta" markdown="1">
 
 <div class="phase-meta-item questions">
 <strong>Key Questions:</strong> What specific clinical, scientific, or operational gap are you filling? Who benefits (patients, researchers, policymakers)? Why is federated analytics necessary rather than just preferable? What does success look like concretely? What assumptions underpin your approach, and how will you validate them?
@@ -325,12 +690,14 @@ Patients with relapsing or progressive multiple sclerosis drawn from the MSBase 
 <div class="example-content" markdown="1">
 
 **Primary outputs:**
+
 - Trained personalized federated learning models for 2-year disability progression prediction
 - Novel AdaptiveDualBranchNet architecture designed for personalized FL
 - Comparative performance analysis across centralized, federated, and personalized approaches
 - Client-specific performance metrics showing improvements for smaller/imbalanced sites
 
 **Secondary outputs:**
+
 - Open-source code repository with preprocessing pipelines and training scripts
 - Hyperparameter configurations and training logs
 - Published peer-reviewed manuscript (npj Digital Medicine, 2025)
@@ -349,6 +716,7 @@ Patients with relapsing or progressive multiple sclerosis drawn from the MSBase 
 <div class="example-content" markdown="1">
 
 This project does not include:
+
 - Real-time clinical decision support integration (offline validation only)
 - Exploratory analytics or federated statistics beyond progression prediction
 - Imaging data analysis (focused on tabular clinical data only)
@@ -370,18 +738,21 @@ This project does not include:
 <div class="example-content" markdown="1">
 
 **Key Assumptions:**
+
 - Disability progression can be reliably captured by EDSS scores following published validation criteria
 - Site-level data are consistent enough to harmonize into comparable features across 32 countries
 - Simulated federation by country approximates real multi-site federation (reasonable for algorithm development)
 - Patient episodes are independent observations (appropriate for population-level modeling)
 
 **Constraints:**
+
 - Only registry data from MSBase available (no access to raw hospital EHR systems)
 - Clients simulated on centralized infrastructure rather than distributed across live hospital servers (TRL limitation)
 - Computational budget limited to Flanders Supercomputer Center resources
 - Data use agreement prohibits physical data transfer or splitting across storage locations
 
 **Validation Approach:**
+
 - Assumptions checked against prior MS literature and clinical expert consultation
 - Internal validation via 10 repeated runs with different random seeds to assess robustness
 - Client-level performance analysis to identify sites where assumptions may be violated
@@ -391,13 +762,15 @@ This project does not include:
 
 ---
 
-## ⚖️ Phase 2: Governance & Ethics
+<h2 class="phase-header" id="phase2">
+⚖️ Phase 2: Governance & Ethics
+</h2>
 
-<div class="phase-intro">
+<div class="phase-intro" markdown="1">
 <strong>Governance can make or break multi-institutional projects.</strong> This phase establishes legal and ethical frameworks, defines decision-making authority, and builds trust among partners. Without solid governance, projects stall in endless negotiations or face ethics violations. Done well, governance becomes your foundation for long-term collaboration.
 </div>
 
-<div class="phase-meta">
+<div class="phase-meta" markdown="1">
 
 <div class="phase-meta-item questions">
 <strong>Key Questions:</strong> Who approves what decisions? What's the legal basis for processing sensitive data? Which ethics committees need to review this work? How will results be shared and published? What happens if a partner wants to withdraw? How do we handle disputes?
@@ -436,7 +809,7 @@ This project does not include:
 **Technical Team:** Martijn Oldenhof, Ádám Arany, Antoine Passemiers (KU Leuven), Axel Faes (Hasselt University)
 **Data Provider:** MSBase International Registry (coordinated by University of Melbourne)
 **MSBase Study Group:** 70+ co-authors representing participating clinics across 32 countries (see full author list in publication)
-**Ethics Oversight:** Uhasselt, KU Leuven and Universitait MS Centrum Pelt  Social and Societal Ethics Committee
+**Ethics Oversight:** Uhasselt, KU Leuven and Universitait MS Centrum Pelt Social and Societal Ethics Committee
 **Compute Provider:** Flanders Supercomputer Center (VSC)
 **End Users:** Clinicians managing MS patients, MS researchers developing prognostic tools
 
@@ -545,13 +918,15 @@ This project does not include:
 
 ---
 
-## 🗂️ Phase 3: Data & Standards
+<h2 class="phase-header" id="phase3">
+🗂️ Phase 3: Data & Standards
+</h2>
 
-<div class="phase-intro">
+<div class="phase-intro" markdown="1">
 <strong>Understanding your data landscape is critical before building any federated system.</strong> This phase characterizes what data exist at each site, how heterogeneous they are across clients, and what standards or harmonization steps are needed to make distributed data semantically comparable.
 </div>
 
-<div class="phase-meta">
+<div class="phase-meta" markdown="1">
 
 <div class="phase-meta-item questions">
 <strong>Key Questions:</strong> Where does your data live? How many clients will participate? How different are they from each other (data volume, feature distributions, outcome prevalence)? What clinical or technical vocabularies do you need to align? What data quality issues exist?
@@ -603,11 +978,13 @@ This project does not include:
 MSBase registry data accessed on Flanders Supercomputer Center infrastructure. Data partitioned by country to create 32 virtual clients, but all data physically reside on same computing cluster. Each virtual client has exclusive access to its country's data subset during training (enforced programmatically). Simulated server-client architecture with Flower framework orchestrating communication rounds.
 
 **Captures:**
+
 - Realistic data heterogeneity (countries genuinely differ in patient demographics, disease severity, treatment patterns)
 - Client-level data isolation (no raw data sharing)
 - Multi-round communication and aggregation overhead
 
 **Does NOT Capture:**
+
 - Real network latency across international hospital connections
 - Firewall negotiations and institutional IT security requirements
 - Human coordination overhead (scheduling training across time zones, aligning with hospital IT maintenance windows)
@@ -630,17 +1007,20 @@ MSBase registry data accessed on Flanders Supercomputer Center infrastructure. D
 <div class="example-content" markdown="1">
 
 **Patient-Level Inclusion:**
+
 - Diagnosis of MS or clinically isolated syndrome (CIS)
 - Age ≥18 years
 - Minimum 12-month follow-up in registry
 - At least 3 EDSS measurements in 3.25 years before baseline assessment
 
 **Episode-Level Inclusion:**
+
 - Baseline EDSS score available
 - Sufficient historical data in observation window (relapses, therapies, function scores)
 - 2-year follow-up available for outcome labeling
 
 **Exclusion:**
+
 - EDSS measurements within 30 days of relapse (to avoid confounding by transient disability)
 - Episodes with missing critical features (baseline EDSS, follow-up duration)
 - Clients (countries) with <5 patient episodes (too small for meaningful training)
@@ -663,22 +1043,26 @@ MSBase registry data accessed on Flanders Supercomputer Center infrastructure. D
 **42 Tabular Features for Modeling:**
 
 **Demographics & Disease Characteristics:**
+
 - Age at episode baseline
 - Sex
 - Disease duration
 - MS type (relapsing-remitting, secondary progressive, primary progressive)
 
 **Disability Measures:**
+
 - Baseline EDSS (Expanded Disability Status Scale, 0-10 scale)
 - Kurtzke Functional System scores (pyramidal, cerebellar, brainstem, sensory, bowel/bladder, visual, cerebral/mental)
 - Changes in EDSS over observation window
 
 **Disease Activity:**
+
 - Number of relapses in past 12 months, 24 months, and observation window
 - Annualized relapse rate
 - Time since last relapse
 
 **Treatment History:**
+
 - Current disease-modifying therapy (DMT) class
 - Treatment duration
 - Number of prior DMT switches
@@ -702,6 +1086,7 @@ MSBase registry data accessed on Flanders Supercomputer Center infrastructure. D
 **Primary Outcome: Confirmed Disability Progression (CDP)**
 
 Defined as sustained increase in EDSS score from baseline, confirmed at 6-month follow-up, following published validation criteria:
+
 - EDSS increase ≥1.0 point if baseline EDSS ≤5.5
 - EDSS increase ≥0.5 points if baseline EDSS >5.5
 - Increase sustained for at least 6 months (confirmation period)
@@ -731,11 +1116,13 @@ Defined as sustained increase in EDSS score from baseline, confirmed at 6-month 
 **Episodes Per Client:** Highly variable (range: 5 to 60,000+ episodes). Largest clients: Australia (~60K), Czech Republic (~45K), Turkey (~30K). Smallest clients: <100 episodes in several countries.
 
 **Class Balance:** Overall progression rate ~18-20% (confirmed disability progression within 2 years). However, class balance varies dramatically by client:
+
 - Some sites have very low progression rates (5-10%, mostly stable patients)
 - Others have higher rates (25-30%, potentially referral bias toward more severe cases)
 - A few small sites have NO positive cases in their sample
 
 **Known Biases:**
+
 - Referral bias: Academic centers (which contribute to MSBase) may see more severe or treatment-refractory cases
 - Geographic bias: MSBase over-represents high-income countries with established MS registries
 - Treatment bias: Patients on registry may have better access to disease-modifying therapies than general MS population
@@ -757,6 +1144,7 @@ Defined as sustained increase in EDSS score from baseline, confirmed at 6-month 
 <div class="example-content" markdown="1">
 
 **Data Quality:**
+
 - EDSS scores generally high quality (required field in MSBase, trained raters, standardized assessment)
 - KFS component scores have higher missingness (~10-15% of episodes)
 - Relapse dating precision varies (some sites record exact date, others only month/year)
@@ -764,6 +1152,7 @@ Defined as sustained increase in EDSS score from baseline, confirmed at 6-month 
 - Some older episodes lack detailed therapy class information
 
 **Harmonization Standards:**
+
 - EDSS: Kurtzke's standardized scale (0.0 to 10.0, half-point increments)
 - MS diagnosis: McDonald criteria (version documented in registry)
 - Relapses: Clinical events with objective neurological findings, minimum 30-day separation
@@ -778,13 +1167,15 @@ Defined as sustained increase in EDSS score from baseline, confirmed at 6-month 
 
 ---
 
-## 🔧 Phase 4: Preparation & Infrastructure
+<h2 class="phase-header" id="phase4">
+🔧 Phase 4: Preparation & Infrastructure
+</h2>
 
-<div class="phase-intro">
+<div class="phase-intro" markdown="1">
 <strong>This is where planning becomes implementation.</strong> You'll transform raw data into analysis-ready features at each client site and set up the technical infrastructure for federation. This phase has two parallel tracks: (1) data engineering happening locally at each site, and (2) federation infrastructure setup happening centrally. Both must work together seamlessly.
 </div>
 
-<div class="phase-meta">
+<div class="phase-meta" markdown="1">
 
 <div class="phase-meta-item questions">
 <strong>Key Questions:</strong> How do you preprocess data consistently across all sites while respecting local variations? How will you handle train/test splits in distributed setting? What normalization strategy avoids information leakage? What federation framework and topology will you use? What hardware do clients need? How will you monitor training and handle failures?
@@ -820,11 +1211,13 @@ Defined as sustained increase in EDSS score from baseline, confirmed at 6-month 
 
 **Episode Construction:**
 Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
+
 - Starts at baseline EDSS measurement
 - Includes 3.25-year observation window capturing: relapse history, therapy changes, prior EDSS trajectory
 - Has binary label: confirmed disability progression at 2-year follow-up (yes/no)
 
 **Feature Engineering:**
+
 - Computed annualized relapse rates over multiple time windows
 - Derived EDSS change metrics (slope, volatility)
 - Encoded treatment history (current DMT class, duration, number of switches)
@@ -833,22 +1226,26 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 - Final feature set: 42 numerical inputs
 
 **Train/Validation/Test Splits:**
+
 - 60% train, 20% validation, 20% test split performed independently at each client
 - Splits performed at patient level (all episodes from same patient in same split) to prevent leakage
 - Random stratified sampling to maintain class balance across splits
 
 **Normalization:**
+
 - Applied per-client using training set statistics (mean/standard deviation)
 - Each client independently normalizes continuous features
 - Avoids information leakage from test set or other clients
 - Trade-off: local normalization may hurt model convergence when client distributions differ substantially
 
 **Missing Data:**
+
 - Documented but not heavily imputed (model architecture chosen to be tolerant to missing features)
 - KFS scores: Mean imputation within client when missing
 - Treatment data: "Unknown" category for missing values
 
 **Class Imbalance:**
+
 - Documented wide variation across clients (5-30% progression rates)
 - Did NOT apply loss weighting or resampling in main analysis
 - Personalization strategies designed to help models adapt to local class distributions
@@ -869,38 +1266,45 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 <div class="example-content" markdown="1">
 
 **Topology:**
+
 - Centralized star architecture: single server coordinates 32 clients
 - All clients participate in each round (no client sampling)
 - Server-client communication only (no peer-to-peer)
 
 **Orchestration:**
+
 - Flower 1.5.0 federated learning framework
 - Server: Centralized coordinator on Flanders Supercomputer Center
 - Clients: Simulated as separate processes on same infrastructure (country-partitioned data)
 - 50 federation rounds per experiment, each round includes: (1) Server distributes global model, (2) Clients train locally for specified epochs, (3) Clients send model updates to server, (4) Server aggregates updates via FedAvg/FedProx/FedOpt
 
 **Compute Environment:**
+
 - Infrastructure: Flanders Supercomputer Center (VSC), Intel Xeon Platinum 8260 CPUs
 - No GPU acceleration (tabular data, MLP architecture trains efficiently on CPU)
 - Each experiment repeated 10 times with different random seeds for robustness assessment
 - Total experiments: >100 configurations tested (different algorithms, client fractions, personalization strategies)
 
 **Client Participation:**
+
 - Main experiments: All 32 clients participate every round
 - Client fraction experiments: Tested 100%, 60%, 40% participation to assess efficiency trade-offs
 - No client dropout handling needed (simulated environment, deterministic availability)
 
 **Monitoring:**
+
 - Flower framework built-in logging: round times, client training metrics, aggregation success
 - Custom logging: model performance on validation sets each round, early stopping based on validation performance plateau
 
 **Simulation Limitations:**
+
 - All clients on same physical infrastructure (no real network latency, firewall issues, or distributed governance)
 - Deterministic client availability (not realistic for hospital IT environments with maintenance windows, downtimes)
 - Uniform hardware (real hospitals would have heterogeneous compute capabilities)
 - No real data quality heterogeneity beyond what exists in MSBase (which is already harmonized)
 
 **Security Baseline (Simulated):**
+
 - Data access controlled via Flanders Supercomputer authentication
 - Experiment isolation via separate processing jobs
 - No data physically transferred (remains on approved infrastructure per ethics agreement)
@@ -911,13 +1315,15 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 
 ---
 
-## 🧬 Phase 5: Development & Training
+<h2 class="phase-header" id="phase5">
+🧬 Phase 5: Development & Training
+</h2>
 
-<div class="phase-intro">
+<div class="phase-intro" markdown="1">
 <strong>This is where the federated learning happens.</strong> You'll design your analytical approach, train models (or run federated analytics), and rigorously evaluate results. This phase generates your scientific findings and determines whether federated analytics successfully solved your problem.
 </div>
 
-<div class="phase-meta">
+<div class="phase-meta" markdown="1">
 
 <div class="phase-meta-item questions">
 <strong>Key Questions:</strong> What algorithms will you test? How do they handle data heterogeneity across clients? What does "success" look like (metrics, thresholds)? How does federated performance compare to centralized and local-only baselines? Does the model work fairly across all participating sites?
@@ -954,6 +1360,7 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 <div class="example-content" markdown="1">
 
 **Model Architecture:**
+
 - Multi-Layer Perceptron (MLP): 5 hidden layers, each with 256 neurons
 - Input layer: 42 features (clinical and demographic variables)
 - Output: Binary classification (disability progression yes/no)
@@ -961,12 +1368,14 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 - Total parameters: ~330K
 
 **Centralized Baseline:**
+
 - Same MLP architecture trained on globally pooled data (all 283K episodes)
 - Standard PyTorch training with Adam optimizer
 - Achieved ROC-AUC ~0.81, PR-AUC ~0.46 on country-partitioned test set
 - Reference for assessing federated vs. centralized trade-off
 
 **Federated Algorithms Tested:**
+
 1. **FedAvg** (Federated Averaging): Baseline FL method, simple weighted average of client model updates
 2. **FedProx**: Adds proximal term to handle client heterogeneity (tested mu=0.001, 0.01, 0.1)
 3. **FedOpt variants:** Server-side adaptive optimizers
@@ -977,6 +1386,7 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 **Personalization Strategies:**
 
 1. **AdaptiveDualBranchNet (Novel Architecture):**
+
    - Shared trunk: Common layers trained federally (learns population-level patterns)
    - Client-specific branches: Local layers adapted to site-specific distributions
    - Adaptive scaling: Branch size proportional to client data volume (large sites get more parameters, small sites share more globally)
@@ -989,17 +1399,20 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
    - Adapts model to local data distribution while retaining global knowledge
 
 **Local-Only Baseline:**
+
 - Each client trains MLP independently on own data (no federation)
 - Represents maximum personalization but no knowledge sharing
 - Expected to perform poorly for small clients, well for large clients
 
 **Training Schedule:**
+
 - 50 communication rounds for federated experiments
 - Local training: variable epochs per round depending on configuration (1-5 epochs tested)
 - Batch size: 64 (when client has sufficient data; smaller for tiny clients)
 - Early stopping: Monitor validation performance, stop if no improvement for 10 rounds (not always triggered in 50-round experiments)
 
 **Hyperparameters:**
+
 - Learning rate: 0.001 (Adam optimizer) for federated training, 0.0001 for fine-tuning
 - Dropout: Not used (MLP with L2 regularization instead)
 - Weight decay: 1e-4
@@ -1007,6 +1420,7 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 - Tuned via grid search on country-based FedAvg configuration, then applied consistently across all experiments for fair comparison
 
 **Reproducibility:**
+
 - 10 repeated runs per configuration with different random seeds (seeds 0-9)
 - Seeds control: data splits, model initialization, batch shuffling
 - Report mean ± standard deviation across runs
@@ -1030,19 +1444,23 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 <div class="example-content" markdown="1">
 
 **Primary Metrics:**
+
 - **ROC-AUC** (area under receiver operating characteristic curve): Threshold-independent performance measure
 - **PR-AUC** (area under precision-recall curve): Emphasizes performance on minority class (important given imbalance)
 
 **Client-Side Evaluation:**
+
 - Each client evaluates model on own test set (20% of local data, never seen during training)
 - Computed metrics: ROC-AUC, PR-AUC, accuracy, sensitivity, specificity
 - Test sets partitioned by country (consistent across all experiments)
 
 **Aggregation Across Clients:**
+
 - Weighted average by test set size: ROC-AUC_global = Σ(n_i × ROC-AUC_i) / Σ(n_i)
 - Also report: simple average (treats all sites equally), min/max (quantify heterogeneity), standard deviation across sites
 
 **Comparison to Centralized Baseline:**
+
 - Centralized MLP: ROC-AUC 0.81 ± 0.01, PR-AUC 0.46 ± 0.02
 - Baseline FedAvg: ROC-AUC 0.73 ± 0.02, PR-AUC 0.28 ± 0.03 (worse than centralized)
 - **Personalized FedProx: ROC-AUC 0.84 ± 0.002, PR-AUC 0.52 ± 0.01 (BETTER than centralized!)**
@@ -1051,12 +1469,14 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 **Key Finding:** Personalization overcomes heterogeneity penalty, enabling federated learning to match or exceed centralized performance while preserving data localization.
 
 **Statistical Uncertainty:**
+
 - 10 repeated runs with different seeds per configuration
 - Report mean ± standard deviation
 - Confidence intervals for ROC-AUC computed via DeLong's method
 - Overall low variance across runs (standard deviations ~0.001-0.003), indicating robust performance
 
 **Runtime and Cost:**
+
 - Experiment time tracked from first round start to final round completion
 - Centralized training: ~9 minutes average
 - FedAvg (32 clients, 50 rounds): ~29 minutes average
@@ -1064,12 +1484,14 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 - Computational cost: CPU-hours on supercomputer (GPU not required for MLP on tabular data)
 
 **Fairness and Subgroup Analysis:**
+
 - Performance stratified by client size (small <1000 episodes, medium 1000-10K, large >10K)
 - **Small clients benefit most from personalization:** Local-only models perform terribly (insufficient data), baseline FL performs poorly (dominated by large clients), personalized FL achieves strong performance (benefits from global knowledge + local adaptation)
 - **Large clients:** Personalization offers modest gains over baseline FL
 - **Imbalanced clients:** Sites with extreme class imbalance (5% or 30% progression rates) show larger improvements with personalization vs. global model
 
 **Sensitivity Analyses:**
+
 - Tested different client fractions (100%, 60%, 40% participation)
 - Tested multiple federated algorithms (FedAvg, FedProx with varying mu, FedOpt variants)
 - Tested two personalization strategies (architecture-based, fine-tuning-based)
@@ -1080,13 +1502,15 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 
 ---
 
-## 🔒 Phase 6: Privacy, Security & Risk
+<h2 class="phase-header" id="phase6">
+🔒 Phase 6: Privacy, Security & Risk
+</h2>
 
-<div class="phase-intro">
+<div class="phase-intro" markdown="1">
 <strong>Privacy and security aren't afterthoughts - they're core design requirements for federated analytics.</strong> This phase documents the technical safeguards that implement your governance policies (from Phase 2). You'll identify threats, describe defenses, and be transparent about what is and isn't protected. Privacy is a spectrum, not binary.
 </div>
 
-<div class="phase-meta">
+<div class="phase-meta" markdown="1">
 
 <div class="phase-meta-item questions">
 <strong>Key Questions:</strong> What could go wrong (threat model)? Who might try to attack your system (adversaries)? What information could leak (attack vectors)? What defenses have you implemented? What privacy guarantees can you actually make? For simulations: how does your threat model differ from real deployment?
@@ -1125,6 +1549,7 @@ Preprocessed longitudinal MS patient data into analysis episodes. Each episode:
 Primary concern: **Honest-but-curious server or researchers** attempting to infer individual patient information from shared model updates or aggregated results.
 
 **Considered Attack Vectors:**
+
 - Membership inference: Could an adversary determine if specific patient was in training set?
 - Model inversion: Could patient features be reconstructed from model weights?
 - Gradient leakage: Could individual patient data be extracted from gradient updates?
@@ -1162,13 +1587,15 @@ No formal incident response plan for simulation phase (research setting, de-iden
 
 ---
 
-## 📚 Phase 7: Reproducibility & Sharing
+<h2 class="phase-header" id="phase7">
+📚 Phase 7: Reproducibility & Sharing
+</h2>
 
-<div class="phase-intro">
+<div class="phase-intro" markdown="1">
 <strong>Making your work reproducible is not optional - it's a scientific and ethical obligation.</strong> This phase documents everything someone else needs to validate your findings or apply your methods to their own data. For federated analytics, reproducibility has unique challenges because data can't be shared, yet methods must still be verifiable.
 </div>
 
-<div class="phase-meta">
+<div class="phase-meta" markdown="1">
 
 <div class="phase-meta-item questions">
 <strong>Key Questions:</strong> Can someone else reproduce your results with access to the same (or similar) data? Have you documented enough detail about your environment, hyperparameters, and preprocessing that results should be identical? If data can't be shared, what alternatives enable validation (synthetic data, code testing, detailed methods)?
@@ -1215,11 +1642,13 @@ No formal incident response plan for simulation phase (research setting, de-iden
 <div class="example-content" markdown="1">
 
 **Code Repository:**
+
 - GitHub: https://github.com/ashkan-pirmani/FL-MS (Apache 2.0 license)
 - Release tag: v1.0.0 (commit hash: [specific commit])
 - Includes: Preprocessing scripts, Flower FL implementation, model architectures, evaluation notebooks, configuration files
 
 **Software Environment:**
+
 - Python 3.9
 - PyTorch 1.12.1
 - Flower 1.5.0
@@ -1228,17 +1657,20 @@ No formal incident response plan for simulation phase (research setting, de-iden
 - Hardware: Intel Xeon Platinum 8260 CPU
 
 **Reproducibility:**
+
 - Random seeds: 0-9 for 10 repeated runs
 - Seeds control: data splits, model initialization, batch shuffling
 - Results highly reproducible (SD across runs ~0.001-0.003 for ROC-AUC)
 
 **Data Availability:**
+
 - **Restricted Access:** MSBase registry data not publicly available due to privacy/governance
 - **Access Process:** Researchers may apply at www.msbase.org. Requires: research proposal, ethics approval, data use agreement, 2-6 month approval timeline
 - **Synthetic Data:** Not provided (difficult to generate realistic longitudinal MS data preserving clinical patterns)
 - **Alternative:** Our code can run on any tabular longitudinal dataset with similar structure (episodes with features + binary outcome)
 
 **Artifacts Released:**
+
 - Configuration files (JSON/YAML) for all experiments
 - Hyperparameter specifications
 - Model architecture code (full Python implementation)
@@ -1246,11 +1678,13 @@ No formal incident response plan for simulation phase (research setting, de-iden
 - Trained model weights: NOT released (privacy concerns even for aggregated models, plus MSBase data use restrictions)
 
 **Persistent Identifiers:**
+
 - Publication DOI: https://doi.org/10.1038/s41746-025-01788-8
 - Code repository: Archived on Zenodo upon publication (DOI to be assigned)
 - Experiments not tracked in MLflow (simpler logging via Flower framework sufficient)
 
 **Known Limitations:**
+
 1. **Simulation vs. live federation:** Results from simulated setup may not fully generalize to live distributed deployment (network latency, hardware heterogeneity, real governance overhead not captured)
 2. **MSBase generalizability:** Registry data may not represent general MS population (referral bias toward academic centers, geographic bias toward high-income countries)
 3. **Label quality:** Disability progression relies on EDSS documentation quality, which varies across sites
@@ -1263,15 +1697,17 @@ No formal incident response plan for simulation phase (research setting, de-iden
 
 ---
 
-## 🚀 Phase 8: Maturity Assessment & Path Forward
+<h2 class="phase-header" id="phase8">
+🚀 Phase 8: Maturity Assessment & Path Forward
+</h2>
 
-<div class="phase-intro">
+<div class="phase-intro" markdown="1">
 <strong>This phase honestly assesses where you are and what comes next.</strong> Not every federated learning project needs to reach production deployment - many generate valuable scientific insights while remaining research tools. This section helps you and your stakeholders understand the current maturity level, what it would take to advance, and whether that investment makes sense.
 <br><br>
 <em>Honest reflection matters more than hype.</em> Many research projects contribute valuable knowledge at TRL 4-5 without ever deploying. Overpromising deployment timelines damages credibility and wastes resources.
 </div>
 
-<div class="phase-meta">
+<div class="phase-meta" markdown="1">
 
 <div class="phase-meta-item questions">
 <strong>Key Questions:</strong> Is this production-ready, or proof-of-concept? What evidence supports your maturity claim? What would it actually take (time, money, people, approvals) to reach the next level? Is deployment realistic and worthwhile, or is the research contribution sufficient?
@@ -1296,6 +1732,7 @@ No formal incident response plan for simulation phase (research setting, de-iden
 **What to document:**
 
 **TRL Scale (briefly explained):**
+
 - **TRL 1-3:** Basic research, proof of concept on toy data
 - **TRL 4:** Technology validated in lab (realistic data, controlled environment)
 - **TRL 5:** Technology validated in relevant environment (simulation with real data characteristics)
@@ -1318,11 +1755,13 @@ No formal incident response plan for simulation phase (research setting, de-iden
 **Claimed TRL: 4-5**
 
 **TRL Definitions:**
+
 - TRL 4: Technology validated in lab environment
 - TRL 5: Technology validated in relevant environment (simulated clinical setting)
 - TRL 6: Technology demonstrated in relevant environment (pilot with real users)
 
 **Justification for TRL 4-5:**
+
 - ✅ Methods validated in simulation with realistic, multi-country MS registry data (26K+ patients)
 - ✅ Demonstrated that personalized FL achieves performance comparable to or exceeding centralized approaches
 - ✅ Published in peer-reviewed journal (npj Digital Medicine, Nature Portfolio)
@@ -1332,6 +1771,7 @@ No formal incident response plan for simulation phase (research setting, de-iden
 - ❌ NOT yet: Regulatory review or medical device assessment
 
 **Evidence:**
+
 1. Large-scale experiments using MSBase registry (283K episodes, 32 countries)
 2. Peer-reviewed publication with rigorous methods and statistical validation
 3. Multiple algorithmic innovations (AdaptiveDualBranchNet architecture)
@@ -1341,22 +1781,26 @@ No formal incident response plan for simulation phase (research setting, de-iden
 **Gaps to Reach TRL 6-7:**
 
 1. **Live Federation Deployment:** Transition from simulated to real distributed clients
+
    - Set up FL infrastructure across subset of MSBase participating hospitals (target: 5-10 sites)
    - Navigate distributed governance (separate ethics approvals, data use agreements per hospital)
    - Handle real IT challenges (firewalls, VPNs, hardware heterogeneity, maintenance windows)
 
 2. **Prospective Validation:**
+
    - Silent trial: Deploy model predictions without showing to clinicians, collect ground truth outcomes
    - Assess model calibration and drift in real-time use
    - Measure whether predictions remain stable over time
 
 3. **Clinical Usability Study:**
+
    - Work with neurologists to design decision support interface
    - Conduct user acceptance testing (n=10-20 clinicians)
    - Assess whether predictions change clinical decision-making
    - Identify barriers to adoption
 
 4. **Regulatory Pathway:**
+
    - Consult with regulatory bodies (FDA, EMA) regarding classification
    - Determine if system qualifies as medical device requiring approval
    - Prepare regulatory dossier if needed
@@ -1432,54 +1876,49 @@ Given regulatory and deployment complexity, may remain research tool for: (1) MS
 **Key Decisions and Rationales:**
 
 1. **Decision: Country-level clients** (vs. hospital-level)
-   *Rationale:* Balances sample size per client (many countries have 1000+ patients) with meaningful heterogeneity. Matches regulatory boundaries (data localization often national). Simplifies simulation (fewer clients, faster experiments). Trade-off: May not capture within-country variation.
+   _Rationale:_ Balances sample size per client (many countries have 1000+ patients) with meaningful heterogeneity. Matches regulatory boundaries (data localization often national). Simplifies simulation (fewer clients, faster experiments). Trade-off: May not capture within-country variation.
 
 2. **Decision: Simulation before live deployment**
-   *Rationale:* De-risks algorithm development. Can test many approaches quickly. Avoids burdening hospital IT with immature systems. Must transition to live federation for higher TRL.
+   _Rationale:_ De-risks algorithm development. Can test many approaches quickly. Avoids burdening hospital IT with immature systems. Must transition to live federation for higher TRL.
 
 3. **Decision: No differential privacy**
-   *Rationale:* DP noise would likely degrade model below acceptable performance. Aggregation over 32 clients provides some privacy protection. Future work could explore DP with larger client pools or better DP-FL algorithms.
+   _Rationale:_ DP noise would likely degrade model below acceptable performance. Aggregation over 32 clients provides some privacy protection. Future work could explore DP with larger client pools or better DP-FL algorithms.
 
 4. **Decision: MLP architecture**
-   *Rationale:* Simple, interpretable, trains fast on CPU. More complex architectures (deep learning, transformers) overkill for tabular data with 42 features. Facilitates comparison across conditions.
+   _Rationale:_ Simple, interpretable, trains fast on CPU. More complex architectures (deep learning, transformers) overkill for tabular data with 42 features. Facilitates comparison across conditions.
 
 5. **Decision: Test personalization strategies**
-   *Rationale:* Literature suggested FL struggles with heterogeneity; personalization seemed necessary. Confirmed via experiments.
+   _Rationale:_ Literature suggested FL struggles with heterogeneity; personalization seemed necessary. Confirmed via experiments.
 
 **Next Steps:**
 
 **Immediate (6-12 months):**
+
 1. Publish results and code (✅ completed, Nature npj Digital Medicine 2025)
 2. Present at MS research conferences (ECTRIMS, ACTRIMS) to engage clinical community
 3. Apply for funding for live deployment pilot (EU Horizon, national research councils)
 4. Identify 3-5 MSBase sites willing to pilot live FL infrastructure
 
-**Medium-term (1-2 years):**
-5. Deploy live FL across pilot hospitals
-6. Develop hospital-friendly FL client software (easy installation, minimal IT burden)
-7. Conduct prospective silent validation (predictions generated but not shown to clinicians)
-8. Assess clinical utility via user studies with neurologists
+**Medium-term (1-2 years):** 5. Deploy live FL across pilot hospitals 6. Develop hospital-friendly FL client software (easy installation, minimal IT burden) 7. Conduct prospective silent validation (predictions generated but not shown to clinicians) 8. Assess clinical utility via user studies with neurologists
 
-**Long-term (3-5 years):**
-9. Scale to 20+ hospitals if pilot succeeds
-10. Explore real-time integration with EHR systems
-11. Extend to additional prediction tasks (relapse risk, treatment response)
-12. Pursue regulatory pathway if clinical deployment becomes goal
+**Long-term (3-5 years):** 9. Scale to 20+ hospitals if pilot succeeds 10. Explore real-time integration with EHR systems 11. Extend to additional prediction tasks (relapse risk, treatment response) 12. Pursue regulatory pathway if clinical deployment becomes goal
 
 </div>
 </details>
 
 ---
 
-## Appendix: Changes from Template v1.1
+## Appendix: Changes from Template v1.1 {#appendix}
 
 **Structural Improvements:**
+
 - Reorganized around 8 lifecycle phases (vs. 14 flat sections) to reflect natural project progression
 - Added visual phase markers and lifecycle roadmap
 - Consolidated related content: merged Data + Standards, merged Wrangling into Preparation, merged Computation + Evaluation
 - Added rich explanatory text for each section explaining what to document and why it matters
 
 **New Fields Added (v1.2):**
+
 - **Ethics Status:** Explicit field for approved/waived/N/A to handle various research contexts (public data, secondary analysis)
 - **Federation Mode:** Simulated/Live/Hybrid with guidance on documenting simulation limitations
 - **Centralized Baseline:** Explicit request for performance comparison to quantify privacy-utility trade-off
@@ -1487,21 +1926,65 @@ Given regulatory and deployment complexity, may remain research tool for: (1) MS
 - **Intended Use Case:** Allows documenting vision for proof-of-concept work without concrete deployment plan
 
 **Clarifications:**
+
 - Population & Setting: Now explicitly includes non-clinical subjects (sensors, administrative data)
 - Fairness & Subgroup Analysis: Clarified to include non-demographic stratifications (per-site, per-outcome, etc.)
 - Simulation Considerations: Added guidance throughout to support early-stage TRL work
 
 **Example Study:**
+
 - Replaced generic examples with real published work: Pirmani et al. (2025), "Personalized federated learning for predicting disability progression in multiple sclerosis using real-world routine clinical data," npj Digital Medicine
 
 **Design Principles Preserved:**
+
 - Prose-first approach (guidance as narrative, not bullet checklists)
 - Separation of governance (policy) from privacy/security (technical controls)
 - Explicit TRL assessment with gap analysis
 - Focus on reproducibility and transparency
 
 
+---
 
-## Bibliography
+## Appendix: Changes from Template v1.1
+
+**Major Structural Changes:**
+
+- **Simplified from 8 phases to 4 phases** aligned with standard FL lifecycle
+- **Removed confusing quick start guide** that created multiple frameworks
+- **Added clear beginner guidance** with step-by-step instructions
+- **Consolidated related phases** to reduce cognitive load
+
+**Design Improvements:**
+
+- Added hero section with clear value proposition
+- Redesigned phase cards with better visual hierarchy
+- Implemented progressive disclosure with collapsible sections
+- Added difficulty indicators and timeline estimates
+- Simplified content with bullet points and shorter paragraphs
+- Improved mobile responsiveness
+
+**Content Improvements:**
+
+- **Aligned with standard FL lifecycle** (Planning, Preparation, Training, Deployment)
+- **Added beginner-friendly guidance** for newcomers to the domain
+- **Consolidated governance and ethics** into planning phase
+- **Combined data understanding and infrastructure** into preparation phase
+- **Integrated privacy/security** into training phase
+- **Merged reproducibility and maturity assessment** into deployment phase
+
+**User Experience:**
+
+- **Single clear framework** instead of multiple confusing ones
+- **Clear beginner path** with step-by-step instructions
+- **Less intimidating first impression** with better onboarding
+- **Clearer navigation** aligned with standard FL lifecycle
+- **Better visual breathing room** with consolidated content
+
+
+
+
+
+
+## Bibliography {#bibliography}
 
 {% bibliography --cited %}
