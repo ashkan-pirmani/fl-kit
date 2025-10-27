@@ -148,6 +148,111 @@ description: A practical implementation guide for federated analytics projects, 
   transform: translateY(-1px);
 }
 
+.beginner-highlights {
+  margin: 24px 0;
+  display: grid;
+  gap: 20px;
+}
+
+.highlight-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.highlight-item:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.highlight-icon {
+  font-size: 1.5em;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e7ff;
+  border-radius: 8px;
+}
+
+.highlight-content {
+  flex: 1;
+}
+
+.highlight-content strong {
+  display: block;
+  color: #374151;
+  font-size: 1em;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.highlight-content p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.beginner-resources {
+  margin-top: 32px;
+  padding: 24px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+}
+
+.beginner-resources h4 {
+  color: #374151;
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.resource-item {
+  padding: 16px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.resource-item:hover {
+  border-color: #7c3aed;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.1);
+}
+
+.resource-item strong {
+  display: block;
+  color: #374151;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.resource-item p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
 .beginner-note {
   background: #f9fafb;
   border: 1px solid #e5e7eb;
@@ -221,6 +326,41 @@ description: A practical implementation guide for federated analytics projects, 
 .extended-version a:hover {
   color: #b45309;
   border-bottom-color: #b45309;
+}
+
+/* Steps Introduction Section */
+.steps-intro {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 32px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.steps-intro h2 {
+  color: #1f2937;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.steps-intro p {
+  color: #4b5563;
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steps-intro p:last-child {
+  margin-bottom: 0;
+  font-size: 1em;
+  color: #6b7280;
 }
 
 /* Steps Overview Section */
@@ -731,6 +871,49 @@ description: A practical implementation guide for federated analytics projects, 
     grid-template-columns: 1fr;
     gap: 12px;
   }
+
+  .beginner-guide {
+    padding: 24px 20px;
+    margin: 24px -20px;
+  }
+
+  .beginner-highlights {
+    gap: 16px;
+  }
+
+  .highlight-item {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .highlight-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.3em;
+  }
+
+  .beginner-resources {
+    padding: 20px;
+  }
+
+  .resource-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .steps-intro {
+    padding: 24px 20px;
+    margin: 24px -20px;
+  }
+
+  .steps-intro h2 {
+    font-size: 1.5em;
+  }
+
+  .steps-intro p {
+    font-size: 1em;
+  }
 }
 
 /* Smooth scrolling */
@@ -747,34 +930,71 @@ html {
 }
 </style>
 
-<div class="template-header">
-  <h1 class="template-title">Federated Analytics Implementation Guide</h1>
-  <p class="template-subtitle">A practical, step-by-step guide for implementing federated analytics projects.
-  <p class="template-description">This guide provides a structured approach to implementing federated analytics projects, building upon the foundational concepts in our <a href="/fl_life_cycle">FL Lifecycle</a>. Rather than introducing new theoretical concepts, this document focuses on practical implementation steps, real-world considerations, and actionable guidance for moving from initial planning to successful deployment.</p>
+<div class="beginner-guide">
+  <div class="beginner-header">
+    <h3 class="beginner-title">🚀 How to Use This Guide</h3>
+  </div>
+  <div class="beginner-content">
+    <p><strong>Welcome!</strong> This guide walks you through implementing federated analytics projects from start to finish. Each step builds on the previous one, but you can adapt the approach to your specific needs and constraints.</p>
+
+    <div class="beginner-highlights">
+      <div class="highlight-item">
+        <div class="highlight-icon">📖</div>
+        <div class="highlight-content">
+          <strong>Built on solid foundations</strong>
+          <p>This guide extends our <a href="/fl_life_cycle">FL Lifecycle</a> framework and incorporates lessons from real-world <a href="/fl_use_cases">FL Use Cases</a> across healthcare and research domains. <em>For academic background, see <a href="https://arxiv.org/abs/1912.04977">McMahan et al. (2017)</a> and <a href="https://arxiv.org/abs/2004.10342">Li et al. (2020)</a>.</em></p>
+        </div>
+      </div>
+
+        <div class="highlight-item">
+          <div class="highlight-icon">⚡</div>
+          <div class="highlight-content">
+            <strong>Practical focus</strong>
+            <p>Build on solid theoretical foundations with actionable implementation steps. Each section includes real examples, common pitfalls, and specific deliverables you can implement immediately. <em>Check our <a href="/fl_use_cases">domain-specific examples</a>.</em></p>
+          </div>
+        </div>
+
+      <div class="highlight-item">
+        <div class="highlight-icon">🎯</div>
+        <div class="highlight-content">
+          <strong>Flexible framework</strong>
+          <p>Every project is unique. Use this as a flexible framework, not a rigid checklist. Adapt timelines, skip irrelevant steps, and customize based on your domain and constraints. <em>See our <a href="/all_training_resources">training resources</a> and <a href="/community">community forums</a> for support.</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="beginner-resources">
+      <h4>📚 Quick Start Paths</h4>
+      <div class="resource-grid">
+        <div class="resource-item">
+          <strong>New to FL?</strong>
+          <p>Start with <a href="/fl_life_cycle">FL Lifecycle</a> and <a href="/fl_glossary">glossary</a>, then explore <a href="/fl_use_cases">real examples</a>. <em>For hands-on learning, try our <a href="/all_training_resources">interactive tutorials</a>.</em></p>
+        </div>
+        <div class="resource-item">
+          <strong>Ready to build?</strong>
+          <p>Check <a href="/fl_framework_assembly">framework selection</a> and browse <a href="/all_tools_and_resources">tools & resources</a>. <em>Popular frameworks include <a href="https://flower.dev/">Flower</a>, <a href="https://github.com/OpenMined/PySyft">PySyft</a>, and <a href="https://www.tensorflow.org/federated">TensorFlow Federated</a>.</em></p>
+        </div>
+        <div class="resource-item">
+          <strong>Need help?</strong>
+          <p>Join our <a href="/community">community</a> or access <a href="/all_training_resources">training materials</a>. <em>For role-specific guidance, check <a href="/your_role">our role pages</a>.</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="general-disclaimer">
-  <p><strong>📋 Important Note:</strong> This guide provides a comprehensive end-to-end pipeline for federated analytics implementation, but we acknowledge that every project is unique. The approaches, timelines, and specific requirements may differ significantly based on your domain, regulatory environment, data characteristics, and organizational context.</p>
+  <p><strong>📋 Every Project is Unique:</strong> This guide provides a comprehensive roadmap for federated analytics implementation, but your journey will be shaped by your specific domain, data characteristics, and organizational context. Healthcare projects face different regulatory challenges than finance or research applications. <em>For regulatory guidance, consult <a href="https://gdpr-info.eu/">GDPR</a>, <a href="https://www.hhs.gov/hipaa">HIPAA</a>, and other relevant frameworks in your jurisdiction.</em></p>
 
-  <p><strong>📅 Timeline Estimates:</strong> All timelines provided are estimates based on typical projects. Your actual timeline may vary significantly depending on your specific domain, data complexity, regulatory requirements, and team experience. Use these as rough guidelines rather than fixed schedules.</p>
+  <p><strong>📅 Realistic Timelines:</strong> The timelines you'll see are based on successful projects across different domains. Your actual schedule will depend on data complexity, team experience, regulatory requirements, and infrastructure readiness. <em>Ethics approval alone can take 3-6 months in many jurisdictions, so plan accordingly.</em> Use these estimates as planning references, not rigid deadlines.</p>
 
-  <p><strong>🎯 Adaptation Required:</strong> While this guide aims to cover the complete implementation pipeline, some steps may not apply to your specific domain, or you may need to adapt the approach based on your unique constraints and requirements. The goal is to provide a structured framework that you can customize to your needs.</p>
+  <p><strong>🎯 Customize Your Approach:</strong> This guide covers the complete implementation pipeline, but you may need to adapt, skip, or modify steps based on your unique constraints. A research prototype has different requirements than a production healthcare system. <em>See our <a href="/fl_use_cases">use case library</a> for domain-specific examples and adaptations.</em> The goal is to give you a structured framework that you can tailor to your needs.</p>
 </div>
 
-<div class="beginner-guide">
-  <div class="beginner-header">
-    <h3 class="beginner-title">🎯 Getting Started</h3>
-  </div>
-  <div class="beginner-content">
-    <p><strong>This guide is designed for progressive learning.</strong> Whether you are new to federated learning or have experience with the concepts, this implementation guide provides practical steps to move from idea to deployment. Each step builds upon the previous one, but you can adapt the approach to your specific needs.</p>
-
-    <p><strong>📚 New to federated learning?</strong> Start with our <a href="/fl_life_cycle">FL Lifecycle overview</a> and <a href="/fl_glossary">glossary</a> to understand the foundational concepts before diving into implementation details. You may also want to explore our <a href="/fl_use_cases">FL Use Cases</a> to see real-world applications.</p>
-
-    <p><strong>💡 Pro tip:</strong> This guide complements rather than replaces the <a href="/fl_life_cycle">FL Lifecycle</a>. Think of the lifecycle as the "what" and this guide as the "how" for practical implementation. For technical framework selection, check our <a href="/fl_framework_assembly">FL Framework Assembly</a> guide.</p>
-
-    <p><strong>🔗 Related Resources:</strong> Throughout this guide, you will find links to relevant <a href="/all_tools_and_resources">tools and resources</a>, <a href="/all_training_resources">training materials</a>, and <a href="/your_role">role-specific guidance</a> to support your implementation journey.</p>
-
-  </div>
+<div class="steps-intro">
+  <h2>🚀 Ready to Start? Here's Your Implementation Roadmap</h2>
+  <p>Now that you understand how to use this guide, let's dive into the four core steps that will take you from initial concept to successful deployment. Each step builds on the previous one, with clear deliverables and checkpoints along the way.</p>
+  <p><strong>💡 Pro tip:</strong> You can click on any step card below to jump directly to the detailed implementation guide, or scroll through them sequentially to get the complete picture.</p>
 </div>
 
 <div class="steps-overview">
