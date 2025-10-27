@@ -45,10 +45,10 @@ subitems:
       - title: Global Data Sharing Initiative (GDSI)
         url: /gdsi
       - title: Inflammatory Bowel Disease Study (FL_IBD)
-        url: /fl_ibd
+        url: /FL_IBD
         subitems:
       - title: WiNGS
-        url: /wings
+        url: /WiNGS
       - title: Templates
         subitems:
         - title: Template 0.1
