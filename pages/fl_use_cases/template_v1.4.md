@@ -278,11 +278,7 @@ html {
 }
 </style>
 
-<div class="extended-header">
-  <h1 class="extended-title">Federated Analytics Extended Implementation Guide</h1>
-  <p class="extended-subtitle">Comprehensive Deep-Dive with Advanced Methodologies</p>
-  <p class="extended-description">This extended guide provides comprehensive methodologies, detailed checklists, advanced techniques, and expert guidance for each step of federated analytics implementation. Use this when you need deep technical details, comprehensive coverage, and extensive referencing for complex scenarios.</p>
-</div>
+
 
 <div class="content-flow">
   <div class="introduction-section">

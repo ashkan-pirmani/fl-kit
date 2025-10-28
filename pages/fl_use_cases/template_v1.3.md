@@ -935,14 +935,14 @@ html {
     <h3 class="beginner-title">🚀 How to Use This Guide</h3>
   </div>
   <div class="beginner-content">
-    <p><strong>Welcome!</strong> This guide walks you through implementing federated analytics projects from start to finish. Each step builds on the previous one, but you can adapt the approach to your specific needs and constraints.</p>
+    <p><strong>Hey there!</strong> This guide walks you through building federated analytics projects from start to finish. Each step builds on the previous one, but feel free to adapt things to fit your specific needs and constraints.</p>
 
     <div class="beginner-highlights">
       <div class="highlight-item">
         <div class="highlight-icon">📖</div>
         <div class="highlight-content">
           <strong>Built on solid foundations</strong>
-          <p>This guide extends our <a href="/fl_life_cycle">FL Lifecycle</a> framework and incorporates lessons from real-world <a href="/fl_use_cases">FL Use Cases</a> across healthcare and research domains. <em>For academic background, see <a href="https://arxiv.org/abs/1912.04977">McMahan et al. (2017)</a> and <a href="https://arxiv.org/abs/2004.10342">Li et al. (2020)</a>.</em></p>
+          <p>This guide builds on our <a href="/fl_life_cycle">FL Lifecycle</a> framework and pulls in lessons from real-world <a href="/fl_use_cases">FL Use Cases</a> across healthcare and research domains. <em>Want the academic background? Check out <a href="https://arxiv.org/abs/1912.04977">McMahan et al. (2021)</a> and <a href="https://www.sciencedirect.com/science/article/pii/S0950705121000381?casa_token=EnIpY-RiBh0AAAAA:zVcsrdkU-6ZSlNnnu99IuRcM75ZzysYEWi60iLupHEgRp-SDl5d6X2nZB7Vpej7MQZkPpvm7o8Q">Zhang et al. (2021)</a>.</em></p>
         </div>
       </div>
 
@@ -950,17 +950,9 @@ html {
           <div class="highlight-icon">⚡</div>
           <div class="highlight-content">
             <strong>Practical focus</strong>
-            <p>Build on solid theoretical foundations with actionable implementation steps. Each section includes real examples, common pitfalls, and specific deliverables you can implement immediately. <em>Check our <a href="/fl_use_cases">domain-specific examples</a>.</em></p>
+            <p>We'll build on solid theoretical foundations with actionable implementation steps. Each section includes real examples, common pitfalls, and specific deliverables you can implement right away. <em>Check out our <a href="/fl_use_cases">domain-specific examples</a>.</em></p>
           </div>
         </div>
-
-      <div class="highlight-item">
-        <div class="highlight-icon">🎯</div>
-        <div class="highlight-content">
-          <strong>Flexible framework</strong>
-          <p>Every project is unique. Use this as a flexible framework, not a rigid checklist. Adapt timelines, skip irrelevant steps, and customize based on your domain and constraints. <em>See our <a href="/all_training_resources">training resources</a> and <a href="/community">community forums</a> for support.</em></p>
-        </div>
-      </div>
     </div>
 
     <div class="beginner-resources">
@@ -968,15 +960,15 @@ html {
       <div class="resource-grid">
         <div class="resource-item">
           <strong>New to FL?</strong>
-          <p>Start with <a href="/fl_life_cycle">FL Lifecycle</a> and <a href="/fl_glossary">glossary</a>, then explore <a href="/fl_use_cases">real examples</a>. <em>For hands-on learning, try our <a href="/all_training_resources">interactive tutorials</a>.</em></p>
+          <p>Start with our <a href="/fl_life_cycle">FL Lifecycle</a> and <a href="/fl_glossary">glossary</a>, then dive into <a href="/fl_use_cases">real examples</a>. <em>Want hands-on learning? Try our <a href="/all_training_resources">interactive tutorials</a>.</em></p>
         </div>
         <div class="resource-item">
           <strong>Ready to build?</strong>
-          <p>Check <a href="/fl_framework_assembly">framework selection</a> and browse <a href="/all_tools_and_resources">tools & resources</a>. <em>Popular frameworks include <a href="https://flower.dev/">Flower</a>, <a href="https://github.com/OpenMined/PySyft">PySyft</a>, and <a href="https://www.tensorflow.org/federated">TensorFlow Federated</a>.</em></p>
+          <p>Check out <a href="/fl_framework_assembly">framework selection</a> and browse our <a href="/all_tools_and_resources">tools & resources</a>. <em>Popular picks include <a href="https://flower.dev/">Flower</a>, <a href="https://github.com/OpenMined/PySyft">PySyft</a>, and <a href="https://www.tensorflow.org/federated">TensorFlow Federated</a>.</em></p>
         </div>
         <div class="resource-item">
           <strong>Need help?</strong>
-          <p>Join our <a href="/community">community</a> or access <a href="/all_training_resources">training materials</a>. <em>For role-specific guidance, check <a href="/your_role">our role pages</a>.</em></p>
+          <p>Join our <a href="/community">community</a> or check out <a href="/all_training_resources">training materials</a>. <em>Looking for role-specific guidance? Check <a href="/your_role">our role pages</a>.</em></p>
         </div>
       </div>
     </div>
@@ -984,17 +976,17 @@ html {
 </div>
 
 <div class="general-disclaimer">
-  <p><strong>📋 Every Project is Unique:</strong> This guide provides a comprehensive roadmap for federated analytics implementation, but your journey will be shaped by your specific domain, data characteristics, and organizational context. Healthcare projects face different regulatory challenges than finance or research applications. <em>For regulatory guidance, consult <a href="https://gdpr-info.eu/">GDPR</a>, <a href="https://www.hhs.gov/hipaa">HIPAA</a>, and other relevant frameworks in your jurisdiction.</em></p>
+  <p><strong>📋 Every Project is Unique:</strong> This guide gives you a solid roadmap for federated analytics implementation, but your journey will be shaped by your specific domain, data characteristics, and organizational context. Healthcare projects face different regulatory challenges than finance or research applications. <em>For regulatory guidance, check out <a href="https://gdpr-info.eu/">GDPR</a>, <a href="https://www.hhs.gov/hipaa">HIPAA</a>, and other relevant frameworks in your jurisdiction.</em></p>
 
-  <p><strong>📅 Realistic Timelines:</strong> The timelines you'll see are based on successful projects across different domains. Your actual schedule will depend on data complexity, team experience, regulatory requirements, and infrastructure readiness. <em>Ethics approval alone can take 3-6 months in many jurisdictions, so plan accordingly.</em> Use these estimates as planning references, not rigid deadlines.</p>
+  <p><strong>📅 Realistic Timelines:</strong> The timelines you'll see are based on successful projects across different domains. Your actual schedule will depend on data complexity, team experience, regulatory requirements, and infrastructure readiness. <em>Ethics approval alone can take months in many jurisdictions, so plan accordingly.</em> Use these estimates as planning references, not rigid deadlines.</p>
 
-  <p><strong>🎯 Customize Your Approach:</strong> This guide covers the complete implementation pipeline, but you may need to adapt, skip, or modify steps based on your unique constraints. A research prototype has different requirements than a production healthcare system. <em>See our <a href="/fl_use_cases">use case library</a> for domain-specific examples and adaptations.</em> The goal is to give you a structured framework that you can tailor to your needs.</p>
+  <p><strong>🎯 Customize Your Approach:</strong> This guide covers the complete implementation pipeline, but you might need to adapt, skip, or modify steps based on your unique constraints. A research prototype has different requirements than a production healthcare system. <em>Check out our <a href="/fl_use_cases">use case library</a> for domain-specific examples and adaptations.</em> The goal is to give you a structured framework that you can tailor to your needs.</p>
 </div>
 
 <div class="steps-intro">
   <h2>🚀 Ready to Start? Here's Your Implementation Roadmap</h2>
-  <p>Now that you understand how to use this guide, let's dive into the four core steps that will take you from initial concept to successful deployment. Each step builds on the previous one, with clear deliverables and checkpoints along the way.</p>
-  <p><strong>💡 Pro tip:</strong> You can click on any step card below to jump directly to the detailed implementation guide, or scroll through them sequentially to get the complete picture.</p>
+  <p>Now that you know how to use this guide, let's dive into the four core steps that'll take you from initial concept to successful deployment. Each step builds on the previous one, with clear deliverables and checkpoints along the way.</p>
+  <p><strong>💡 Pro tip:</strong> You can click on any step card below to jump straight to the detailed implementation guide, or scroll through them sequentially to get the complete picture.</p>
 </div>
 
 <div class="steps-overview">
@@ -1083,7 +1075,7 @@ html {
         <ul>
           <li>Algorithm design and model architecture</li>
           <li>Federated training implementation</li>
-          <li>Privacy-preserving techniques (differential privacy, secure multi-party computation)</li>
+          <li>Privacy-preserving techniques (<a href ="https://link.springer.com/chapter/10.1007/11787006_1">differential privacy</a>, <a href ="https://www.researchgate.net/profile/Oded-Goldreich/publication/2934115_Secure_Multi-Party_Computation/links/00b7d52bb04f7027d4000000/Secure-Multi-Party-Computation.pdf">secure multi-party computation</a>)</li>
           <li>Performance evaluation and validation</li>
         </ul>
       </div>
@@ -1143,7 +1135,7 @@ html {
   <div class="extended-header">
     <strong>Need More Detail?</strong>
   </div>
-  <p>This guide provides a streamlined overview of the FL implementation process. For comprehensive guidance with detailed examples, checklists, and step-by-step instructions, explore our <a href="template_v1.4">Complete Template</a>.</p>
+  <p>This guide gives you a streamlined overview of the FL implementation process. Want more comprehensive guidance with detailed examples, checklists, and step-by-step instructions? Check out our <a href="#">Complete Template</a>.</p>
 </div>
 
 ---
@@ -1182,7 +1174,7 @@ html {
 
     <div class="content-section">
       <h4><span class="content-section-icon">⚠️</span> Common Mistakes</h4>
-      <p>Vague problem statements ("improve healthcare"), unrealistic objectives (overpromising performance), weak federation justification (could actually centralize with proper agreements), underestimating ethics timeline (budget 6+ months), unclear authorship rules leading to publication conflicts.</p>
+      <p>Vague problem statements ("improve healthcare"), unrealistic objectives (overpromising performance), weak federation justification (could actually centralize with proper agreements), underestimating ethics timeline, unclear authorship rules leading to publication conflicts.</p>
     </div>
 
     <div class="content-section">
@@ -1209,16 +1201,16 @@ html {
 
     <div class="example-box">
       <div class="example-header">
-        <span>📝 Example: FL-MS Study Planning</span>
+        <span>📝 Example: <a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000533">FL-MS Study Planning</a></span>
       </div>
       <div class="example-content">
         <p><strong>Background:</strong> This example is based on a real-world federated learning study for multiple sclerosis (MS) disability progression prediction, published in <a href="#Pirmani2025-sd">Pirmani et al. (2025)</a>. The study demonstrates how federated learning can be applied to clinical prediction tasks while maintaining data privacy and regulatory compliance.</p>
 
-        <p><strong>Problem:</strong> Early prediction of disability progression in multiple sclerosis (MS) remains challenging despite its critical importance for therapeutic decision-making. MS affects millions of people worldwide, with each patient experiencing unique disease progressions and varying responses to treatment. The primary challenge lies in capturing this heterogeneity to enable personalized, data-driven treatment strategies. While machine learning shows promise for improving our understanding of MS progression and predicting individual treatment responses, developing advanced ML models remains constrained by limited access to large-scale, high-quality datasets. Although MS impacts an estimated 2.8 million individuals globally, clinical data needed for precision modeling remain fragmented and siloed across healthcare institutions.</p>
+        <p><strong>Problem:</strong> Early prediction of disability progression in multiple sclerosis (MS) remains challenging despite its critical importance for therapeutic decision-making. MS affects millions of people worldwide <a href="https://journals.sagepub.com/doi/full/10.1177/1352458520970841">(Walton et al., 2020)</a>, with each patient experiencing unique disease progressions and varying responses to treatment. The primary challenge lies in capturing this heterogeneity to enable personalized, data-driven treatment strategies. While <a href="https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000533">machine learning shows promise</a> for improving our understanding of MS progression and predicting individual treatment responses, developing advanced ML models remains constrained by limited access to large-scale, high-quality datasets. Although MS impacts an estimated 2.8 million individuals globally, clinical data needed for precision modeling remain <a href="https://journals.sagepub.com/doi/full/10.1177/1352458520941485">fragmented and siloed across healthcare institutions</a>.</p>
 
-        <p><strong>Why Federated:</strong> Aggregating MS clinical data across international institutions is complicated by legitimate but complex regulatory constraints (<a href="https://gdpr-info.eu/">GDPR</a>, national health data laws), data ownership concerns, and inconsistent data quality standards. Healthcare institutions are reluctant to share raw patient records due to privacy regulations, competitive concerns, and liability fears. Federated learning offers a decentralized learning paradigm that enables training ML models while preserving data localization, strongly aligned with data privacy and protection standards. This approach allows collaborative model development without requiring data centralization.</p>
+        <p><strong>Why Federated:</strong> Aggregating MS clinical data across international institutions is complicated by legitimate but complex regulatory constraints (<a href="https://gdpr-info.eu/">GDPR</a>, national health data laws), data ownership concerns, and inconsistent data quality standards. <a href="https://medinform.jmir.org/2023/1/e48030/">Healthcare institutions are reluctant to share raw patient records</a> due to privacy regulations, competitive concerns, and liability fears. Federated learning offers a decentralized learning paradigm that enables training ML models while preserving data localization, strongly aligned with data privacy and protection standards. This approach allows <a href="https://formative.jmir.org/2024/1/e55496">collaborative model development</a> without requiring data centralization.</p>
 
-        <p><strong>Objective:</strong> Assess whether personalized federated learning can match or exceed centralized model performance in predicting 2-year disability progression in multiple sclerosis patients, while maintaining data localization and privacy. Success defined as achieving comparable ROC-AUC to centralized baseline (~0.81) using federated approaches across multiple international sites.</p>
+        <p><strong>Objective:</strong> Assess whether <a href="https://arxiv.org/abs/2103.00710">personalized federated learning</a> can match or exceed centralized model performance in predicting 2-year disability progression in multiple sclerosis patients, while maintaining data localization and privacy. Success defined as achieving comparable ROC-AUC to centralized baseline (~0.81) using federated approaches across multiple international sites.</p>
 
         <p><strong>Ethics Approval:</strong> Hasselt University and KU Leuven PRET Approval: G 2023 6771. Legal Basis: <a href="https://gdpr-info.eu/art-6-gdpr/">GDPR Article 6(1)(e)</a> + <a href="https://gdpr-info.eu/art-9-gdpr/">Article 9(2)(j)</a> for health data research with appropriate safeguards.</p>
       </div>
@@ -1288,13 +1280,13 @@ html {
         <span>📝 Example: FL-MS Study Preparation</span>
       </div>
       <div class="example-content">
-        <p><strong>Data Source:</strong> MSBase international MS registry, a large prospective observational cohort collecting routine clinical data from MS patients worldwide. Clients defined at country level, resulting in multiple federated sites. This choice balances sufficient sample size per client (many countries have 1000+ patients) with meaningful clinical heterogeneity (MS care practices, genetic backgrounds, environmental factors vary by country).</p>
+        <p><strong>Data Source:</strong><a href="https://doi.org/10.1177/1352458506070775"> MSBase international</a> MS registry, a large prospective observational cohort collecting routine clinical data from MS patients worldwide. Clients defined at country level, resulting in multiple federated sites. This choice balances sufficient sample size per client (many countries have 1000+ patients) with meaningful clinical heterogeneity (MS care practices, genetic backgrounds, environmental factors vary by country).</p>
 
-        <p><strong>Federation Mode:</strong> Simulated on Flanders Supercomputer - captures data heterogeneity but not real network challenges. Data partitioned by country to create multiple virtual clients, but all data physically reside on same computing cluster. Each virtual client has exclusive access to its country's data subset during training (enforced programmatically).</p>
+        <p><strong>Federation Mode:</strong> Simulated on Flanders Supercomputer, captures data heterogeneity but not real network challenges. Data partitioned by country to create multiple virtual clients, but all data physically reside on same computing cluster. Each virtual client has exclusive access to its country's data subset during training (enforced programmatically).</p>
 
-        <p><strong>Features:</strong> 42 tabular features including demographics, Expanded Disability Status Scale (EDSS) scores, relapse history, treatment records. Outcome: Confirmed Disability Progression (CDP) - sustained EDSS increase confirmed at 6 months. Final dataset: 283,115 episodes from 26,246 patients across multiple countries.</p>
+        <p><strong>Features:</strong> 42 tabular features including demographics, Expanded Disability Status Scale (EDSS) scores, relapse history, treatment records. Outcome: Confirmed Disability Progression (CDP), sustained EDSS increase confirmed at 6 months. Final dataset: 283,115 episodes from 26,246 patients across multiple countries.</p>
 
-        <p><strong>Infrastructure:</strong> Centralized star topology with Flower 1.5.0, multiple clients on Flanders Supercomputer. Preprocessing: Episode construction with 3.25-year observation windows, 60/20/20 train/validation/test splits at patient level. Normalization: Per-client using training set statistics to avoid information leakage.</p>
+        <p><strong>Infrastructure:</strong> Centralized star topology with Flower 1.5.0, 32 clients on Flanders Supercomputer. Preprocessing: Episode construction with 3.25-year observation windows, 60/20/20 train/validation/test splits at patient level. Normalization: Per-client using training set statistics to avoid information leakage.</p>
       </div>
     </div>
 
@@ -1344,9 +1336,9 @@ html {
     <div class="content-section">
       <h4><span class="content-section-icon">📝</span> What to Document</h4>
       <ul>
-        <li><strong>Algorithm Selection:</strong> List all algorithms tested - both federated (FedAvg, FedProx, etc.) and baselines (centralized, local-only). Describe your model architecture in detail. Explain hyperparameter choices and how you tuned them. Document training schedules (number of rounds, local epochs, batch sizes, early stopping).</li>
+        <li><strong>Algorithm Selection:</strong> List all algorithms tested, both federated (FedAvg, FedProx, etc.) and baselines (centralized, local-only). Describe your model architecture in detail. Explain hyperparameter choices and how you tuned them. Document training schedules (number of rounds, local epochs, batch sizes, early stopping).</li>
         <li><strong>Evaluation and Success Criteria:</strong> Define your primary metric (the ONE number you will use to judge success) and secondary metrics. Explain how evaluation happens: where are models tested (centrally or at each client), how do you aggregate local performance metrics, and how do you ensure test data never leaked into training. Compare federated performance to three baselines: (1) centralized, (2) local-only, (3) simpler methods.</li>
-        <li><strong>Fairness Analysis:</strong> Do results hold across all clients, or do some sites get worse predictions? Report performance stratified by client size, class balance, or other relevant factors. Check fairness: do results hold across all clients, or do some sites get worse predictions?</li>
+        <li><strong>Fairness Analysis:</strong> Do results hold across all clients, or do some sites get worse predictions? Report performance stratified by client size, class balance, or other relevant factors.</li>
         <li><strong>Threat Model and Controls:</strong> Identify potential adversaries (honest-but-curious server, malicious clients, external attackers, insiders) and attack vectors (model inversion, membership inference, gradient leakage, Byzantine updates). List implemented defenses (secure aggregation, encryption, differential privacy, access logging).</li>
         <li><strong>Privacy Guarantees:</strong> What protection is actually provided? If using differential privacy: document privacy budget accounting. For simulations: note how threat model differs from live deployment. Be transparent about what is and is not protected.</li>
         <li><strong>Reproducibility:</strong> Set and document random seeds for reproducibility. Note any sources of non-determinism (GPU operations, asynchronous updates, client ordering effects). Document software versions, hardware specs, dependencies.</li>
@@ -1358,7 +1350,7 @@ html {
         <span>📝 Example: FL-MS Study Training</span>
       </div>
       <div class="example-content">
-        <p><strong>Architecture:</strong> 5-layer Multi-Layer Perceptron (MLP) (256 neurons/layer) with AdaptiveDualBranchNet for personalization. Total parameters: ~330K. Centralized baseline achieved ROC-AUC ~0.81, PR-AUC ~0.46 on country-partitioned test set.</p>
+        <p><strong>Architecture:</strong> 5-layer Multi-Layer Perceptron (MLP) (512 neurons/layer) with AdaptiveDualBranchNet for personalization. Total parameters: ~330K. Centralized baseline achieved ROC-AUC ~0.81, PR-AUC ~0.46 on country-partitioned test set.</p>
 
         <p><strong>Key Finding:</strong> Personalized FL achieved ROC-AUC 0.84 ± 0.002, exceeding centralized baseline (0.81). Small clients benefit most from personalization, large clients show modest gains. 10 repeated runs with different seeds, low variance across experiments (SD ~0.001-0.003).</p>
 
@@ -1383,7 +1375,7 @@ html {
   <div class="step-content">
     <div class="content-section">
       <h4><span class="content-section-icon">💡</span> What This Step Covers</h4>
-      <p><strong>This step honestly assesses where you are and what comes next.</strong> The deployment step combines reproducibility, sharing, and maturity assessment. Making your work reproducible is not optional - it is a scientific and ethical obligation. This step documents everything someone else needs to validate your findings or apply your methods to their own data. Not every federated learning project needs to reach production deployment - many generate valuable scientific insights while remaining research tools.</p>
+      <p><strong>This step honestly assesses where you are and what comes next.</strong> The deployment step combines reproducibility, sharing, and maturity assessment. Making your work reproducible is not optional, it is a scientific and ethical obligation. This step documents everything someone else needs to validate your findings or apply your methods to their own data. Not every federated learning project needs to reach production deployment, many generate valuable scientific insights while remaining research tools.</p>
     </div>
 
     <div class="content-section">
@@ -1448,7 +1440,7 @@ html {
 
         <p><strong>Data Access:</strong> Restricted - researchers can apply at www.msbase.org with 2-6 month approval timeline. Model weights: NOT released (privacy concerns even for aggregated models, plus MSBase data use restrictions).</p>
 
-        <p><strong>Current TRL:</strong> 4-5 (validated in simulation with realistic data, published in peer-reviewed journal). Gaps to TRL 6-7: Live federation deployment, prospective validation, clinical usability studies, regulatory pathway. Timeline to TRL 7: 2-3 years, €500K-1M investment.</p>
+        <p><strong>Current TRL:</strong> 4-5 (validated in simulation with realistic data, published in peer-reviewed journal). Gaps to TRL 6-7: Live federation deployment, prospective validation, clinical usability studies, regulatory pathway. Timeline to TRL 7: 2-3 years</p>
 
         <p><strong>Key Lessons:</strong> Personalization crucial for heterogeneous data, simulation valuable for algorithm development, stakeholder engagement needed earlier. Next steps: Apply for funding for live deployment pilot, identify 3-5 MSBase sites willing to pilot live FL infrastructure.</p>
       </div>
