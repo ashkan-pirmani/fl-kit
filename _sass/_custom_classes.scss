@@ -24,6 +24,30 @@
         }
         header nav.navbar {
             margin-bottom: 0 !important;
+            position: relative;
+            overflow: visible;
+            background-image: url("../img/banner_overlay.svg") !important;
+            background-size: cover !important;
+            background-position: center center !important;
+            background-repeat: no-repeat !important;
+            background-color: $dark !important;
+            background-blend-mode: overlay;
+
+            .navbar-brand {
+                position: relative;
+                z-index: 2;
+
+                img {
+                    max-height: 80px;
+                    width: auto;
+                    height: auto;
+                }
+            }
+
+            .navbar-nav {
+                position: relative;
+                z-index: 2;
+            }
         }
         aside#sidebar {
             padding-top: $spacer * 3;
@@ -173,11 +197,69 @@ section#search-section {
 
 /*-----Top navigation-----*/
 
+// Banner overlay on navbar (global - applies to all pages including landing page)
+header nav.navbar {
+    background-image: url("../img/banner_overlay.svg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-color: $dark !important;
+    background-blend-mode: overlay;
+    overflow: visible;
+    position: relative;
+
+    .navbar-brand {
+        position: relative;
+        z-index: 2;
+
+        img {
+            max-height: 80px;
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .navbar-nav {
+        position: relative;
+        z-index: 2;
+    }
+}
+
 .navbar-nav .nav-item > a {
     white-space: nowrap;
     &.active {
         background-color: $primary;
         border-radius: $border-radius;
+    }
+}
+
+// Banner overlay on navbar (for mobile)
+@media (max-width: 991px) {
+    header nav.navbar {
+        position: relative;
+        overflow: visible;
+        background-image: url("../img/banner_overlay.svg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+        background-color: $dark !important;
+        background-blend-mode: overlay;
+
+        .navbar-brand {
+            position: relative;
+            z-index: 2;
+
+            img {
+                max-height: 80px;
+                width: auto;
+                height: auto;
+            }
+        }
+
+        .navbar-nav {
+            position: relative;
+            z-index: 2;
+        }
     }
 }
 
