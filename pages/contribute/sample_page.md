@@ -2,6 +2,7 @@
 page_id: sample_page
 title: Title of the sample page
 description: This is a description
+page_citation: true
 
 search_exclude: true # note we want to exclude this "sample" page
 
@@ -34,14 +35,22 @@ Linking to other pages:
   - [Click here for how to add a new tool](tool_resource_update)
 - This is an example of a cite {% cite Pirmani2024FL4E %}.
     - [Click here for how to add new citations](style_guide#bibliography)
+    
+
+## Bibliography
+This is how we can include a bibliography in the page
+
+{% bibliography --cited %}
 
 ## Page source code
+Source code of this page:
  {% raw %}
 ```markdown
 ---
 page_id: sample_page
 title: Title of the sample page
 description: This is a description
+page_citation: true
 
 search_exclude: true # note we want to exclude this "sample" page
 
@@ -75,5 +84,10 @@ Linking to other pages:
 - This is an example of a cite {% cite Pirmani2024FL4E %}.
   - [Click here for how to add new citations](tool_resource_update)
 
+
+## Bibliography
+This is how we can include a bibliography in the page
+
+{% bibliography --cited %}
 ``` 
 {% endraw %}
