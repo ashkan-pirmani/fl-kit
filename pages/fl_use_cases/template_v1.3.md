@@ -1131,12 +1131,12 @@ html {
   </div>
 </div>
 
-<div class="extended-version">
+<!-- <div class="extended-version">
   <div class="extended-header">
     <strong>Need More Detail?</strong>
   </div>
   <p>This guide gives you a streamlined overview of the FL implementation process. Want more comprehensive guidance with detailed examples, checklists, and step-by-step instructions? Check out our <a href="#">Complete Template</a>.</p>
-</div>
+</div> -->
 
 ---
 
