@@ -17,14 +17,14 @@ subitems:
         url: /preview_changes
   - title: How to
     subitems:
-      - title: Add new tool or resource
-        url: /tool_resource_update
       - title: Markdown cheat sheet
         url: /markdown_cheat_sheet
-      - title: Style guide
-        url: /style_guide
       - title: Page metadata
         url: /page_metadata
+      - title: Add new tool or resource
+        url: /tool_resource_update
+      - title: Style guide
+        url: /style_guide
   - title: Copyright guidelines
     url: /copyright
   - title: Code of Conduct

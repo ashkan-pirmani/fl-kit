@@ -39,6 +39,24 @@ If you wish to contribute, please remember the following:
 </div>
 
 
+## Read the guides
+
+Before starting editing on GitHub:
+1. Make sure you are following our [style guide](style_guide).
+2. Follow the structure of the provided template for the page you wish to create or update.
+3. We use markdown. To learn how to create paragraphs, headings, format text, add links and images and much more, follow our [markdown cheat sheet]({{site.WEBSITE}}/markdown_cheat_sheet).
+4. Our pages contain metadata. Read more about them in our [page metadata guide](page_metadata).
+
+## Linking resources and other pages (optional)
+* If you have mentioned tools or resources in your text, you will have to add them to the [tool and resource list](tool_resource_update).
+* If you want to list training material or link to other FLkit pages, add it to the page metadata. Read more on how to do this in our [page metadata guide](page_metadata).
+
+{% include callout.html type="important" content="In general terms, you must avoid manual interlinking of FLkit pages." %}
+
+## Example page
+
+This page [sample page](sample_page) demonstrates the types of metadata and links a page can include.
+
 ## Acknowledgement and ownership of content
 
 Contributors will be shown at the bottom of each page and on the main [contributors page]({{site.WEBSITE}}/contributors) if listed in the metadata of the markdown file. We strongly suggest to add the name, ORCID, email address and/or GitHub account and affiliation of the contributor to the [CONTRIBUTORS file]({{site.REPO}}/CONTRIBUTORS.yaml).
