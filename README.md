@@ -3,9 +3,10 @@
 [![Jekyll site CI](https://github.com/UHasselt-BiomedicalDataSciences/federated-learning-toolkit/workflows/Jekyll%20site%20CI/badge.svg)](https://github.com/UHasselt-BiomedicalDataSciences/federated-learning-toolkit/actions?query=workflow%3A%22Jekyll+site+CI%22)
 [![theme badge](https://img.shields.io/badge/ELIXIR%20toolkit%20theme-jekyll-blue?color=0d6efd)](https://github.com/ELIXIR-Belgium/elixir-toolkit-theme)
 
-<img src="/assets/img/FLkit_logo.svg" alt="FLkit logo" width="450"/>
+<img src="/assets/img/logo.svg" alt="FLkit logo" width="450"/>
 
 # FLkit
+
 The ELIXIR Federated Learning Kit
 
 ## Contribute
@@ -19,18 +20,15 @@ Do you want to help with this project? Please check out following pages for more
 * [Code of Conduct](https://uhasselt-biomedicaldatasciences.github.io/federated-learning-toolkit/blob/master/CODE_OF_CONDUCT.md)
 * [How to contribute](https://uhasselt-biomedicaldatasciences.github.io/federated-learning-toolkit/how_to_contribute)
 
-
 Do you which to contact the editors of this project? Use <lotte.geys@uhasselt.be>
 
 If you want to build the website locally, please have a look at our [Git tutorial](https://uhasselt-biomedicaldatasciences.github.io/federated-learning-toolkit/working_with_git).
-
 
 ## FLkit is an ELIXIR product
 
 ELIXIR is an intergovernmental organisation that brings together life science resources from across Europe.
 These resources include databases, software tools, training materials, cloud storage and supercomputers.
 TODO: expand
-
 
 ## License
 
@@ -40,7 +38,7 @@ More information about our license can be found on our [license](LICENSE) page.
 
 ## Acknowledgements
 
-TODO: 
+TODO:
 
 ### Custom icons
 
@@ -50,5 +48,4 @@ We base our toolkit and it's visuals on ELIXIR RDMkit. The amazing icons library
 <br>
 <a href="https://elixir-europe.org/about-us/how-funded/eu-projects/converge"><img src="https://raw.githubusercontent.com/elixir-europe/rdmkit/master/assets/img/elixir_logo_inverted.svg" width="15%"></a>
 
-
-TODO:  go over the README and adapt where necessary 
+TODO:  go over the README and adapt where necessary
