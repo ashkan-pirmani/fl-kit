@@ -17,6 +17,8 @@ subitems:
         url: /preview_changes
   - title: How to
     subitems:
+      - title: Sample page
+        url: /sample_page
       - title: Markdown cheat sheet
         url: /markdown_cheat_sheet
       - title: Page metadata
