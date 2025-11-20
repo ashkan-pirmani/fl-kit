@@ -1,5 +1,5 @@
 ---
-title: Federated Learning Framework Assembly
+title: Federated Learning Frameworks
 contributors: [Ashkan Pirmani]
 page_id: fl_framework_assembly
 search_exclude: true
