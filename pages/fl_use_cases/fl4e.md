@@ -1,13 +1,13 @@
 ---
 title: Federated Learning for Everyone (FL4E)
 contributors: [Axel Faes]
-page_id: fl4e
 search_exclude: false
+description: Overview of the FL4E framework, which simplifies and democratizes federated learning for clinical research, enabling flexible, scalable, and inclusive collaboration across healthcare stakeholders.
 ---
 
 The paper "Federated Learning for Everyone (FL4E)" presents a new approach to improve collaboration in clinical research using federated learning {% cite Pirmani2024FL4E %}, [(external link)](https://formative.jmir.org/2024/1/e55496) . Here's a simplified explanation:
 
-## Overview 
+## Overview
 ### Short Summary
 
 #### Background
@@ -108,7 +108,7 @@ Here are the main modules and their functionalities:
 
 4. **Data Center**:
    - **Purpose**: Central to the concept of the "degree of federation" within the FL4E framework, providing data sharing, integration, and aggregation capabilities.
-   - **Functions**: 
+   - **Functions**:
      - **Raw Data Sharing Scheme**: Initiates the process when the data provider shares a raw data scheme via a data dictionary.
      - **Data Cleaning and Enhancement Script**: Ensures data quality by handling duplicates, missing values, and validating value ranges.
      - **Data Sharing and Aggregation**: Facilitates data sharing, triggering cleaning scripts and ensuring data is aggregated into a single file for analytical use .
@@ -135,7 +135,7 @@ The key concepts of the FL4E framework are designed to facilitate adaptable and 
 
 These key concepts underscore FL4E's commitment to creating an inclusive, adaptable, and secure environment for collaborative healthcare research, leveraging the strengths of both federated and centralized models to meet the diverse needs of stakeholders.
 
-## Reimplementation 
+## Reimplementation
 To reimplement the work outlined in the FL4E framework, follow these detailed steps:
 
 ### Server-Side Implementation

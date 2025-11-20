@@ -3,11 +3,12 @@ title: Transforming Multiple Sclerosis Research - Pioneering Practical and Preci
 contributors: [Axel Faes]
 page_id: flms
 search_exclude: false
+description: Application of federated learning to real-world multiple sclerosis data, exploring optimal FL configurations and strategies for privacy-preserving, large-scale MS research.
 ---
 
 The paper titled "Transforming Multiple Sclerosis Research: Pioneering Practical and Precise Approaches with Federated Learning using Real-World Data" focuses on the application of Federated Learning (FL) to Multiple Sclerosis (MS) research using real-world clinical data. Here's a simplified explanation of the key points and findings:
 
-## Overview 
+## Overview
 ### Short Summary
 
 #### What is the Study About?
@@ -46,7 +47,7 @@ The study demonstrates that FL can be a powerful tool for MS research, offering 
 
 The full source code for this study is available at [GitHub](https://github.com/ashkan-pirmani/FL-MS-RWD), allowing for further exploration and replication of the study's findings.
 
-## Reimplementation 
+## Reimplementation
 
 ### Reimplementing the Work
 
@@ -146,7 +147,7 @@ By following these detailed steps, you can successfully reimplement the work out
 1. **Federated Model Performance**:
    - Various federated learning (FL) configurations were tested, identified by mnemonics such as 'Country AVG', 'Country 60% AVG', 'OTDD AVG', 'HighSkewed AVG', etc.
    - Extensive hyperparameter tuning was conducted for the 'Country AVG' model to ensure consistency across all experiments. Each experiment was repeated five times to ensure reliability.
-   - **Performance Metrics**: 
+   - **Performance Metrics**:
      - The models were evaluated using the Receiver Operating Characteristic Area Under the Curve (ROC-AUC) and the Area Under the Precision-Recall Curve (AUC-PR).
      - **Experiment Time**: Total time taken for training from the beginning to the end of the last federation round.
 
@@ -157,7 +158,7 @@ By following these detailed steps, you can successfully reimplement the work out
 
 2. **Comparative Analysis**:
    - Different partitioning strategies and federated algorithms were compared, highlighting the following:
-     - **Country-Based Partitioning**: 
+     - **Country-Based Partitioning**:
        - 'Country AVG' achieved a ROC-AUC of 0.7295 and AUC-PR of 0.2767, with an average experiment time of 28.93 minutes.
        - 'Country Adagrad' and 'Country Adam' showed slightly lower performance but required longer experiment times.
      - **Clinic-Based Partitioning**:

@@ -1,8 +1,9 @@
 ---
-title: Tutorial on using the WiNGS REST API to query Federated Genomics Data 
+title: Tutorial on using the WiNGS REST API to query Federated Genomics Data
 contributors: [Geert Vandeweyer]
 page_id: wings
 search_exclude: false
+description: Step-by-step guide to querying federated genomics data using the WiNGS REST API, covering environment setup, API access, and data manipulation for secure, federated analysis.
 ---
 
 
@@ -15,7 +16,7 @@ This tutorial will guide you through the process of querying federated genomics 
 1. Understanding Genetic Data and VCF Files
 2. Setting up the python conda environment
 3. Acquiring an api key
-4. Querying data 
+4. Querying data
 5. Manipulating data
 
 
@@ -25,13 +26,13 @@ This tutorial will guide you through the process of querying federated genomics 
 
 ### VCF files
 
-Genetic data is usually provided in Variant Call Format (VCF) files. These files contain information about genetic variants, including the position, reference, and alternate alleles, as well as additional annotations. VCF files are commonly used in genomic research to store and share genetic variant data.  It is important to keep in mind that over time, multiple versions of '[the human genome](https://en.wikipedia.org/wiki/Reference_genome)' have been released, and variant positions might shift slightly between these releases.  
+Genetic data is usually provided in Variant Call Format (VCF) files. These files contain information about genetic variants, including the position, reference, and alternate alleles, as well as additional annotations. VCF files are commonly used in genomic research to store and share genetic variant data.  It is important to keep in mind that over time, multiple versions of '[the human genome](https://en.wikipedia.org/wiki/Reference_genome)' have been released, and variant positions might shift slightly between these releases.
 
-VCF files can contain data from a single sample, or from multiple samples. In the latter case, samples are organized is columns, holding information for each encountered position. Although these files can be filtered and analyzed using multiple tools such as [vcftools](https://github.com/vcftools/vcftools) or [pyVCF](https://pyvcf.readthedocs.io/en/latest/), adding more data over time would require to rebuild them iteratively.  Another limitation is formed by the privacy constraints on genomic data, prohibiting the collection of cross-center cohorts for large-scale statistical analysis. 
+VCF files can contain data from a single sample, or from multiple samples. In the latter case, samples are organized is columns, holding information for each encountered position. Although these files can be filtered and analyzed using multiple tools such as [vcftools](https://github.com/vcftools/vcftools) or [pyVCF](https://pyvcf.readthedocs.io/en/latest/), adding more data over time would require to rebuild them iteratively.  Another limitation is formed by the privacy constraints on genomic data, prohibiting the collection of cross-center cohorts for large-scale statistical analysis.
 
-### Principle of WiNGS 
+### Principle of WiNGS
 
-For these reasons, WiNGS was implemented to become a portal to aggregated genomics data, kept privately in a federated framework. WiNGS supports data in multiple of the human reference versions (or genome builds) and provides unified, biological annotations. This way, variants in all federated data hubs, will have uniform annotations (or meta data). 
+For these reasons, WiNGS was implemented to become a portal to aggregated genomics data, kept privately in a federated framework. WiNGS supports data in multiple of the human reference versions (or genome builds) and provides unified, biological annotations. This way, variants in all federated data hubs, will have uniform annotations (or meta data).
 
 ![WiNGS setup](/images/wings/wings_federation.png)
 
@@ -40,22 +41,22 @@ For these reasons, WiNGS was implemented to become a portal to aggregated genomi
 Data is structured in WiNGS as follows:
 - ** Individual **: these are cinical cases, patients.
 - ** Sample **: these are the experimental samples associated to individuals. (eg : WGS experiment, or SV experiment)
-- ** Dataset **: These are the analysis files related to a sample. eg : GATK based SNV analysis on hg38 for WGS data. 
+- ** Dataset **: These are the analysis files related to a sample. eg : GATK based SNV analysis on hg38 for WGS data.
 
-WiNGS is accessible as REST api, which is documented through [swagger](https://wings.esat.kuleuven.be/rest-api/api-docs/).  To perform an analysis, the following prerequisites are needed, which are performed through a web-based UI: 
+WiNGS is accessible as REST api, which is documented through [swagger](https://wings.esat.kuleuven.be/rest-api/api-docs/).  To perform an analysis, the following prerequisites are needed, which are performed through a web-based UI:
 
 - ** A user account ** : to shield data, anonymous access is not allowed, register [here](https://wings.esat.kuleuven.be/Account/Register)
 - ** An API key ** : [Log in](https://wings-platform.org) and select user meny : Create API key , on the top right
 
 
 
- 
+
 
 ## 2. Setup conda environment
 
 ### Install miniconda
 
-We use miniconda for this tutorial. Follow the [Installation Instructions](https://docs.anaconda.com/miniconda/miniconda-install/). For example on linux: 
+We use miniconda for this tutorial. Follow the [Installation Instructions](https://docs.anaconda.com/miniconda/miniconda-install/). For example on linux:
 
 ```bash
    mkdir -p ~/miniconda3
@@ -64,10 +65,10 @@ We use miniconda for this tutorial. Follow the [Installation Instructions](https
    rm ~/miniconda3/miniconda.sh
 ```
 
-Install the prerequisites : 
+Install the prerequisites :
 
 ```bash
-   conda create -n wings  python=3.10 pandas xlsxwriter 
+   conda create -n wings  python=3.10 pandas xlsxwriter
    conda activate wings
 ```
 
@@ -246,7 +247,7 @@ class WingsApi:
 
 
 if __name__ == '__main__':
-   # provide your token : 
+   # provide your token :
    token = getpass.getpass('Enter your token : ')
    # the url of the api :
    url="https://wings.esat.kuleuven.be/rest-api/"
@@ -261,11 +262,11 @@ if __name__ == '__main__':
    piid = r[0]['PIID']
 ```
 
-When executed, the above script will ask for your token and will print the api response to screen. Note the piid as you will need the value later on. 
+When executed, the above script will ask for your token and will print the api response to screen. Note the piid as you will need the value later on.
 
 ## 4. Listing Samples
 
-Samples access is restricted by account.  This means that as a registered user, you can only see samples assigned to you. This type of work is not federated in a strict sense, as WiNGS automatically directs queries to the correct, individual data node.  We'll move on to cross-node routines in later sections. 
+Samples access is restricted by account.  This means that as a registered user, you can only see samples assigned to you. This type of work is not federated in a strict sense, as WiNGS automatically directs queries to the correct, individual data node.  We'll move on to cross-node routines in later sections.
 
 For now, we'll investigate what samples you have access to, select a family (inddex + parents) and perform variant querying on them.
 
@@ -277,11 +278,11 @@ Add the following snippet to the __main__ section of the script:
    r = api.get(endpoint)
    print(f"You have access to {len(r)} individuals:")
    individual = None
-   
+
    # input for matching the individual you want :
    #s_string = input('Provide the LocalID of the individual to select: ')
    s_string = "Demo_index"
-   
+
    for idx, i in enumerate(r):
       if i['LocalID'] == s_string:
          individual = i
@@ -289,12 +290,12 @@ Add the following snippet to the __main__ section of the script:
           print(f"{i['LocalID']} : {i['IndividualID']}")
       if idx == 5:
           print('....')
-   
+
    if not individual:
      raise Exception('No Individual found')
-   
+
 ```
-It will list all individuals and then select "Demo_index" as an example. It is part of a public dataset all users have access to. 
+It will list all individuals and then select "Demo_index" as an example. It is part of a public dataset all users have access to.
 
 
 ### Information about the individual of interest
@@ -307,7 +308,7 @@ The following code will fetch information about the family members linked to the
 
    print("\nDetails on the selected individual : ")
    pprint.pprint(individual)
-   
+
    # get variables for use in querying :
    used_trio = individual['trio'][0]
    used_sample = [x for x in individual['samples'] if x['SampleFileID'] == used_trio['ProbandFileID']][0]
@@ -315,15 +316,15 @@ The following code will fetch information about the family members linked to the
 
 ```
 
-The information printed includes phenotypes (HPO) and family members. If family members, with data, are assigned, a TRIO will be created as well. Trio's contain precalculated in heritance patterns of all variants in the proband, which can be used to speed up filtering. 
+The information printed includes phenotypes (HPO) and family members. If family members, with data, are assigned, a TRIO will be created as well. Trio's contain precalculated in heritance patterns of all variants in the proband, which can be used to speed up filtering.
 
-We selected the first available trio in the list.  In case there are multiple datafiles (WES, WGS, ...) , multiple trio's an exists. 
+We selected the first available trio in the list.  In case there are multiple datafiles (WES, WGS, ...) , multiple trio's an exists.
 
 ## 5. Querying Data : Sample Based Analysis
 
-### General querying 
+### General querying
 
-As a first analysis, it might be interesting to look at general variant characteristics in the data.  For this, we run a broad filter to obtain all exonic variants: 
+As a first analysis, it might be interesting to look at general variant characteristics in the data.  For this, we run a broad filter to obtain all exonic variants:
 
 ```python
 
@@ -493,13 +494,13 @@ print(df.to_string(index=False))
 
 ```
 
-For this demonstration sample, we could identify 17 variants, out of which 8 affected a transcript. We'll investige these further in the next section. 
+For this demonstration sample, we could identify 17 variants, out of which 8 affected a transcript. We'll investige these further in the next section.
 
 ## 6. Querying Data : Variant/Gene Based Analysis
 
 ### Variant Based
 
-Interestingly, some of the variants were not present in gnomAD. To investige this is more detail, we can look at the frequency within WiNGS: 
+Interestingly, some of the variants were not present in gnomAD. To investige this is more detail, we can look at the frequency within WiNGS:
 
 ```python
 # submit query for the variant on chromosome 8
@@ -519,7 +520,7 @@ df = pd.DataFrame(pd.json_normalize(variant_info["overall"]))
 print(df.to_string(index=False))
 ```
 
-This would show us that the variant is not present in 2800+ WES samples, and 3 times in roughly 900 WGS samples. 
+This would show us that the variant is not present in 2800+ WES samples, and 3 times in roughly 900 WGS samples.
 
 |exp | ref_build | cnt  | sample-size  | het  | hom-alt |
 |----|-----------|------|--------------|------|---------|
@@ -531,7 +532,7 @@ This would show us that the variant is not present in 2800+ WES samples, and 3 t
 
 ### Gene Based
 
-Next, we will investigate if other high impact variants are present in the same gene (PUF60). To do this, we apply a "high impact" filter, using the gene-id as starting point: 
+Next, we will investigate if other high impact variants are present in the same gene (PUF60). To do this, we apply a "high impact" filter, using the gene-id as starting point:
 
 ```python
 # what filter:
@@ -577,13 +578,13 @@ wes_variants = api.get_variant_results("/variant/discovery/query/results",{'requ
 
 ```
 
-We also provided the phenotype of our demo individual. This allows us to group data based on the presence of these hpo terms.  The results are : 
+We also provided the phenotype of our demo individual. This allows us to group data based on the presence of these hpo terms.  The results are :
 
 | WGS       |           |            |           |
-| var+phen  | var-phen  | -var+phen  | -var-phen | 
+| var+phen  | var-phen  | -var+phen  | -var-phen |
 |------------|-----------|------------|----------|
 |       0   |       2   |        7   |      460  |
- 
+
 |  WES      |          |           |          |
 |  var+phen | var-phen | -var+phen | -var-phen|
 |-----------|----------|-----------|----------|
@@ -594,7 +595,7 @@ Note that the original variant is no longer retained (no var+phen entries). This
 
 When we investigate the gene with regard to phenotypes, we'll find that it is causative for verhije syndrome [omim:615583](https://omim.org/entry/615583). The phenotypic desscription of this syndrome is in line with the phenotype of the demo individual.
 
-A final test would be to investigate if the variant is significantly associated to the phenotype. For this, we'll use the a less stringent filtering to make sure we retain the variant in question. 
+A final test would be to investigate if the variant is significantly associated to the phenotype. For this, we'll use the a less stringent filtering to make sure we retain the variant in question.
 
 
 ```python
@@ -635,7 +636,7 @@ wes_variants = api.get_variant_results("/variant/discovery/query/results",{'requ
 
 ```
 
-The results are now: 
+The results are now:
 
 |WGS       |          |           |          |
 | var+phen | var-phen | -var+phen | -var-phen|
@@ -647,7 +648,7 @@ The results are now:
 |----------|----------|-----------|----------|
 |       1  |       0  |       11  |      791 |
 
-Based on these counts, we can run a fisher exact test: 
+Based on these counts, we can run a fisher exact test:
 
 ```python
 endoint = 'variant/discovery/statistics'
@@ -664,17 +665,17 @@ result = api.post(endpoint,arguments)
 pprint.pprint(result)
 ```
 
-### 7. Querying Data : Structural Variant 
- 
+### 7. Querying Data : Structural Variant
+
 ## single sample
-A second data type, next to SNV variants, are structural variants.  Similar to SNVS, single samples can be queried in depth. However, for SVs, the filters are provided as part of the call: 
+A second data type, next to SNV variants, are structural variants.  Similar to SNVS, single samples can be queried in depth. However, for SVs, the filters are provided as part of the call:
 
 ```python
-# list all samples with SVS: 
+# list all samples with SVS:
 endpoint = "SV_samples"
 sv_samples = api.get(endpoint,{"piid": piid, "host_id": 1})
 pprint.pprint(sv_samples[0:3])
-## 
+##
 arguments = {"host_id" : 1,
              "piid" : piid,
              "individualID" : sv_samples[0]['IndividualID'],
@@ -693,7 +694,7 @@ pprint.pprint(results)
 
 SV calling on WGS data often results in large amount of variants. A valuable approach is then to exclude variants based on a control population. This is done by using the `populations` endpoint:
 
-Populations are similar to datasets for SNV, and allow grouping of samples for analysis.  Listing your populations is done through the following call: 
+Populations are similar to datasets for SNV, and allow grouping of samples for analysis.  Listing your populations is done through the following call:
 
 ```python
 r = api.get('populations',{'host_id': 1,'piid' : piid})

@@ -6,15 +6,17 @@ layout: none
 <!doctype html>
 <html lang="en">
 {% include head.html %}
+
 <body>
     {% if jekyll.environment == "development" %}{% include dev-info.html %}{% endif %}
     {% include topnav.html search=false %}
     <div class="landingpage">
         <section class="container mb-5">
             <div>
-                <h1>Federated Learning toolkit for Life Sciences</h1>
+                <h1>Federated Learning toolkit
+                    for Health & Life Sciences</h1>
                 <p class="text-center mt-2">
-                Best Practices and Guidelines for advancing science while preserving privacy and conforming to regulations
+                    A Structured Entry Point into Federated Analytics & Learning
                 </p>
             </div>
         </section>
@@ -25,9 +27,12 @@ layout: none
                     <div class="position-relative">
                         <div class="d-flex justify-content-center">
                             <form role="search" class="input-group">
-                                <span class="input-group-text" id="search-label"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                <input type="search" id="search-input" class="search-input form-control form-control-lg bg-white" tabindex="0"
-                                    placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}" autocomplete="off">
+                                <span class="input-group-text" id="search-label"><i
+                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                <input type="search" id="search-input"
+                                    class="search-input form-control form-control-lg bg-white" tabindex="0"
+                                    placeholder="Search {{ site.title }}" aria-label="Search {{ site.title }}"
+                                    autocomplete="off">
                             </form>
                             <div id="search-results" class="search-results"></div>
                         </div>
@@ -45,16 +50,16 @@ layout: none
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                     {%- for folder in sidebar.subitems %}
                     <div class="col">
-                            <div class="card bg-white h-100">
-                                <!--- TODO: temporarily remove alt="{{folder.title}} icon" --->
-                                <img src="{{folder.image_url | relative_url}}" class="card-img-top h-icon-6 mx-auto">
-                                <div class="card-body text-center">
-                                    <a href="{{ folder.url | relative_url }}" class="stretched-link">
-                                        <h3 class="card-title no-anchor text-dark">{{folder.title}}</h3>
-                                    </a>
-                                    <p class="card-text">{{folder.description}}</p>
-                                </div>
+                        <div class="card bg-white h-100">
+                            <!--- TODO: temporarily remove alt="{{folder.title}} icon" --->
+                            <img src="{{folder.image_url | relative_url}}" class="card-img-top h-icon-6 mx-auto">
+                            <div class="card-body text-center">
+                                <a href="{{ folder.url | relative_url }}" class="stretched-link">
+                                    <h3 class="card-title no-anchor text-dark">{{folder.title}}</h3>
+                                </a>
+                                <p class="card-text">{{folder.description}}</p>
                             </div>
+                        </div>
                         </a>
                     </div>
                     {%- endfor %}
@@ -67,16 +72,20 @@ layout: none
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2 my-auto">
-                        <img class="h-icon-8" src="{{ '/assets/img/section-icons/community.svg' | relative_url }}" alt="Contributors icon">
+                        <img class="h-icon-8" src="{{ '/assets/img/section-icons/community.svg' | relative_url }}"
+                            alt="Contributors icon">
                     </div>
                     <div class="col-lg-7">
                         <h2>We welcome contributors!</h2>
-                        <p>This project would not be possible without the many <a href="{{ '/contributors' | relative_url }}"><b>amazing
-                            community contributors</b></a>. FLkit is an open community project, and you are welcome to join us!
+                        <p>This project would not be possible without the many <a
+                                href="{{ '/contributors' | relative_url }}"><b>amazing
+                                    community contributors</b></a>. FLkit is an open community project, and you are
+                            welcome to join us!
                         </p>
                     </div>
                     <div class="col-lg-3 my-auto">
-                        <a class="btn btn-primary btn-lg rounded-pill px-4" href="{{ '/how_to_contribute' | relative_url }}">Start contributing</a>
+                        <a class="btn btn-primary btn-lg rounded-pill px-4"
+                            href="{{ '/how_to_contribute' | relative_url }}">Start contributing</a>
                     </div>
                 </div>
             </div>
@@ -85,27 +94,32 @@ layout: none
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 pe-lg-4">
-                    {% include news.html caption=true title=true limit=3 %}
+                        {% include news.html caption=true title=true limit=3 %}
                     </div>
                     <div class="col-lg-6 mt-4 mt-lg-0 ps-lg-4">
-                    <h2>Events</h2>
-{% comment %}
+                        <h2>Events</h2>
+                        {% comment %}
                         <!--- TODO: it would seam events' need to be added here manually. Check this further --->
                         <div class="events upcoming_events" style="display: block;">
                             <ul class="list-unstyled mt-3">
                                 <li class="upcoming_event" data-start="2024-06-22" style="display: list-item;">
                                     <span class="title mb-1">FLkit Club monthly meeting</span>
-                                    <p class="text-muted mb-0"><i class="far fa-calendar me-2"></i>Last Thursday of each month at 10:00 CEST / 9:00 BST</p>
+                                    <p class="text-muted mb-0"><i class="far fa-calendar me-2"></i>Last Thursday of each
+                                        month at 10:00 CEST / 9:00 BST</p>
                                     <i class="fa-solid fa-map-marker-alt me-2 text-muted"></i>
                                     <div class="d-inline-block text-muted">
-                                        <p><a href="https://elixir-europe-org.zoom.us/meeting/register/tZAuce-grDssEtH114zzMh8DgRPHzWteDAmt">Zoom</a></p>
+                                        <p><a
+                                                href="https://elixir-europe-org.zoom.us/meeting/register/tZAuce-grDssEtH114zzMh8DgRPHzWteDAmt">Zoom</a>
+                                        </p>
                                     </div>
-                                    <p>Informal drop-in session to discuss impact and future directions of the FLkit. More information can be found on our <a href="{{ 'flkit_club' | relative_url }}">FLkit Club page</a>.</p>
+                                    <p>Informal drop-in session to discuss impact and future directions of the FLkit.
+                                        More information can be found on our <a
+                                            href="{{ 'flkit_club' | relative_url }}">FLkit Club page</a>.</p>
                                 </li>
                             </ul>
                         </div>
-{% endcomment %}
-                    {% include events.html event_type="upcoming_event" %}
+                        {% endcomment %}
+                        {% include events.html event_type="upcoming_event" %}
                     </div>
                 </div>
             </div>
@@ -139,7 +153,9 @@ layout: none
                                         People of FLkit</p>
                                 </div>
                                 <div class="col-5 my-auto">
-                                    <img class="h-icon-6" src="{{ '/assets/img/section-icons/community.svg' | relative_url }}" alt="Contributors icon">
+                                    <img class="h-icon-6"
+                                        src="{{ '/assets/img/section-icons/community.svg' | relative_url }}"
+                                        alt="Contributors icon">
                                 </div>
                             </div>
                         </div>
@@ -154,12 +170,15 @@ layout: none
                             {%- endfor %}
                             <div class="row g-1 flex-grow-1">
                                 <div class="col-7">
-                                    <span class="count-number text-primary">{{tools.size | plus: national_tools }}</span>
+                                    <span class="count-number text-primary">{{tools.size | plus: national_tools
+                                        }}</span>
                                     <p><b>Tools & resources</b><br>
                                         Explained in the context of real world problems</p>
                                 </div>
                                 <div class="col-5 my-auto">
-                                    <img class="h-icon-6" src="{{ '/assets/img/section-icons/cogs.svg' | relative_url }}" alt="Tools icon">
+                                    <img class="h-icon-6"
+                                        src="{{ '/assets/img/section-icons/cogs.svg' | relative_url }}"
+                                        alt="Tools icon">
                                 </div>
                             </div>
                         </div>
@@ -174,7 +193,9 @@ layout: none
                                         Total number of pages</p>
                                 </div>
                                 <div class="col-5 my-auto">
-                                    <img class="h-icon-6" src="{{ '/assets/img/section-icons/your-task.svg' | relative_url }}" alt="Pages icon">
+                                    <img class="h-icon-6"
+                                        src="{{ '/assets/img/section-icons/your-task.svg' | relative_url }}"
+                                        alt="Pages icon">
                                 </div>
                             </div>
                         </div>
@@ -184,7 +205,7 @@ layout: none
         </section>
     </div>
     {%- if site.theme_variables.back_to_top or site.theme_variables.back_to_top == nil %}
-    {% include scroll-top.html  %}
+    {% include scroll-top.html %}
     {%- endif %}
     {% include footer.html %}
     {% include cookie-popup.html %}
