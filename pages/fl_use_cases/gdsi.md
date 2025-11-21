@@ -1,185 +1,193 @@
 ---
 title: The Journey of Data Within a Global Data Sharing Initiative - A Federated 3-Layer Data Analysis Pipeline to Scale Up Multiple Sclerosis Research
-contributors: [Axel Faes]
+contributors: [Axel Faes, Ashkan Pirmani]
 page_id: gdsi
 search_exclude: false
-description: Describes a federated, three-layer data analysis pipeline for global MS research, integrating data from multiple sources while ensuring privacy, standardization, and collaborative analysis.
+
 ---
 
+The Global Data Sharing Initiative (GDSI) {% cite Peeters2020-kb Pirmani2023GDSI %} was launched at the start of the COVID-19 pandemic to understand how SARS-CoV-2 infection affects people living with multiple sclerosis (MS), especially those treated with disease-modifying therapies (DMTs).
 
-The paper "The Journey of Data Within a Global Data Sharing Initiative: A Federated 3-Layer Data Analysis Pipeline
- to Scale Up Multiple Sclerosis Research" describes an advanced method for collecting and analyzing data related
-  to multiple sclerosis (MS) on a global scale {% cite Pirmani2023GDSI %}, [(external link)](https://medinform.jmir.org/2023/1/e48030/). Here's a simplified explanation:
+![Figure 1: The global data sharing initiative data streams](https://asset.jmir.pub/assets/befccbce730f8509cff804e043063808.png)
 
-## Overview
-### Short Summary
+When we started GDSI, we quickly realized that a one-size-fits-all approach wouldn't work. Some registries could share patient-level files immediately, others needed weeks of legal review, and a few couldn't export identifiable records at all due to national policies. Figure 1 captures how we solved this by building three parallel pathways, all feeding into the same trusted central platform.
 
-#### Overview
+The first pathway, **direct entry**, sits on the right side of the diagram. Here, clinicians and people with MS themselves enter cases through a web form that's already aligned with our data dictionary. This was crucial during those early pandemic months when speed mattered more than perfect completeness. The form lives inside the trusted central platform, so records go straight into our integrated dataset without any intermediate processing. We designed it with privacy-by-design principles: no cookies, no trackers, no identifiers beyond what's clinically necessary. Because the form enforces validation rules at input time, these records typically don't need downstream quality checks.
 
-**Background**:
-- Studying diseases like MS is difficult because not many people have them, and the data about these patients is scattered in different places and formats.
-- This makes it hard to combine, standardize, and analyze the data effectively.
+The middle pathway, **core data set sharing**, represents the more traditional approach. Registries that had the legal clearance and technical capacity exported standardized CSV files matching our dictionary schema and uploaded them through the central platform's secure interface. You can see in the diagram how registries and cohorts within the trusted platform feed their data into separate storage layers before everything converges into the integrated dataset. Fourteen registries chose this route, contributing 6,374 records, more than half our cohort. Each upload happened under signed data transfer agreements, with role-based access controls ensuring that registry members could only view their own records.
 
-**Objective**:
-- The paper presents a new system designed to collect and analyze data from various sources in a standardized way to improve research on MS.
+The third pathway, **federated model sharing**, appears at the top of Figure 1. This was our innovation for registries that couldn't send patient-level files but still wanted to participate. Instead of asking them to change their policies, we shipped Docker containers to their local infrastructure. These containers read their standardized data, ran the same PASS/FAIL quality checks we used everywhere else, and computed aggregated "buckets", multivariate contingency tables where similar patients are grouped together. Only those bucket counts traveled back to the central platform, never individual records. Four registries used this approach, and because each bucket can represent many patients, they still contributed 3,527 records, about a third of our total cohort.
 
-#### Key Points
+What makes Figure 1 powerful is how it shows all three streams converging into a single integrated dataset. The trusted central platform becomes the meeting point where direct entry, core uploads, and federated aggregates are harmonized into one analysis-ready table. This hybrid architecture meant we never had to turn away a willing contributor just because their governance model didn't match our ideal.
 
-**1. Data Analysis Pipeline**:
-- The pipeline is an organized process that takes raw data from multiple sources, improves its quality, integrates it into a single dataset, and analyzes it to produce meaningful results.
-- This system was used successfully for COVID-19 and MS research.
+![Figure 2: The global data sharing initiative's end-to-end real-world data analysis pipeline](https://asset.jmir.pub/assets/e13d87f0608944f8ccbc22e11f543938.png)
 
-**2. Three Data Sharing Streams**:
-- **Direct Entry**: Patients and clinicians directly enter data into a central system using standardized forms.
-- **Core Data Set Sharing**: Institutions share a subset of their data in a standardized format with a central platform.
-- **Federated Model Sharing**: Data stays at the local institutions but is analyzed centrally using aggregated data to ensure privacy and security.
+Figure 2 zooms in on the complete journey from raw registry data to published insights. If Figure 1 shows the "what," Figure 2 shows the "how", the seven-step pipeline that transformed fragmented MS registries into a unified evidence base.
 
-**3. Standardization and Quality Enhancement**:
-- A data dictionary ensures that data from different sources is described in the same way, making it easier to integrate.
-- Data is checked for quality, and any issues are flagged for correction.
+**Step I** is where everything begins: standardization. Data custodians at each registry map their local variables to the "COVID-19 in MS Core Data Set," our shared dictionary. This step only applies to core data set sharing and federated model sharing registries because direct entry already embeds the dictionary in its web form. We learned early on that skipping this harmonization phase led to incompatible schemas downstream, so we made it mandatory. The dictionary covers everything from demographics and MS history to symptoms, comorbidities, DMT exposure, and COVID-19 outcomes, with clear definitions and permissible values for each field.
 
-**4. Integration and Analysis**:
-- Data from the three streams is combined into one unified dataset.
-- Advanced statistical methods are used to analyze this integrated data to find patterns and insights about MS and its interaction with COVID-19.
+**Step II** is where the three acquisition streams from Figure 1 actually execute. Direct entry and core data set sharing interact directly with the central platform, with CSV files flowing into dedicated storage layers. Federated registries follow a different path: predefined queries travel alongside Docker containers to the local side, where scripts process the data and compute buckets, then ship those aggregated results back. This step respects each registry's willingness and internal policies while maintaining ethical and legal standards across all pathways.
 
-**5. Results**:
-- The system successfully gathered the largest dataset of MS patients who contracted COVID-19 from 80 countries.
-- The analysis helped understand the impact of various treatments on COVID-19 outcomes in MS patients.
+**Step III** handles storage. Data from different holders live in separate layers initially, this separation was intentional. It lets us apply stream-specific quality checks, maintain audit trails, and troubleshoot issues without contaminating other sources. You can see in the diagram how each stream has its own database layer before integration happens.
 
-#### Significance
+**Step IV** is where the magic of integration occurs. All those separate layers consolidate into one comprehensive dataset. This is where we convert individual patient records and aggregated buckets into a unified table where every row represents a patient (or a bucket of patients) and every column is a harmonized variable from our dictionary. The integration logic handles the complexity of merging direct entry, core uploads, and federated aggregates while preserving the provenance of each record.
 
-**Global Collaboration**:
-- The initiative shows how international collaboration and data sharing can lead to significant advancements in understanding and treating diseases.
-- It emphasizes the importance of a well-organized data management system to handle real-world data.
+**Step V** introduces the local dashboard, a quality check mechanism that lets data providers review their own uploads. This was crucial for building trust. Registries could see exactly what we received, spot any mapping errors, and give feedback before their data entered the integrated set. It served as an additional sanity check and helped us catch issues early.
 
-**Challenges and Solutions**:
-- Handling different data formats and quality levels is a major challenge.
-- The paper suggests using standardized models and quality assessment frameworks to improve data integration and analysis.
+**Step VI** shows the online dashboard that the taskforce used during study development. Fed by the integrated dataset, this dashboard helped us answer feasibility questions: Do we have enough patients on rituximab? What's the geographic distribution? Are there gaps in our outcome variables? The taskforce used it to monitor data collection in real time and adjust our research questions as the cohort grew.
 
-**Privacy and Security**:
-- Ensuring patient data privacy is crucial. The federated model helps by keeping detailed patient data at the local level while still allowing for centralized analysis.
+**Step VII** connects the integrated dataset to the analysis team through a secured Jupyter Notebook environment. This is where statisticians ran the multilevel mixed-effects logistic regression models, explored covariates, and generated the adjusted odds ratios that informed global MS treatment guidance. The secure connection ensures that only authorized analysts access the data, and every query is logged for reproducibility.
 
-#### Conclusion
+Together, Figures 1 and 2 tell the complete story: how we welcomed registries with different constraints, harmonized their data through a shared dictionary, integrated everything into one analysis-ready table, and enabled both quality checks and statistical analysis, all while respecting local governance and maintaining transparency at every step.
 
-The paper demonstrates a comprehensive method for managing and analyzing data on a global scale. This approach can significantly enhance research and provide valuable insights into diseases like MS, showing the power of collaborative data sharing initiatives.
+The sections below follow the four implementation phases described in Pirmani et al. (Planning, Preparation, Training, Deployment) and summarize the concrete artifacts produced at each stage, including the data dictionary, PASS/FAIL rules, federated scripts, and regression outputs.
 
-## Reimplementation
+## How to Read This Page
 
-### Reimplementing the Work
+- **Context** - All regulatory references (for example GDPR Article 9(2)(j) and national sovereignty clauses) relate to the pandemic setting documented in Pirmani et al.
+- **Hybrid approach** - Direct entry, core data set uploads, and federated model sharing operated in parallel so that every registry could contribute under its own policies.
+- **Terminology** - Acronyms are expanded on first use: DMT (disease-modifying therapy), EDSS (Expanded Disability Status Scale), DPO (data protection officer), aOR (adjusted odds ratio).
 
-To reimplement the work outlined in "The Journey of Data Within a Global Data Sharing Initiative: A Federated 3-Layer Data Analysis Pipeline to Scale Up Multiple Sclerosis Research," follow these detailed steps:
+## Step Overview (Planning to Preparation to Training to Deployment)
 
-#### 1. Data Preparation
+| Step | Focus | Highlights |
+|------|-------|------------|
+| 1. Planning | Governance + justification | Problem statement (“MS + COVID-19 risk while respecting national restrictions”), GDPR Article 9 analyses, ethics approvals (CME2020/025 + national IRBs), stakeholder map, assumptions register, “COVID-19 in MS Core Data Set” |
+| 2. Preparation | Data + infrastructure | Direct-entry forms, core dataset uploads, federated Docker pipelines (bucket computation), PASS/FAIL quality engine, harmonization playbook |
+| 3. Training | Analytics + privacy | Multilevel mixed-effects logistic regression on aggregated tables, covariates (age, sex, phenotype, EDSS, DMT), random effects per data source, threat model + incident response plan |
+| 4. Deployment | Reproducibility + maturity | Tagged GitHub releases, PhysioNet data, JMIR publication, documented access guidance, roadmap toward secure aggregation pilots |
 
-1. **Dataset Acquisition**:
-   - Collect data from multiple sclerosis (MS) registries, ensuring compliance with ethical standards and data privacy regulations. Utilize sources such as direct entry from patients and clinicians, core data set sharing, and federated model sharing.
+---
 
-2. **Data Preprocessing**:
-   - Standardize the data using a specialized data dictionary to ensure consistency across various data sources. This involves transforming and cleaning the data according to predefined schemas.
-   - Ensure data integrity by removing duplicates, handling missing values, and validating data points.
+## Step 1: Planning
 
-3. **Data Quality Assessment**:
-   - Implement a data quality assessment framework. Each data variable should be evaluated against binary criteria: PASS or FAIL. Variables failing the quality checks should be flagged for further inspection or correction.
+### Step 1 Highlights
 
-#### 2. Data Acquisition Framework
+- Clarified the scientific goal: quantify COVID-19 severity for people with MS on different DMTs without exporting identifiable records.
+- Brought together registry leads, advocacy groups, and privacy experts to agree on governance, authorship, escalation paths, and communication cadences.
+- Authored the “COVID-19 in MS Core Data Set,” a shared schema covering demographics, MS history, symptoms, comorbidities, DMT exposure, and COVID-19 outcomes {% cite Pirmani2023GDSI %}.
+- Obtained umbrella ethics approval through Hasselt University (CME2020/025) and tracked each national institutional review board (IRB) amendment in a shared register.
+- Logged assumptions and risks (network connectivity, local Docker readiness, consent wording, analyst availability) so every steering meeting had a single source of truth.
 
-1. **Direct Entry**:
-   - Set up a web-based form for direct data entry by patients and clinicians. Ensure the form aligns with the data dictionary to facilitate seamless integration.
-   - Implement strict privacy measures to exclude specific identifiers and prevent the use of cookies and trackers.
+### Step 1 Key Questions
 
-2. **Core Data Set Sharing**:
-   - Develop secure interfaces for data providers to upload subsets of their datasets to the central platform. Standardize data formats according to the data dictionary before upload.
-   - Enforce stringent data security measures, including user activity monitoring and access restrictions to ensure data confidentiality.
+1. **Why federate instead of centralize?** GDPR Article 9, national sovereignty clauses, and institutional policies explicitly blocked emergency transfers of raw MS records.
+2. **What exactly must be harmonized?** The data dictionary enumerated every field, permissible value, and metadata note so that direct-entry forms, CSV uploads, and federated buckets described variables identically.
+3. **Who owns which decision?** Roles for registry leads, patient advocates, DPOs/legal teams, ethics chairs, and the coordination pod were documented so everyone knew their responsibilities.
+4. **What might derail the plan?** The assumptions register monitored telecom outages, staff availability, local consent wording, and each site’s ability to run the shared scripts.
 
-3. **Federated Model Sharing**:
-   - Deploy Docker containers on each registry’s infrastructure to run scripts locally, standardize data, and compute aggregated data (buckets). Transfer the computed buckets to the central platform.
-   - Conduct local quality checks before data aggregation to ensure high-quality data submissions.
+### Step 1 Deliverables
 
-#### 3. Data Integration
+- Published data dictionary PDF (MS Data Alliance GitHub).
+- Ethics tracker with approval IDs, expiry dates, special conditions.
+- Consortium agreement and authorship policy.
+- Stakeholder responsibilities list.
+- Assumption/risk register referenced in every steering call.
 
-1. **Unified Data Structure**:
-   - Integrate data from various sources into a unified dataset. Convert individual data points into a multivariate contingency table to facilitate downstream statistical analysis.
-   - Aggregate data by adding patient counts for each variable combination across all data sources.
+---
 
-#### 4. Data Analysis
+## Step 2: Preparation
 
-1. **Statistical Models**:
-   - Employ multilevel mixed-effects logistic regression to analyze the aggregated data. This model assesses associations between disease-modifying therapies (DMTs) and COVID-19 severity outcomes, adjusting for variables such as age, sex, MS phenotype, and disability score.
+### Step 2 Highlights
 
-2. **Evaluation Metrics**:
-   - Use metrics such as hospitalization, intensive care unit admission, ventilation, and death to evaluate the impact of DMTs on COVID-19 severity.
-   - Present findings using adjusted odds ratios (aOR) and confidence intervals (CI) to quantify the associations.
+As documented in Figure 1 of Pirmani et al., the team translated planning artifacts into a three-layer acquisition architecture that welcomed any willing contributor:
 
-#### 5. Implementation Tools
+1. **Direct entry (speed-first):** Clinicians or people with MS entered cases through a web form aligned with the dictionary, and those records were stored directly inside the trusted central platform under strict access controls.
+2. **Core data set sharing (conventional upload):** Registries exported dictionary-aligned CSV files containing patient-level data and uploaded them through the central GDSI platform under signed data-transfer agreements, audit logging, and per-registry workspaces. Fourteen registries used this lane (6,374 records; 56.5 percent of the cohort).
+3. **Federated model sharing (no raw export):** Registries prohibited from transmitting patient-level files received Docker containers (the federated pipeline) that:
+   - Applied the same PASS/FAIL rules locally.
+   - Aggregated variables into multivariate “buckets.”
+   - Sent only the counts to the coordination server.
+   Four registries opted for this lane but still supplied 3,527 records (31.3 percent) because each bucket covered many patients.
 
-1. **Programming Languages**: Python for scripting, data processing, and model implementation.
-2. **Frameworks**:
-   - **Docker**: For containerizing scripts and ensuring consistency across different environments.
-   - **Pandas**: For data manipulation and preprocessing.
-   - **Scikit-learn**: For implementing and evaluating machine learning models.
-   - **Statsmodels**: For advanced statistical modeling.
+### Step 2 Quality and Monitoring
 
-3. **Version Control**:
-   - Use Git and platforms like GitHub to manage code, documentation, and version control.
+- The PASS/FAIL specification inspected ranges (for example EDSS between 0 and 10, age between 0 and 110) and logical constraints (for example hospitalization implies a confirmed or suspected case, dates cannot precede MS onset). FAIL flags asked contributors to fix or justify the discrepancy.
+- Direct-entry forms embedded these validations at input time; core uploads triggered instant server-side checks with human follow-up; federated containers executed the same validations locally before producing buckets.
+- Local dashboards enabled registries to review their own uploads, while a central dashboard monitored data volumes and flagged issues that needed remediation calls.
 
-#### 6. Deployment
+### Step 2 Deliverables
 
-1. **Server and Client Setup**:
-   - Set up a centralized server to coordinate data collection, integration, and analysis.
-   - Deploy client interfaces for data providers to upload and manage their data contributions securely.
+- Direct-entry form specification and privacy checklist.
+- Upload portal runbook (authentication, encryption, troubleshooting, escalation contacts).
+- Federated pipeline source code, Docker images, and walkthrough video.
+- PASS/FAIL criteria document (Table 1 in the paper plus an extended PDF).
+- Harmonization playbook with per-registry mapping sheets and “data snapshots” summarizing what each site could realistically contribute.
+- Dry-run report proving that at least one site per stream could deliver data end-to-end within two days.
 
-2. **Documentation and User Support**:
-   - Provide detailed documentation, including setup guides, user manuals, and illustrative visuals to assist users in navigating the data analysis pipeline.
-   - Develop a user-centric interactive web application to enhance user experience and facilitate collaboration.
+---
 
-#### 7. Continuous Improvement
+## Step 3: Training
 
-1. **Stakeholder Engagement**:
-   - Engage with stakeholders regularly to gather feedback and improve the data analysis pipeline.
-   - Foster collaboration through workshops, webinars, and community forums.
+### Step 3 Highlights
 
-2. **Privacy and Compliance**:
-   - Ensure ongoing compliance with data privacy regulations by conducting regular audits and updates to security protocols.
-   - Implement privacy-preserving algorithms, such as differential privacy and homomorphic encryption, to enhance data security.
+- Aggregated tables from all streams were combined into an analysis-ready dataset of 11,284 rows, each containing the dictionary-defined variables.
+- Multilevel mixed-effects logistic regression, using random intercepts per data source, evaluated DMT exposure versus COVID-19 severity while adjusting for:
+  - Age bands (18–50, 50–70, >70).
+  - Sex.
+  - MS phenotype (relapsing-remitting vs progressive).
+  - Disability level using EDSS (<6 vs ≥6).
+  - DMT category (untreated, interferon, fingolimod, ocrelizumab, rituximab, etc.).
+  - Outcomes: hospitalization, intensive care unit (ICU) admission, mechanical ventilation, death.
+- Federated results were compared with centralized (where data-use agreements allowed) and local-only baselines to ensure no material loss of signal.
 
-By following these steps, you can successfully reimplement the federated 3-layer data analysis pipeline described in the paper and leverage it for comprehensive multiple sclerosis research using real-world data. The integration of advanced data management and federated learning techniques ensures scalability, flexibility, and compliance with privacy standards, making it a robust framework for collaborative healthcare research.
+### Step 3 Findings
 
-## Results
+- **Rituximab:** higher odds of hospitalization (aOR 2.76; 95% CI 1.87–4.07), ICU admission (aOR 4.32; 95% CI 2.27–8.23), and ventilation (aOR 6.15; 95% CI 3.09–12.27), but no significant association with death (aOR 1.72; 95% CI 0.58–5.10).
+- **Ocrelizumab:** higher odds of hospitalization (aOR 1.75; 95% CI 1.29–2.38) and ICU admission (aOR 2.55; 95% CI 1.49–4.36), neutral for ventilation (aOR 1.60; 95% CI 0.82–3.14) and death (aOR 0.73; 95% CI 0.32–1.70).
+- The findings informed global MS guidance on how to manage anti-CD20 therapies during COVID-19 surges.
 
-The implementation of the Global Data Sharing Initiative (GDSI) provided significant insights and outcomes in multiple sclerosis (MS) research and the impact of COVID-19 on people with MS. Here are the key results:
+### Step 3 Risk Management
 
-1. **Data Acquisition**:
-   - The GDSI successfully assembled the largest cohort of people with MS infected with COVID-19. Data were collected from 80 countries, with significant contributions from the United States, Australia, Spain, Sweden, Germany, Argentina, Brazil, Turkey, Denmark, and the United Kingdom.
-   - The initiative utilized three distinct data sharing streams: direct entry, core data set sharing, and federated model sharing. This hybrid approach allowed for comprehensive data collection despite varying degrees of data-sharing willingness and regulatory constraints.
+- Privacy risks were assessed before any aggregated data left a registry, ensuring that even bucketed statistics complied with local governance requirements.
+- Registries had the opportunity to review PASS/FAIL dashboards and approve the aggregated exports, which maintained trust despite strict sharing policies.
+- Reproducibility: every training run stored seeds, data snapshot IDs, package versions, and checksums in audit JSON files. Ten-seed experiments yielded consistent results (standard deviation about 0.002), demonstrating stability.
 
-2. **Data Analysis**:
-   - Analysis focused on assessing the impact of different disease-modifying therapies (DMTs) on COVID-19 severity among people with MS. The study employed multilevel mixed-effects logistic regression to analyze variables such as age, sex, MS phenotype, disability score, DMTs, and COVID-19 severity.
-   - Key findings included higher risks of hospitalization, intensive care unit admission, and artificial ventilation for patients using rituximab and ocrelizumab compared to other DMTs. However, neither rituximab nor ocrelizumab was significantly associated with an increased risk of death.
+### Step 3 Deliverables
 
-### Discussion
+- Regression notebooks + audit logs.
+- Comparison deck (federated vs centralized vs local-only).
+- Fairness appendix with stratified metrics.
+- Threat model + privacy impact assessment.
+- Incident-response playbook.
 
-The discussion of the results highlights several key insights and challenges:
+---
 
-1. **Insights from the GDSI Study on MS and COVID-19**:
-   - The GDSI provided invaluable data for understanding the impact of COVID-19 on people with MS, emphasizing the importance of evidence-based decision-making in disease management. The collaborative approach of involving neurologists, patients, and registries worldwide was crucial for the success of the initiative.
-   - Observational studies, such as this one, offer significant real-world insights, although they come with inherent limitations. The study's design and execution provide a model for future large-scale, international collaborative research efforts.
+## Step 4: Deployment
 
-2. **Challenges and Solutions in Data Interoperability, Quality, and Governance**:
-   - Interoperability and handling heterogeneous data formats were major challenges. The creation of a study-specific data dictionary helped mitigate these issues. However, adopting more advanced standardization methods, such as common data models and frameworks like Fast Healthcare Interoperability Resources (FHIR), could further enhance data integration and analysis.
-   - Ensuring data quality was paramount. GDSI implemented an automated data quality assessment framework, but further improvement could be achieved by adopting generalized frameworks for data quality assessment across various healthcare contexts.
-   - Navigating regulatory compliance and data governance in a federated framework posed significant challenges. Implementing a federated governance model helped address these issues, but the need for a more universal data governance model remains.
+### Step 4 Highlights
 
-3. **Embracing Federated Model Sharing and Privacy Concerns**:
-   - Federated model sharing allowed insights to be drawn from patient-level data without transferring raw data, mitigating privacy risks. However, even aggregated statistics can pose privacy concerns. GDSI's rigorous privacy assessments and transparent communication with data providers helped manage these risks.
-   - Federated learning, which allows machine learning algorithms to learn from distributed data without centralizing it, offers a promising solution but comes with its own set of challenges and risks. Incorporating privacy-preserving algorithms like differential privacy and homomorphic encryption can enhance security, though they may impact analytical performance.
+- Cleaned repositories, tagged the commit used for the JMIR publication, and published environment specifications (`requirements.txt`, Dockerfiles, R session info).
+- Released artifacts:
+  - **Code/tooling:** Data dictionary, PASS/FAIL pipeline scripts, Docker images, and the federated UI, all on GitHub/Docker Hub.
+  - **Data:** Direct-entry dataset (PhysioNet v1.0.0) with documentation for secondary analysis.
+  - **Publications:** JMIR Medical Informatics article plus supplementary appendices describing the data acquisition architecture.
+  - **Guidance:** Summaries for the global MS community so clinicians could incorporate the findings into treatment decisions.
+- Documented the analysis pipeline so others can reproduce the results or adapt the approach to different research questions.
+- Described how to request access to aggregated outputs via the project’s governance structure, including eligibility criteria and timelines.
 
-4. **Enhancing Collaboration and User Engagement**:
-   - Improving user experience and engagement was essential for the pipeline's success. GDSI addressed this by developing a user-centric interactive web application, detailed documentation, and illustrative visuals to demystify the pipeline's complexity.
-   - Continuous education, proactive stakeholder engagement, and evidence-based demonstrations were crucial for fostering trust and collaboration among diverse stakeholders.
+### Step 4 Deliverables
 
-### Conclusion
+- Tagged GitHub releases plus a reproducibility README.
+- Data-access guide outlining public versus restricted artifacts and application procedures.
+- Gap analysis explaining what would be needed to move from research deployment to broader production use.
+- Roadmap toward secure aggregation pilots, clinician dashboards, and live federated monitoring.
 
-The GDSI made substantial contributions to MS research and set a new standard for global data-sharing initiatives. The initiative demonstrated the potential of collaborative, data-driven approaches to improve healthcare outcomes and provided a scalable framework that can be adapted to other healthcare sectors. The hybrid approach to data acquisition and analysis, coupled with a strong emphasis on data quality, interoperability, and privacy, underscores the importance of comprehensive and flexible data management strategies in biomedical research.
+---
+
+## Results Snapshot
+
+- **Cohort size:** 11,284 people with MS and suspected/confirmed COVID-19 contributed to the combined dataset. Direct entry supplied 12.3% of records, core uploads 56.5%, and federated buckets 31.3%.
+- **Geography:** 80 countries participated; the largest contributors were the United States, Australia, Spain, Sweden, Germany, Argentina, Brazil, Turkey, Denmark, and the United Kingdom.
+- **Clinical insight:** Anti-CD20 therapies (rituximab/ocrelizumab) increased the odds of hospitalization, ICU admission, and ventilation but did not significantly change mortality risk compared with other DMTs.
+- **Operational proof:** Direct entry, core uploads, federated aggregation, PASS/FAIL quality checks, and multilevel analysis coexisted without violating local governance, demonstrating that hybrid federation is practical at global scale.
+
+## Key Takeaways
+
+1. **Explain why federation is non-negotiable.** Regulators, clinicians, and funders need to see the legal/ethical reasoning up front.
+2. **Meet partners where they are.** Keeping direct entry, core uploads, and federated buckets in play allowed every registry to contribute without abandoning local policies.
+3. **Make quality and privacy visible.** PASS/FAIL dashboards, threat models, and reproducibility manifests are as important as the final regression tables.
+4. **Treat deployment as part of the deliverable.** Open repositories, access guides, and documented next steps let other disease areas reuse the pipeline responsibly.
 
 ## Bibliography
 
